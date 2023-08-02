@@ -1,7 +1,7 @@
 public class calculate{
 public static void main(String[] args){
 System.out.println("ÄãºÃ");
-
+int money=0;
 //再收20元
 money = money + 20;
 //再打印money记录的值是多少
