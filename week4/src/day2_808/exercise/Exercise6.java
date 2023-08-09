@@ -15,15 +15,28 @@ public class Exercise6 {
             System.out.print(a[i]+"\t");
         }
         System.out.println();
-        System.out.print("请输入位置n(n<"+a.length+")：");
+        int[] aNew=new int[a.length+1];
+        System.out.print("请输入位置n(n<="+(a.length+1)+")：");
         int n = sc.nextInt();
-        System.out.println();
-        System.out.print("请输入值k：");
-        int k = sc.nextInt();
-        System.out.println();
-        a[n-1]=k;
-        for (int arr : a) {
-            System.out.print(arr+"\t");
+        if(n>a.length+1){
+            System.out.println("你输入的值有误");
+        }else {
+            System.out.println();
+            System.out.print("请输入值k：");
+            int k = sc.nextInt();
+            System.out.println();
+            for (int i = 0; i < aNew.length; i++) {
+                if (i == n-1) {
+                    aNew[i] = k;
+                } else if (i < n-1) {
+                    aNew[i] = a[i];
+                } else {
+                    aNew[i] = a[i - 1];
+                }
+            }
+            for (int arr : aNew) {
+                System.out.print(arr + "\t");
+            }
         }
     }
 }
