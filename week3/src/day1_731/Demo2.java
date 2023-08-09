@@ -2,16 +2,16 @@ package day1_731;
 
 public class Demo2{
 	public static void main(String[] args){
-	//ï¿½ï¿½ï¿½ï¿½System.out.printï¿½ï¿½System.out.printlnï¿½ï¿½ï¿½ï¿½
+	//    System.out.print  System.out.println    
 	System.out.print('.');
 	System.out.print('a');
-	System.out.print("0eEï¿½ï¿½");
+	System.out.print("0eE  ");
 	System.out.print('.');
-	System.out.print('ï¿½ï¿½');
+	System.out.print(' ');
 	System.out.println("hi");
-	System.out.print("ï¿½ï¿½ï¿½");
+	System.out.print("   ");
 	System.out.println("hi");
-	//ï¿½ï¿½ï¿½ï¿½+
-	System.out.println("Iï¿½ï¿½m lucky" + 123 + 456.58);
+	//    +
+	System.out.println("I¡®m lucky" + 123 + 456.58);
 	}
 }
