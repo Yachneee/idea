@@ -10,13 +10,14 @@ public class Exercise5 {
 
         //System类中的arraycopy方法实现
         int[] newNums=new int[nums.length-1];
-        int number=33;
-        int index=-1;
-        for (int i = 0; i < nums.length; i++) {
-            if(nums[i]==number){
-                index=i;
-            }
-        }
+//        int number=33;
+//        int index=-1;
+//        for (int i = 0; i < nums.length; i++) {
+//            if(nums[i]==number){
+//                index=i;
+//            }
+//        }
+        int index=Arrays.binarySearch(nums,33);
         System.out.println("用System类中的arraycopy方法，得到的新数组newNums：");
         System.arraycopy(nums,0,newNums,0,index);
         System.arraycopy(nums,index+1,newNums,index,newNums.length-index);
