@@ -1,6 +1,5 @@
 package day3_809.exercise;
 
-import java.util.Arrays;
 
 public class Exercise3_2 {
     public static void main(String[] args) {
@@ -42,6 +41,7 @@ public class Exercise3_2 {
             }
             System.out.println();
         }
+        //插入排序
         int index=3;
         for (int i = 1; i < sum.length; i++) {
             int prevIndex=i-1;
@@ -54,9 +54,6 @@ public class Exercise3_2 {
             sum[prevIndex+1]=current;
             names[prevIndex+1]= currentN;
         }
-//        for (String n : names) {
-//            System.out.print("\t"+n+"\t");
-//        }
         System.out.println();
         System.out.println("按总成绩降序排序后的 学生姓名、每门课程的名称和该学生的成绩、该学生的总成绩：");
         for (int i = 0; i < sum.length; i++) {

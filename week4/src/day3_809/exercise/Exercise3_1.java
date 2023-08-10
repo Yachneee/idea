@@ -5,8 +5,8 @@ public class Exercise3_1 {
         //// 设 names 数组中存放学生姓名
         // 设 courses 数组中依次存放三门课程的名称
         // 设 scores 数组中依次存储的是 names 数组中各个学生的 C++ 、Java 、Python 课程的成绩
-        String[] names= { "安琪拉" , "王昭君" , "蔡文姬" , "妲己" , "张良" };
-        String[] courses= { "C++" , "Java" , "Python" };
+//        String[] names= { "安琪拉" , "王昭君" , "蔡文姬" , "妲己" , "张良" };
+//        String[] courses= { "C++" , "Java" , "Python" };
         int[][] scores= {
                  {  90 ,  89 ,  75 } ,
                  {  59 ,  40 , 100 } ,
@@ -24,6 +24,7 @@ public class Exercise3_1 {
 //                index=i;
 //            }
 //        }
+        //插入排序
         for (int i = 1; i < scores.length; i++) {
             int prevIndex=i-1;
             int[] current=scores[i];

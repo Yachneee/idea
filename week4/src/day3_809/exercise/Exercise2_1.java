@@ -17,27 +17,37 @@ public class Exercise2_1 {
                 {'相','顾','无','言','，','惟','有','泪','千','行','。'},
                 {'料','得','年','年','肠','断','处','，','明','月','夜','，','短','松','冈','。'}
         };
+        //找出ci[i]的最大长度(因为二维可以定义不同长度的数组，所以需要找到最长的，才能翻转)
         int k = 0;
-        //找出chunxiao[i]的最大长度(因为二维可以定义不同长度的数组，所以需要找到最长的，才能翻转)
-        for (int i = 0; i < ci.length; i++) {
-            for (int j = 0; j < ci[i].length; j++) {
-               if(j+1>k){
-                   k++;
-               }
+        for (char[] chars : ci) {
+            for (int j = 0; j < chars.length; j++) {
+                if (j + 1 > k) {
+                    k++;
+                }
             }
         }
         System.out.println(k);
-        char[][] ci1=new char[k][ci.length];
-        for (int i = 0; i < ci.length; i++) {
-            for (int j = 0; j < ci[i].length; j++) {
-                ci1[j][ci.length-1-i]=ci[i][j];
-            }
-        }
-        for (char[] r : ci1) {
-            for (char c : r) {
-                System.out.print(c+"\t");
+        for (int i = 0; i <k; i++) {
+            for (int j =ci.length-1; j >= 0; j--) {
+                if(i<ci[j].length){
+                    System.out.print("\t" + ci[j][i] + "\t");
+                }else{
+                    System.out.print("\t\t");
+                }
             }
             System.out.println();
         }
+//        char[][] ci1=new char[k][ci.length];
+//        for (int i = 0; i < ci.length; i++) {
+//            for (int j = 0; j < ci[i].length; j++) {
+//                ci1[j][ci.length-1-i]=ci[i][j];
+//            }
+//        }
+//        for (char[] r : ci1) {
+//            for (char c : r) {
+//                System.out.print(c+"\t");
+//            }
+//            System.out.println();
+//        }
     }
 }
