@@ -16,14 +16,16 @@ public class Exercise3 {
         //遍历数组，获取a去重后的数组长度l
         int l=1;
         for (int i = 1; i < a.length; i++) {
-            boolean same=false;
-            for (int j = 0; j <a.length && j!=i ; j++) {
+            int count=1;
+            for (int j = i-1; j>=0 ; j--) {
                 if(a[i]==a[j]){
-                    same=true;
+                    count++;
+                }
+                if(count>2){
                     break;
                 }
             }
-            if(!same){
+            if(count==1){
                 l++;
             }
         }
@@ -33,14 +35,16 @@ public class Exercise3 {
         //遍历数组，把互异的l个值存储在arr里
         int index=0;
         for (int i = 0; i < a.length; i++) {
-            boolean unique=true;
-            for (int j = 0; j <a.length && j!=i ; j++) {
+            int count=1;
+            for (int j = i-1; j >=0 ; j--) {
                 if(a[i]==a[j]){
-                    unique=false;
+                    count++;
+                }
+                if(count==2){
                     break;
                 }
             }
-            if(unique){
+            if(count==1){
                 arr[index]=a[i];
                 index++;
             }

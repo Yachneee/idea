@@ -3,7 +3,7 @@ package day2_808.exercise;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Exercise7 {
+public class Exercise7_1 {
     public static void main(String[] args) {
         //给定两个各不包含重复元素的数组 arr 和 arr1 ，求 arr 和 arr1 的交集(在 arr 中有，arr1 中也包含的元素集合)，
         // 将交集中的元素放到一个数组中并输出。
@@ -26,14 +26,16 @@ public class Exercise7 {
         //遍历数组，获取arr去重后的数组长度l
         int l=1;
         for (int i = 1; i < arr.length; i++) {
-            boolean same=false;
-            for (int j = 0; j <arr.length && j!=i ; j++) {
+            int count=1;
+            for (int j = i-1; j >=0 ; j--) {
                 if(arr[i]==arr[j]){
-                    same=true;
+                    count++;
+                }
+                if(count==2){
                     break;
                 }
             }
-            if(!same){
+            if(count==1){
                 l++;
             }
         }
@@ -43,14 +45,16 @@ public class Exercise7 {
         //遍历数组，把互异的l个值存储在arr里
         int index=0;
         for (int i = 0; i < arr.length; i++) {
-            boolean unique=true;
-            for (int j = 0; j <arr.length && j!=i ; j++) {
+            int count=1;
+            for (int j = i-1; j >=0; j--) {
                 if(arr[i]==arr[j]){
-                    unique=false;
+                    count++;
+                }
+                if(count==2){
                     break;
                 }
             }
-            if(unique){
+            if(count==1){
                 arrU[index]=arr[i];
                 index++;
             }
@@ -67,6 +71,9 @@ public class Exercise7 {
             for (int j = 0; j < arr1.length; j++) {
                 if(arrU[i]==arr1[j]){
                     count++;
+                }
+                if(count>0){
+                    break;
                 }
             }
             if(count>0){
@@ -85,11 +92,11 @@ public class Exercise7 {
                     count++;
                 }
                 if(count>0){
-                    sIndex++;
                     break;
                 }
             }
             if(count>0){
+                sIndex++;
                 same[sIndex]=arrU[i];
             }
         }

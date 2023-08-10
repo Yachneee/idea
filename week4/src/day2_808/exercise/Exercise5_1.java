@@ -11,8 +11,9 @@ public class Exercise5_1 {
         Scanner sc=new Scanner(System.in);
         Random r=new Random();
         int[] a=new int[20];
+        System.out.println("数组a为：");
         for (int i = 0; i < a.length; i++) {
-            a[i]=r.nextInt(50);
+            a[i]=r.nextInt(31);
             System.out.print(a[i]+"\t");
         }
         System.out.println();
@@ -32,6 +33,7 @@ public class Exercise5_1 {
             aSort[i]=aSort[maxIndex];
             aSort[maxIndex]=current;
         }
+        System.out.println("数组a降序后的数组aSort为：");
         for (int as : aSort) {
             System.out.print(as+"\t");
         }
@@ -39,34 +41,39 @@ public class Exercise5_1 {
         //遍历数组，获取a去重后的数组长度l
         int l=1;
         for (int i = 1; i < a.length; i++) {
-            boolean same=false;
-            for (int j = 0; j <a.length && j!=i ; j++) {
+            int count=1;
+            for (int j=i-1; j >=0 ; j--) {
                 if(a[i]==a[j]){
-                    same=true;
+                    count++;
+                }
+                if(count==2){
                     break;
                 }
             }
-            if(!same){
+            if(count==1){
                 l++;
             }
         }
-        System.out.println(l);
+        System.out.println("数组aSort中不重复的数字个数："+l);
         //遍历数组，将aSort去重后存进aSortUnique，并输出
         int[] aSortUnique=new int[l];
         int index=0;
         for (int i = 0; i < aSort.length; i++) {
-            boolean unique=true;
-            for (int j = 0; j < aSort.length && j!=i; j++) {
+            int count=1;
+            for (int j = i-1; j >=0; j--) {
                 if(aSort[i]==aSort[j]){
-                    unique=false;
+                    count++;
+                }
+                if(count==2){
                     break;
                 }
             }
-            if(unique){
+            if(count==1){
                 aSortUnique[index]=aSort[i];
                 index++;
             }
         }
+        System.out.println("数组aSort去重后的数组aSortUnique为：");
         for (int as : aSortUnique) {
             System.out.print(as+"\t");
         }
@@ -93,6 +100,7 @@ public class Exercise5_1 {
                 j++;
             }
         }
+        System.out.println("去掉数组a中第 n 大的数后的数组out为：");
         for (int out : aOut) {
             System.out.print(out+"\t");
         }

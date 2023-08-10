@@ -11,26 +11,12 @@ public class Exercise4_1 {
         Scanner sc=new Scanner(System.in);
         Random r=new Random();
         int[] a=new int[20];
+        System.out.println("数组a为：");
         for (int i = 0; i < a.length; i++) {
-            a[i]=r.nextInt(50);
+            a[i]=r.nextInt(31);
             System.out.print(a[i]+"\t");
         }
         System.out.println();
-        //遍历数组，获取a去重后的数组长度l
-        int l=1;
-        for (int i = 1; i < a.length; i++) {
-            boolean same=false;
-            for (int j = 0; j <a.length && j!=i ; j++) {
-                if(a[i]==a[j]){
-                    same=true;
-                    break;
-                }
-            }
-            if(!same){
-                l++;
-            }
-        }
-        System.out.println(l);
         //使用选择排序将a降序后存进aSort0，并输出
         int[] aSort0=new int[a.length];
         for (int i = 0; i < a.length; i++) {
@@ -47,26 +33,47 @@ public class Exercise4_1 {
             aSort0[i]=aSort0[maxIndex];
             aSort0[maxIndex]=current;
         }
+        System.out.println("数组a降序后的数组aSort0为：");
         for (int as : aSort0) {
             System.out.print(as+"\t");
         }
         System.out.println();
+        //遍历数组，获取a去重后的数组长度l
+        int l=1;
+        for (int i = 1; i < a.length; i++) {
+            int count=1;
+            for (int j = i-1; j>=0 ; j--) {
+                if(a[i]==a[j]){
+                    count++;
+                }
+                if(count>2){
+                    break;
+                }
+            }
+            if(count==1){
+                l++;
+            }
+        }
+        System.out.println("a中不重复的数字个数："+l);
         //遍历数组，将aSort0去重后存进aSort，并输出
         int[] aSort=new int[l];
         int index=0;
         for (int i = 0; i < aSort0.length; i++) {
-            boolean unique=true;
-            for (int j = 0; j < aSort0.length && j!=i; j++) {
-                if(aSort0[i]==aSort0[j]){
-                    unique=false;
+            int count=1;
+            for (int j = i-1; j >=0; j--) {
+                if(aSort0[j]==aSort0[i]){
+                    count++;
+                }
+                if(count==2){
                     break;
                 }
             }
-            if(unique){
+            if(count==1){
                 aSort[index]=aSort0[i];
                 index++;
             }
         }
+        System.out.println("数组aSort0去重后的数组aSort为：");
         for (int as : aSort) {
             System.out.print(as+"\t");
         }
