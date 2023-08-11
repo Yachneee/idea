@@ -27,6 +27,16 @@ public class Exercise7 {
         return a;
     }
 
+    public static void leftShift2(int[]arr, int n) {
+        for (int i = 0; i < n; i++) {
+            int temp = arr[0];
+            for (int j = 0; j < arr.length-1; j++) {
+                arr[j] = arr[j + 1];
+            }
+            arr[arr.length - 1] = temp;
+        }
+    }
+
     public static void main(String[] args) {
         int[] a=new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
         Scanner sc=new Scanner(System.in);
@@ -35,5 +45,7 @@ public class Exercise7 {
         System.out.println(Arrays.toString(leftShift(a,place)));
 
         System.out.println(Arrays.toString(leftShift1(a,place)));
+        leftShift2(a,place);
+        System.out.println(Arrays.toString(a));
     }
 }
