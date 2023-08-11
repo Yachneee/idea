@@ -4,7 +4,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Tree {
-    static int grow = 11; // 树初始成长值，当成长值 归零或小于0时，树死亡
+    static int grow = 11;
+    /** 树初始成长值，当成长值 归零或小于0时，树死亡 */
     static int count=1;
     static int prevGrow=0;
     public static void main(String[] args){
@@ -27,11 +28,14 @@ public class Tree {
                 case 3: fertilize();
                 break;
                 default: worms();
-            };
+            }
             if(grow<=0){
                 System.out.println("Oh,so bad. 你的树死啦！");
                 break;
             }
+        }
+        if(grow>0) {
+            System.out.println("操作 " + n + " 次后，你的树最终成长值为：" + grow);
         }
 
     }
@@ -64,18 +68,18 @@ public class Tree {
      连续生虫三次，生长值额外 - 20
      */
     public static void worms(){
-        if(grow == prevGrow){
+        if(grow == prevGrow) {
             count++;
+        }else{
+            count=1;
         }
-        grow-=10;
-        if(count==3){
-            grow-=20;
+        if(count%3==0){
+            grow-=30;
+            System.out.println("Very bad!! 连续 3 次生虫, 成长值-10 -20,剩余成长值："+grow);
+        }else{
+            grow-=10;
+            System.out.println("Bad! 第 "+count+" 次生虫, 成长值-10,剩余成长值："+grow);
         }
         prevGrow=grow;
-        if(count<3){
-            System.out.println("Bad! 第 "+count+" 次生虫, 成长值-10,剩余成长值："+grow);
-        }else if(count==3){
-            System.out.println("Very bad!! 连续 3 次生虫, 成长值-10 -20,剩余成长值："+grow);
-        }
     }
 }
