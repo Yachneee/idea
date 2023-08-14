@@ -30,5 +30,14 @@ public class Exercise10 {
             a_copy[i]=a[a.length-i-1];
             System.out.print(a_copy[i]+"\t");
         }
+        System.out.println();
+        for (int i = 0; i < a.length/2; i++) {
+            a[i]=a[i]^a[a.length-1-i];
+            a[a.length-1-i]=a[i]^a[a.length-1-i];
+            a[i]=a[i]^a[a.length-1-i];
+        }
+        for (int c : a) {
+            System.out.print(c+"\t");
+        }
     }
 }
