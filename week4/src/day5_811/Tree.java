@@ -30,7 +30,7 @@ public class Tree {
                 default: worms();
             }
             if(grow<=0){
-                System.out.println("Oh,so bad. 你的树死啦！");
+                System.out.println("Game over! 你的树死啦！");
                 break;
             }
         }
