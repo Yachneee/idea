@@ -1,6 +1,9 @@
 package day5_811;
 
-public class RecursionFeibo {
+/**
+ * @author Administrator
+ */
+public class RecursionFibo {
     public static int fibo(int n){
         if(n==1 || n==2){
             return 1;
