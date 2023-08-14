@@ -7,29 +7,30 @@ public class ResolveNum {
         Scanner sc=new Scanner(System.in);
         System.out.print("请输入一个数字：");
         int num= sc.nextInt();
-        System.out.print(num+"= 1");
+        System.out.print(num+"=");
         divisor(num);
+        divisor1(num);
     }
 
-    public static boolean prime(int d){
-        for (int i = 2; i < d; i++) {
-            if(d%i==0){
-                return false;
+    public static void divisor(int num){
+        for (int i = num/2; i >=2;) {
+            if(num%i==0){
+                System.out.print(num/i+"*");
+                num=i;
+                i=num/2;
+//                divisor(num);
+            }else{ i--;}
+        }
+        System.out.print(num);
+    }
+    public static void divisor1(int num){
+        for (int i = 2; i <=num/2;i++) {
+            if(num%i==0){
+                System.out.print(i+"*");
+                num=num/i;
+                i=1;
             }
         }
-        return true;
-    }
-
-    public static boolean divisor(int num,int d){
-        return num%d==0;
-    }
-    public static int divisor(int num){
-        for (int i = 2; i <= num; i++) {
-            if(prime(i)&&divisor(num,i)){
-                System.out.print("*"+i);
-                return divisor(num/i);
-            }
-        }
-        return 1;
+        System.out.print(num);
     }
 }
