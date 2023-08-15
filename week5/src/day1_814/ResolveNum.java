@@ -8,8 +8,9 @@ public class ResolveNum {
         System.out.print("请输入一个数字：");
         int num= sc.nextInt();
         System.out.print(num+"=");
-        divisor(num);
-        divisor1(num);
+//        divisor(num);
+//        divisor1(num);
+        divisor2(num);
     }
 
     public static void divisor(int num){
@@ -32,5 +33,17 @@ public class ResolveNum {
             }
         }
         System.out.print(num);
+    }
+    public static void divisor2(int num){
+        for(int i=2;i<=num/2;i++){
+            while(num%i==0){
+                if(num/i==1){
+                    System.out.print(i);
+                }else{
+                    System.out.print(i+"*");
+                }
+                num/=i;
+            }
+        }
     }
 }
