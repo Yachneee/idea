@@ -13,6 +13,6 @@ public class Book {
         this.price=price;
     }
     public void showBook(){
-        System.out.println(title+"是"+year+"年"+author+"出版的，价格为："+price);
+        System.out.println(title+"是"+year+"年出版的，作者为："+author+"，价格为："+price);
     }
 }
