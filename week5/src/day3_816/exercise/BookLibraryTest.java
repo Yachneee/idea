@@ -1,5 +1,5 @@
 package day3_816.exercise;
-public class LibraryTest {
+public class BookLibraryTest {
     public static void main(String[] args) {
         Library stack=new Library(3);
         stack.addBook("《小王子》","安托万·德·圣埃克苏培里",1943,20);

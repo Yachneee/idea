@@ -17,6 +17,9 @@ public class BankAccount {
     public String getAccountHolder(){
         return accountHolder;
     }
+    public double getBalance(){
+        return balance;
+    }
     public void setBalanceDeposit(double balance){
         this.balance+=balance;
     }
