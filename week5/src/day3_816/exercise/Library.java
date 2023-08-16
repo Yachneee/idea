@@ -8,24 +8,24 @@ public class Library {
         books=new Book[num];
         index=0;
     }
-    public void addBook(Book book){
-        if(index== books.length){
-            System.out.println("书库已满，不可添加！");
-        }else{
-            books[index]=book;
-            System.out.println("添加成功！");
-            index++;
-        }
-    }
-//    public void addBook(String title,String author,int year,double price){
+//    public void addBook(Book book){
 //        if(index== books.length){
 //            System.out.println("书库已满，不可添加！");
 //        }else{
-//            books[index]=new Book(title,author,year,price);
+//            books[index]=book;
 //            System.out.println("添加成功！");
 //            index++;
 //        }
 //    }
+    public void addBook(String title,String author,int year,double price){
+        if(index== books.length){
+            System.out.println("书库已满，不可添加！");
+        }else{
+            books[index]=new Book(title,author,year,price);
+            System.out.println("添加成功！");
+            index++;
+        }
+    }
 
     public void findBook(String title){
         int i = 0;
