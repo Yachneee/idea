@@ -13,8 +13,8 @@ public class BookLibraryTest {
             switch (n) {
                 case 1 -> addBook();
                 case 2 -> findBook();
-                case 3 -> showAllbook();
-                default -> {
+                case 3 -> showAllBook();
+                case 4 -> {
                     System.out.println("退出成功，再见！");
                     return;
                 }
@@ -27,7 +27,7 @@ public class BookLibraryTest {
         System.out.println("1. 添加图书");
         System.out.println("2. 查找图书");
         System.out.println("3. 显示所有图书");
-        System.out.println("0. 退出");
+        System.out.println("4. 退出");
         System.out.println("-------------");
     }
     public static void addBook(){
@@ -40,10 +40,10 @@ public class BookLibraryTest {
         System.out.print("请输入图书价格：");
         double price= sc.nextDouble();
         Book b = new Book(title, name, year, price);
-        if(lib.addBook(b)){
+        if(lib.addBook1(b)){
             System.out.println("添加成功！");
         }else{
-            System.out.println("书库已满，不可添加！");
+            System.out.println("识别不到内容，添加失败！");
         }
     }
     public static void findBook(){
@@ -55,8 +55,9 @@ public class BookLibraryTest {
         }else{
             book.showBook();
         }
+
     }
-    public static void showAllbook(){
+    public static void showAllBook(){
         lib.showBooks();
     }
 }
