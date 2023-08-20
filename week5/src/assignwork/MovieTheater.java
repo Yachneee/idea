@@ -7,7 +7,7 @@ public class MovieTheater {
     private Movie[] movies;
     int index1;
     private User[] users;
-    int index2=0;
+    int index2;
     public MovieTheater(int a,int b){
         movies=new Movie[2+a];
         movies[0]=new Movie("消失的她",42.9,"饶晓志",20230622,5);
@@ -39,7 +39,7 @@ public class MovieTheater {
     /**
      * 根据电影名称查询电影组中的电影
      * @param name
-     * @return查询到的电影
+     * @return movies[i] 查询到的电影
      */
     public Movie findMovie(String name){
         for (int i = 0; i < index1; i++) {
@@ -53,6 +53,31 @@ public class MovieTheater {
     }
 
     /**
+     * 根据电影名称删除电影组中的电影（新建一个等长的对象组，把除了该电影外的其它电影复制到新电影组中，最后把新电影组（地址）赋给旧电影组）
+     */
+    public void deleteMovie(String name){
+        if (name == null) {
+            return;
+        }
+        int nameIndex=-1;
+        for (int i = 0; i < index1; i++) {
+             if (movies[i].getName().equals(name)) {
+                 nameIndex=i;
+                 break;
+             }
+        }
+        if(nameIndex==-1){
+            System.out.println("没有找到该电影");
+        }else{
+            Movie[] moviesNew=new Movie[movies.length];
+            System.arraycopy(movies,0,moviesNew,0,nameIndex);
+            System.arraycopy(movies,nameIndex+1,moviesNew,nameIndex,index1-nameIndex-1);
+            movies=moviesNew;
+            System.out.println("删除"+name+"成功");
+            index1--;
+        }
+    }
+    /**
      * 显示所有电影信息
      */
     public void showAllMovies(){
@@ -64,7 +89,7 @@ public class MovieTheater {
     /**
      * 往电影组里添加电影
      * @param movie
-     * @return添加结果（成功/失败）
+     * @return boolean 添加结果（成功/失败）
      */
     public boolean addMovie(Movie movie){
         expandMovie();
@@ -92,7 +117,7 @@ public class MovieTheater {
     /**
      * 往用户组里添加用户
      * @param user
-     * @return添加结果（成功/失败）
+     * @return boolean 添加结果（成功/失败）
      */
     public boolean addUser(User user){
         expandUser();
@@ -120,7 +145,7 @@ public class MovieTheater {
     /**
      * 查找用户组中是否有该用户
      * @param user
-     * @return有就返回用户，否则返回null
+     * @return user[i] 有就返回用户，否则返回null
      */
     public User findUser(User user){
         for (int i = 0; i < index2; i++) {

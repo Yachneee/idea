@@ -34,7 +34,7 @@ public class Test {
     public static void menu(){
         System.out.println("-+---------------------------+-");
         System.out.println("1.查询电影信息");
-        System.out.println("2.显示所有电影信息(按照评分降序显示)");
+        System.out.println("2.显示所有电影信息");
         System.out.println("3.管理员登陆");
         System.out.println("4.用户登录");
         System.out.println("5.用户注册");
@@ -57,22 +57,22 @@ public class Test {
     }
 
     /**
-     * （系统界面功能2）显示所有电影信息（按照评分降序显示）
+     * （系统界面功能2）显示所有电影信息(按照日期降序显示)
      */
     public static void showAllMovies(){
-        sortScore(cinema.getMovies());
+        sortDate(cinema.getMovies());
         cinema.showAllMovies();
     }
 
     /**
-     * 按照评分降序排序电影组
+     * 按照日期降序排序电影组
      * @param movies
      */
-    public static void sortScore(Movie[] movies){
+    public static void sortDate(Movie[] movies){
         for (int i = 1; i < cinema.index1; i++) {
             int j=i-1;
             Movie current=movies[i];
-            for(;j>=0 && current.getScore()>movies[j].getScore();j--){
+            for(;j>=0 && current.getDate()>movies[j].getDate();j--){
                 movies[j+1]=movies[j];
             }
             movies[j+1]=current;
@@ -149,10 +149,11 @@ public class Test {
     public static void managerList(){
         System.out.println("-+----------------------------------------------------------------------------------------+-");
         System.out.println("1. 新增电影");
-        System.out.println("2. 删除电影(输入电影名称，删除对应电影)");
-        System.out.println("3. 修改电影（输入电影名称，展示电影信息，选择要修改的内容（价格/上映时间），输入内容，修改已存储的电影信息）");
-        System.out.println("4. 查看所有用户信息");
-        System.out.println("5. 退出");
+        System.out.println("2. 删除电影");
+        System.out.println("3. 修改电影");
+        System.out.println("4. 显示所有电影");
+        System.out.println("5. 查看所有用户信息");
+        System.out.println("6. 退出");
         System.out.println("-+-----------------------------+-");
     }
 
@@ -162,14 +163,15 @@ public class Test {
     public static void managerOpe(){
         while(true){
             managerList();
-            System.out.println("请输入你要操作的编号：");
+            System.out.print("请输入你要操作的编号：");
             int num= sc.nextInt();
             switch (num){
                 case 1-> addMovie();
                 case 2-> deleteMovie();
                 case 3-> changeMovie();
-                case 4-> showAllUsers();
-                case 5-> {
+                case 4-> showAllMovies();
+                case 5-> showAllUsers();
+                case 6-> {
                     System.out.println("退出管理员界面成功");
                     return;
                 }
@@ -204,33 +206,27 @@ public class Test {
     public static void deleteMovie(){
         System.out.print("请输入电影名称：");
         String name=sc.next();
-        Movie movie=cinema.findMovie(name);
-        if(movie==null){
-            System.out.println("没有找到电影，请检查输入是否有误");
-        }else {
-            movie = null;
-            System.out.println("删除成功");
-        }
+        cinema.deleteMovie(name);
     }
     /**
      * （管理员界面功能3）修改电影（输入电影名称，展示电影信息，选择要修改的内容（价格/上映时间），输入内容，修改已存储的电影信息）
      */
     public static void changeMovie(){
-        System.out.println("请输入电影名称：");
+        System.out.print("请输入电影名称：");
         String name=sc.next();
         Movie movie=cinema.findMovie(name);
         if(movie==null){
             System.out.println("没有找到电影");
         }else{
-            System.out.println("找到电影："+ movie);
-            System.out.println("请选择你要修改的内容(请输入对应编号：1.价格/2.上映时间)：");
+            System.out.println("找到电影：\t"+ movie);
+            System.out.print("请选择你要修改的内容(请输入对应编号：1.价格/2.上映时间)：");
             int i = sc.nextInt();
             if(i==1){
                 System.out.print("请输入价格：");
                 double price=sc.nextDouble();
                 movie.setPrice(price);
                 System.out.println("成功修改价格");
-            } else if (i==2) {
+            }else{
                 System.out.print("请输入上映时间(形如20230101)：");
                 int date = sc.nextInt();
                 movie.setDate(date);
@@ -241,7 +237,7 @@ public class Test {
 
     }
     /**
-     * （管理员界面功能4）查看所有用户信息
+     * （管理员界面功能5）查看所有用户信息
      */
     public static void showAllUsers(){
         cinema.showAllUsers();
@@ -288,7 +284,7 @@ public class Test {
      */
     public static void changeUser(){
         while(true){
-            System.out.println("请输入你要修改的内容(1->username,2->phone,3->password,4->role,其它->退出)：");
+            System.out.print("请输入你要修改的内容(1->username,2->phone,3->password,4->role,5->退出)：");
             int num=sc.nextInt();
             switch (num){
                 case 1-> {
@@ -315,7 +311,7 @@ public class Test {
                     man2.setRole(role);
                     System.out.println("修改role成功！");
                 }
-                default -> {
+                case 5-> {
                     System.out.println("退出成功！");
                     return;
                 }

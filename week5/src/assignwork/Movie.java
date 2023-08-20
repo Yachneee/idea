@@ -8,7 +8,6 @@ public class Movie {
     //电影票数量
     private int date;
     //2023年1月1日写成20230101
-    private double score;
     public String getName() {
         return name;
     }
@@ -41,14 +40,6 @@ public class Movie {
         this.date = date;
     }
 
-    public double getScore() {
-        return score;
-    }
-
-    public void setScore(double score) {
-        this.score = score;
-    }
-
     public int getTicketCount() {
         return ticketCount;
     }
@@ -72,7 +63,6 @@ public class Movie {
                 "',price='"+price+
                 "',director='"+director+
                 "',date='"+date+
-                "',score='"+score+
                 "',ticketCount='"+ticketCount+
                 "'}";
     }
