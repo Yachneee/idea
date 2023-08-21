@@ -38,7 +38,7 @@ public class MovieTheater {
 
     /**
      * 根据电影名称查询电影组中的电影
-     * @param name
+     * @param name 要查询的电影名
      * @return movies[i] 查询到的电影
      */
     public Movie findMovie(String name){
@@ -88,7 +88,7 @@ public class MovieTheater {
 
     /**
      * 往电影组里添加电影
-     * @param movie
+     * @param movie 要添加的电影
      * @return boolean 添加结果（成功/失败）
      */
     public boolean addMovie(Movie movie){
@@ -116,7 +116,7 @@ public class MovieTheater {
 
     /**
      * 往用户组里添加用户
-     * @param user
+     * @param user 要添加的用户
      * @return boolean 添加结果（成功/失败）
      */
     public boolean addUser(User user){
@@ -144,7 +144,7 @@ public class MovieTheater {
 
     /**
      * 查找用户组中是否有该用户
-     * @param user
+     * @param user 要查找的用户
      * @return user[i] 有就返回用户，否则返回null
      */
     public User findUser(User user){

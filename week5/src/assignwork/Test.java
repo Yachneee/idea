@@ -66,7 +66,7 @@ public class Test {
 
     /**
      * 按照日期降序排序电影组
-     * @param movies
+     * @param movies 要排序的电影对象组
      */
     public static void sortDate(Movie[] movies){
         for (int i = 1; i < cinema.index1; i++) {
@@ -147,7 +147,7 @@ public class Test {
      * 管理员界面功能列表
      */
     public static void managerList(){
-        System.out.println("-+----------------------------------------------------------------------------------------+-");
+        System.out.println("-+-----------------------------+-");
         System.out.println("1. 新增电影");
         System.out.println("2. 删除电影");
         System.out.println("3. 修改电影");

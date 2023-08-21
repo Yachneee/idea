@@ -80,8 +80,8 @@ public class User {
 
     /**
      * 比较两个对象是否是同一个对象（电话+密码符合就算一样）
-     * @param obj
-     * @return比较结果（一样/不一样）
+     * @param obj 比较的对象（和当前对象）
+     * @return 比较结果（一样/不一样）
      */
     @Override
     public boolean equals(Object obj) {
