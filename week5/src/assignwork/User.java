@@ -19,7 +19,9 @@ public class User {
         this.phone=phone;
         this.password=password;
         movies=new Movie[10];
-    }public User(String username,String phone,String password,int role){
+    }
+
+    public User(String username,String phone,String password,int role){
         this.username=username;
         this.phone=phone;
         this.password=password;
@@ -87,8 +89,10 @@ public class User {
             return true;
         }
         if(obj instanceof User u){
-            if((u.phone==null && this.phone==null)||(u.phone.equals(this.phone))){
-                return (u.password == null && this.password == null) || (u.password.equals(this.password));
+            if (u.phone != null && u.phone.equals(this.phone)) {
+                if (u.password != null) {
+                    return u.password.equals(this.password);
+                }
             }
         }
         return false;

@@ -73,9 +73,9 @@ public class Movie {
             return true;
         }
         if(obj instanceof Movie m){
-            if((m.name==null&&this.name==null)||(m.name.equals(this.name))){
-                if((m.director==null &&this.director==null)||(m.director.equals(this.director))){
-                    return m.date==this.date;
+            if (m.name != null && m.name.equals(this.name)) {
+                if (m.director != null && m.director.equals(this.director)) {
+                    return m.date == this.date;
                 }
             }
         }
