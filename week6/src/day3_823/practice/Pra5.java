@@ -12,8 +12,9 @@ public class Pra5 {
      * @return 文件后缀
      */
     public static String fileSuffix(String fileName){
-        int index=fileName.lastIndexOf('.');
-        return fileName.substring(index+1);
+//        int index=fileName.lastIndexOf('.');
+//        return fileName.substring(index+1);
+        return fileName.substring(fileName.lastIndexOf('.')+1);
     }
 
     public static void main(String[] args) {

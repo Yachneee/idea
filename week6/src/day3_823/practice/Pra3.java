@@ -12,9 +12,23 @@ public class Pra3 {
      * @return 若是对称的返回true，否则返回false
      */
     public static boolean symmetryStr(String str){
+        if(str==null||str.isEmpty()||str.isBlank()){
+            return false;
+        }
         char[] chars=str.toCharArray();
         for (int i = 0; i < chars.length / 2; i++) {
             if(chars[i]!=chars[chars.length-i-1]){
+                return false;
+            }
+        }
+        return true;
+    }
+    public static boolean isDuiChen(String str){
+        if(str==null||str.isEmpty()||str.isBlank()){
+            return false;
+        }
+        for (int i = 0; i < str.length()/2; i++) {
+            if(str.charAt(i)!=str.charAt(str.length()-i-1)){
                 return false;
             }
         }
@@ -26,6 +40,7 @@ public class Pra3 {
         System.out.print("请输入一个字符串：");
         String str=sc.nextLine();
         String judge=symmetryStr(str)? "是":"不是";
+        System.out.println(isDuiChen(str));
         System.out.printf("%s %s对称的字符串",str,judge);
     }
 }

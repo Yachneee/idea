@@ -6,6 +6,8 @@ import java.util.Scanner;
  * @author Administrator
  */
 public class Pra1 {
+    private static final String NAME="kfm";
+    private static final String PASS="123456";
     /**
      *
       使用字符串的功能完成登录案例。案例需求如下：
@@ -14,12 +16,13 @@ public class Pra1 {
       登录成功后展示：“欢迎进入系统！”，即可停止程序。（最多三次登录机会）
      */
     public static boolean login(String name,String password){
-        return "kfm".equals(name)&& "123456".equals(password);
+        return (name!=null)&&name.equals(NAME) && (password!=null)&&password.equals(PASS);
     }
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        for(int i=0;i<3;i++){
+        int count=3;
+        for(int i=0;i<count;i++){
             System.out.print("请输入登录名：");
             String name=sc.next();
             System.out.print("请输入密码：");
@@ -28,7 +31,7 @@ public class Pra1 {
                 System.out.println("欢迎进入系统！");
                 break;
             }else{
-                System.out.println("你输入的登录名或密码有误，请重新输入！");
+                System.out.printf("你还有 %d 次机会。\n",count-i-1);
             }
             if(i==2){
                 System.out.println("账户暂时被锁定！");
