@@ -1,7 +1,6 @@
 package day4_824;
 
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 /**
  * @author Administrator
