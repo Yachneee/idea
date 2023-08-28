@@ -40,15 +40,20 @@ public class Calculator {
             }
             str=str.substring(0,left+1)+c+str.substring(right);
         }
-        while(str.contains("+")||str.contains("-")){
-            int index=str.indexOf("-");
-            int index1=str.indexOf("+");
+        while(str.contains("+")||(str.contains("-"))){
+            int index=str.indexOf("+");
+            int index1=str.indexOf("-",1);
             if(index==-1){
                 index=index1;
+            }else if(index1!=-1&&index1<index){
+                index=index1;
+            }
+            if(index==-1){
+                break;
             }
             int left=index-1;
             int right=index+1;
-            while(left>=0 && Character.isDigit(str.charAt(left))){
+            while(left>=0 && (Character.isDigit(str.charAt(left))||str.charAt(left)=='-')){
                 left--;
             }
             while(right<str.length() && Character.isDigit(str.charAt(right))){
