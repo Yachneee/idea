@@ -14,18 +14,18 @@ public class ValidBracket {
      * @return 有效返回true，无效返回false
      */
     public static boolean validBra(String str){
-        if(str.length()==0){
+        if(str==null){
             return false;
         }
-        if(str.contains("()")||str.contains("[]")||str.contains("{}")||str.contains("【】")||str.contains("（）")){
+        str=str.replace(" ","");
+        while(str.contains("()")||str.contains("[]")||str.contains("{}")||str.contains("【】")||str.contains("（）")){
             str=str.replace("()","");
             str=str.replace("[]","");
             str=str.replace("{}","");
             str=str.replace("【】","");
             str=str.replace("（）","");
-            return str.isEmpty() || str.isBlank();
         }
-        return false;
+        return str.isEmpty() || str.isBlank();
     }
 
     public static void main(String[] args) {
