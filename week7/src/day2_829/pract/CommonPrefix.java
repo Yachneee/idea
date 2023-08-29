@@ -22,13 +22,9 @@ public class CommonPrefix {
         }
         String str="";
         outer:for (int i = 0; i < strings[0].length(); i++) {
-            boolean con=true;
             char c=strings[0].charAt(i);
             for (int j = 1; j < strings.length; j++) {
-                if(strings[j].charAt(i)!=c){
-                    con=false;
-                }
-                if(!con){
+                if (strings[j].charAt(i) != c) {
                     break outer;
                 }
             }
