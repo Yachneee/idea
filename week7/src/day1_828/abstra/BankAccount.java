@@ -26,8 +26,8 @@ public abstract class BankAccount {
     public void setBalance(double balance) {
         this.balance = balance;
     }
-    abstract boolean withdraw(double money);
-    abstract double deposit(double money);
+    abstract void withdraw(double money);
+    abstract void deposit(double money);
 }
 class SavingAccount extends BankAccount{
 
@@ -36,47 +36,59 @@ class SavingAccount extends BankAccount{
     }
 
     @Override
-    boolean withdraw(double money) {
+    void withdraw(double money) {
         if(money<=getBalance()){
-            setBalance(getBalance()-money);
-            return true;
+            super.setBalance(super.getBalance()-money);
+            System.out.printf("取款%.2f成功，余额%.2f\n",money,super.getBalance());
+        }else{
+            System.out.println("余额不足！");
         }
-        return false;
     }
 
     @Override
-    double deposit(double money) {
+    void deposit(double money) {
         setBalance(getBalance()+money);
-        return getBalance();
+        System.out.println("存款成功！"+money);
     }
 }
 class CheckingAccount extends BankAccount{
-    private final double overdraftLimit=1000;
+    private double overdraftLimit;
 
-    CheckingAccount(String accountNumber, double balance) {
+    CheckingAccount(String accountNumber, double balance,double overdraftLimit) {
         super(accountNumber, balance);
+        this.overdraftLimit=overdraftLimit;
     }
 
     @Override
-    boolean withdraw(double money) {
+    void withdraw(double money) {
+        double balance=super.getBalance()-money;
         if(money<=getBalance()+overdraftLimit){
-            setBalance(getBalance()-money);
-            return true;
+            setBalance(balance<0?0:balance);
+            if(balance<0){
+                overdraftLimit+=balance;
+            }
+            System.out.printf("取款%.2f成功，余额%.2f，透支额度%.2f\n",money,super.getBalance(),overdraftLimit);
+        }else{
+            System.out.println("透支额度不足！");
         }
-        return false;
     }
 
     @Override
-    double deposit(double money) {
-        setBalance(getBalance()+money);
-        return getBalance();
+    void deposit(double money) {
+        super.setBalance(super.getBalance()+money);
+        System.out.println("存款成功！"+money);
     }
 }
 class Test2{
     public static void main(String[] args) {
         BankAccount bk=new SavingAccount("12345",5000);
-        BankAccount bk1=new CheckingAccount("11111",10000);
-        System.out.println(bk.deposit(1000));
-        System.out.println(bk.withdraw(6100)?"取钱成功":"取钱失败");
+        BankAccount bk1=new CheckingAccount("11111",10000,4000);
+        bk.deposit(1000);
+        bk.withdraw(5100);
+        bk.withdraw(1000);
+        bk1.deposit(10000);
+        bk1.withdraw(15000);
+        bk1.withdraw(8000);
+        bk1.withdraw(1100);
     }
 }
