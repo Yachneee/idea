@@ -63,8 +63,9 @@ class MyStack extends Stack{
         if(isEmpty()){
             return null;
         }
-        Object top=peek();
-        System.arraycopy(objs,count,objs,count-1,objs.length-count);
+        Object top=objs[count-1];
+//        System.arraycopy(objs,count,objs,count-1,objs.length-count);
+        objs[count-1]=null;
         count--;
         return top;
     }
