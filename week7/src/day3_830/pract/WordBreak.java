@@ -53,8 +53,7 @@ public class WordBreak {
             if(!booleans[i]){
                 for (int j = index-1; j >= 0; j--) {
                     newS1=s.charAt(j)+newS1;
-                    String newS2=s.substring(0,j);
-                    if(inDict(newS1,wordDict)&&(inDict(newS2,wordDict)|| "".equals(newS2))){
+                    if(inDict(newS1,wordDict)&&(booleans[j]||s.indexOf(newS1)==0)){
                         booleans[i] = true;
                         index = i + 1;
                     }
@@ -71,6 +70,27 @@ public class WordBreak {
             }
         }
         return false;
+    }
+    public static boolean wordBreak4(String s, String[] wordDict) {
+        if (s == null || s.isEmpty()) {
+            return false;
+        }
+        boolean[] arr = new boolean[s.length() + 1];
+        arr[0] = true;
+        for (int i = 1; i <= s.length(); i++) {
+            inner:
+            for (int j = 0; j < i; j++) {
+                String str = s.substring(j, i);
+                for (int k = 0; k < wordDict.length; k++) {
+                    if (wordDict[k].equals(str) && arr[j]) {
+                        arr[i] = true;
+                        break inner;
+                    }
+                }
+            }
+
+        }
+        return arr[s.length()];
     }
 
     public static void main(String[] args) {
@@ -89,6 +109,8 @@ public class WordBreak {
         //不能
         //TODO 有bug
         System.out.printf("%s %s 被拆分为 %s 中的单词\n",string1,(wordBreak3(string1, wordDict1)?"能":"不能"),Arrays.toString(wordDict1));
+        //能
+        System.out.printf("%s %s 被拆分为 %s 中的单词\n",string1,(wordBreak4(string1, wordDict1)?"能":"不能"),Arrays.toString(wordDict1));
         //能
     }
 }
