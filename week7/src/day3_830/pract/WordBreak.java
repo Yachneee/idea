@@ -24,7 +24,7 @@ public class WordBreak {
         }
         return str.length() == 0;
     }
-    public static boolean wordBre(String s,String[] wordDict){
+    public static boolean wordBreak2(String s,String[] wordDict){
         boolean[] booleans=new boolean[s.length()];
         int index=0;
         for (int i = 0; i < s.length(); i++) {
@@ -40,22 +40,56 @@ public class WordBreak {
         System.out.println(Arrays.toString(booleans));
         return booleans[s.length()-1];
     }
+    public static boolean wordBreak3(String s,String[] wordDict){
+        boolean[] booleans=new boolean[s.length()];
+        int index=0;
+        for (int i = 0; i < s.length(); i++) {
+            String str=s.substring(index,i+1);
+            if(inDict(str,wordDict)){
+                booleans[i] = true;
+                index = i + 1;
+            }
+            String newS1=str;
+            if(!booleans[i]){
+                for (int j = index-1; j >= 0; j--) {
+                    newS1=s.charAt(j)+newS1;
+                    String newS2=s.substring(0,j);
+                    if(inDict(newS1,wordDict)&&(inDict(newS2,wordDict)|| "".equals(newS2))){
+                        booleans[i] = true;
+                        index = i + 1;
+                    }
+                }
+            }
+        }
+        System.out.println(Arrays.toString(booleans));
+        return booleans[s.length()-1];
+    }
+    public static boolean inDict(String s,String[] dict){
+        for (String value : dict) {
+            if (s.equals(value)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
         String string="cars";
         String[] wordDict= {"car","ca","rs"};
         System.out.printf("%s %s 被拆分为字典中的单词\n",string,(wordBreak(string, wordDict)?"能":"不能"));
         //不能
         //TODO 有bug
-        System.out.printf("%s %s 被拆分为字典中的单词\n",string,(wordBre(string, wordDict)?"能":"不能"));
+        System.out.printf("%s %s 被拆分为字典中的单词\n",string,(wordBreak2(string, wordDict)?"能":"不能"));
         //能
         String string1="hellocode";
-        String[] wordDict1= {"hello","code","he"};
+        String[] wordDict1= {"he","hello","code"};
         System.out.printf("%s %s 被拆分为字典中的单词\n",string1,(wordBreak(string1, wordDict1)?"能":"不能"));
-        //能
-        System.out.printf("%s %s 被拆分为字典中的单词\n",string1,(wordBre(string1, wordDict1)?"能":"不能"));
+        //不能
+        System.out.printf("%s %s 被拆分为字典中的单词\n",string1,(wordBreak2(string1, wordDict1)?"能":"不能"));
         //不能
         //TODO 有bug
-
+        System.out.printf("%s %s 被拆分为 %s 中的单词\n",string1,(wordBreak3(string1, wordDict1)?"能":"不能"),Arrays.toString(wordDict1));
+        //能
     }
 }
 
