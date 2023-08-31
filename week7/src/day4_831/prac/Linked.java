@@ -1,62 +1,43 @@
 package day4_831.prac;
-
 import java.util.Objects;
 
 /**
  * @author Administrator
  */
-class Node {
-    private Object value;
-    private Node next;
-    public Node(Object value,Node next){
-        this.value=value;
-        this.next=next;
-    }
-
-    public Object getValue() {
-        return value;
-    }
-
-    public void setValue(Object value) {
-        this.value = value;
-    }
-
-    public Node getNext() {
-        return next;
-    }
-    public void setNext(Node next) {
-        this.next = next;
-    }
-
-    @Override
-    public String toString() {
-        return "Node{" +
-                "元素值：" + value +
-                ", 下一个元素：" + next +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        Node node = (Node) o;
-        return Objects.equals(value, node.value) && Objects.equals(next, node.next);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(value, next);
-    }
-}
-/**
- * @author Administrator
- */
 public class Linked{
+    static class Node {
+        private Object value;
+        private Node next;
+        public Node(Object value,Node next){
+            this.value=value;
+            this.next=next;
+        }
+
+        @Override
+        public String toString() {
+            return "Node{" +
+                    "元素值：" + value +
+                    ", 下一个元素：" + next +
+                    '}';
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) {
+                return true;
+            }
+            if (o == null || getClass() != o.getClass()) {
+                return false;
+            }
+            Node node = (Node) o;
+            return Objects.equals(value, node.value) && Objects.equals(next, node.next);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(value, next);
+        }
+    }
     private Node first;
     private int size;
 
@@ -88,10 +69,10 @@ public class Linked{
         Node t=first;
         while(t!=null){
             //传入的是Node  ||  传入的不是Node,比较值
-            if(t.equals(o)||t.getValue().equals(o)){
+            if(t.equals(o)||t.value.equals(o)){
                 return true;
             }
-            t=t.getNext();
+            t=t.next;
         }
         return false;
     }
@@ -103,16 +84,16 @@ public class Linked{
      */
     public boolean add(Object o){
         size++;
-        Node node=new Node(o,null);
+        Node node= new Node(o, null);
         if(first==null){
             first=node;
             return true;
         }
         Node t=first;
-        while(t.getNext()!=null){
-            t=t.getNext();
+        while(t.next!=null){
+            t=t.next;
         }
-        t.setNext(node);
+        t.next=node;
         return true;
     }
 
@@ -125,24 +106,24 @@ public class Linked{
         if(isEmpty()){
             return false;
         }
-        Node n=first.getNext();
+        Node n=first.next;
         //传入的是Node  ||  传入的不是Node
-        if(first.equals(o)||first.getValue().equals(o)){
+        if(first.equals(o)||first.value.equals(o)){
             first=n;
             return true;
         }
         Node before=first;
-        Node now = first.getNext();
+        Node now = first.next;
         while(now!=null){
-            Node after=now.getNext();
+            Node after=now.next;
             //传入的是Node  ||  传入的不是Node
-            if(now.equals(o)||now.getValue().equals(o)){
-                now.setNext(null);
-                before.setNext(after);
+            if(now.equals(o)||now.value.equals(o)){
+                now.next=null;
+                before.next=after;
                 return true;
             }
-            before=before.getNext();
-            now=before.getNext();
+            before=now;
+            now=after;
         }
         return false;
     }
@@ -164,7 +145,7 @@ public class Linked{
                 return n;
             }
             i++;
-            n=n.getNext();
+            n=n.next;
         }
         return null;
     }
@@ -183,11 +164,11 @@ public class Linked{
         Node n=first;
         while(n!=null){
             //传入的是Node  ||  传入的不是Node
-            if(n.equals(o)||n.getValue().equals(o)){
+            if(n.equals(o)||n.value.equals(o)){
                 return index;
             }
             index++;
-            n=n.getNext();
+            n=n.next;
         }
         return -1;
     }
@@ -203,11 +184,11 @@ public class Linked{
         }
         String str="Linked[";
         Node n=first;
-        while(n.getNext()!=null){
-            str+=n.getValue()+",";
-            n=n.getNext();
+        while(n.next!=null){
+            str+=n.value+",";
+            n=n.next;
         }
-        return str+n.getValue()+"]";
+        return str+n.value+"]";
     }
 }
 class Test{
