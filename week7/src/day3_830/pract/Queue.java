@@ -79,7 +79,7 @@ class MyQueue extends Queue{
 
     @Override
     int size() {
-        return size;
+        return count;
     }
 
     @Override
