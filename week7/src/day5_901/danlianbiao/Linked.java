@@ -68,8 +68,7 @@ public class Linked{
         }
         Node t=first;
         while(t!=null){
-            //传入的是Node  ||  传入的不是Node,比较值
-            if(t.equals(o)||t.value.equals(o)){
+            if(t.value.equals(o)){
                 return true;
             }
             t=t.next;
@@ -107,14 +106,14 @@ public class Linked{
             return false;
         }
         //传入的是Node  ||  传入的不是Node
-        if(first.equals(o)||first.value.equals(o)){
+        if(first.value.equals(o)){
             first=first.next;
             size--;
             return true;
         }
         Node n=first;
             //传入的是Node  ||  传入的不是Node
-        while(!(Objects.equals(n.next,o)||Objects.equals(n.next.value,o))){
+        while(!Objects.equals(n.next.value,o)){
             n=n.next;
             //当前的元素，且值不等于o
             if(n.next==null){
@@ -181,19 +180,14 @@ public class Linked{
      * @return 位置的元素
      */
     public Object get(int index){
-        if(isEmpty()||index>=size){
+        if(isEmpty()||index<0||index>=size){
             return null;
         }
-        int i=0;
         Node n=first;
-        while(n!=null){
-            if(i==index){
-                return n;
-            }
-            i++;
+        for (int i = 0; i < index; i++) {
             n=n.next;
         }
-        return null;
+        return n.value;
     }
 
     /**
@@ -206,17 +200,16 @@ public class Linked{
         if(isEmpty()){
             return -1;
         }
-        int index=0;
         Node n=first;
-        while(n!=null){
-            //传入的是Node  ||  传入的不是Node
-            if(n.equals(o)||n.value.equals(o)){
-                return index;
+        int index=0;
+        while (!n.value.equals(o)){
+            if(n.next==null){
+                return -1;
             }
-            index++;
             n=n.next;
+            index++;
         }
-        return -1;
+        return index;
     }
 
     /**
