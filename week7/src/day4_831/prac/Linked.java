@@ -100,7 +100,7 @@ public class Linked{
     /**
      * 删除某个元素
      * @param o 要删除的元素
-     * @return 结果(没有找到返回null)
+     * @return 结果(没有找到返回false)
      */
     public boolean remove(Object o){
         if(isEmpty()){
