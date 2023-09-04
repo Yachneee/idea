@@ -1,4 +1,4 @@
-package day1_904.pm;
+package day1_904.pm.singleton;
 
 /**
  * @author Administrator

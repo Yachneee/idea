@@ -1,6 +1,5 @@
-package day1_904;
+package day1_904.am;
 
-import java.sql.SQLOutput;
 import java.util.Arrays;
 
 /**
