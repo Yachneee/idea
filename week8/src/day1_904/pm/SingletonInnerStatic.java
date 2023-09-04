@@ -5,7 +5,7 @@ package day1_904.pm;
  */
 public class SingletonInnerStatic {
     private SingletonInnerStatic(){}
-    private static class Inner{
+    static class Inner{
         private static SingletonInnerStatic instance=new SingletonInnerStatic();
     }
     public static SingletonInnerStatic getInstance(){
