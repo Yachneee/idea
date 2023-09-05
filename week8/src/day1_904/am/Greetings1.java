@@ -10,7 +10,7 @@ public enum Greetings1 {
     /**
      * 问候语
      */
-    greet;
+    greet();
     private String text;
     private int hour;
     Greetings1() {
