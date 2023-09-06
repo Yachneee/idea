@@ -6,8 +6,11 @@ import java.util.Vector;
  * @author Yachne
  */
 public class Pra4 {
-    static Vector<Double> studentsScore=new Vector<Double>();
+    static Vector<Double> studentsScore= new Vector<>();
     public static int countInRange(double min,double max){
+        if(min>max){
+            return -1;
+        }
         int count=0;
         for (Double s : studentsScore) {
             if(s<=max&&s>=min){

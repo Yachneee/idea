@@ -26,6 +26,9 @@ public class VectorTraversal {
             }
         });
         System.out.println();
+        //forEach()+Lambda表达式(箭头函数，只有一个抽象方法的接口可以用)
+        vector.forEach(o -> System.out.print(o+" "));
+        System.out.println();
         vector.sort(new MyComparator());
         //迭代器
         Iterator it=vector.iterator();
