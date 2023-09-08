@@ -1,10 +1,6 @@
 package day3_906.practice;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
-
 /**
  * @author Administrator
  */
@@ -12,10 +8,15 @@ public class Pra2{
     static class Student{
         private int id;
         private static int count=1;
-        private int score;
+//        private int score;
+        private double score;
         Student(){
             id=count++;
-            score=(int)Math.ceil((Math.random()*40+60));
+//            score=(int)Math.ceil((Math.random()*40+60));
+            double d=Math.random()*41+60;
+            d=d>100?100:d;
+            String str=String.format("%.1f",d);
+            score=Double.parseDouble(str);
         }
 
         @Override
@@ -32,10 +33,10 @@ public class Pra2{
         for (int i = 0; i < 20; i++) {
             l.add(new Student());
         }
-        l.forEach(o -> System.out.println(o));
         sort(l);
-        System.out.println("分数最高的学生为："+l.getLast());
-        System.out.println("分数最低的学生为："+l.getFirst());
+        l.forEach(o -> System.out.println(o));
+        System.out.println("first："+l.getFirst());
+        System.out.println("last："+l.getLast());
     }
 
     /**
@@ -46,7 +47,7 @@ public class Pra2{
         a.sort((o1,o2)->{
             Student s1=(Student)o1;
             Student s2=(Student)o2;
-            return s1.score-s2.score;
+            return s2.score>s1.score?1:s2.score==s1.score?0:-1;
         });
     }
 

@@ -20,6 +20,7 @@ public class Pra4 {
         a2.add(2);
         a2.add(4);
         System.out.println(a1+"和"+a2+"的交集为"+toIntersection(a1,a2));
+        System.out.println(a1+"和"+a2+"的交集为"+toIntersection(a1,a2));
     }
     public static ArrayList toIntersection(ArrayList a1,ArrayList a2){
         ArrayList a=new ArrayList();
@@ -47,5 +48,10 @@ public class Pra4 {
             }
         }
         return count;
+    }
+    public static ArrayList toIntersection1(ArrayList a1,ArrayList a2){
+        ArrayList a= (ArrayList) a1.clone();
+        a.retainAll(a2);
+        return a;
     }
 }

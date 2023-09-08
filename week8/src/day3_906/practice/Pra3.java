@@ -15,16 +15,25 @@ public class Pra3 {
         a.add(5);
         a.add(3);
         a.add(2);
-        System.out.println(a+"中的不重复元素个数为："+countDiff(a));
+        System.out.println(a+"中的所有(去重)元素为："+countDiff(a)+",个数为："+countDiff(a).size());
+        System.out.println(a+"中的不重复的元素为："+countUnique(a)+",个数为："+countUnique(a).size());
     }
-    public static int countDiff(ArrayList a){
-        int count=0;
+    public static ArrayList countDiff(ArrayList a){
+        ArrayList al=new ArrayList();
         for (int i = 0; i < a.size(); i++) {
-            Object o = a.get(i);
-            if(a.indexOf(o)==i){
-                count++;
+            if(a.indexOf(a.get(i))==i){
+                al.add(a.get(i));
             }
         }
-        return count;
+        return al;
+    }
+    public static ArrayList countUnique(ArrayList a){
+        ArrayList al=new ArrayList();
+        for (Object o : a) {
+            if(a.indexOf(o)==a.lastIndexOf(o)){
+                al.add(o);
+            }
+        }
+        return al;
     }
 }
