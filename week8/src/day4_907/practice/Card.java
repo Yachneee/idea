@@ -20,9 +20,6 @@ public class Card implements Comparable{
 
     @Override
     public String toString() {
-        return "Card{" +
-                "点数：'" + number + '\'' +
-                ", 花色：'" + type + '\'' +
-                '}';
+        return  number + type + ' ';
     }
 }

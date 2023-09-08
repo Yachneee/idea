@@ -17,6 +17,7 @@ public class PokeRoom {
     private Scanner sc=new Scanner(System.in);
     private Random r=new Random();
     public PokeRoom(){
+        System.out.println("=========欢迎来到开发喵牌室==========");
         String[] numbers={"3","4","5","6","7","8","9","10","J","Q","K","A","2"};
         String[] type={"♠","♥","♣","♦"};
         for (int i = 0; i < 13; i++) {
@@ -33,12 +34,7 @@ public class PokeRoom {
         Collections.shuffle(table);
     }
     public void distributeCard(){
-        for (int i = 0; i < 3; i++) {
-            int d=r.nextInt(table.size());
-            Card card =(Card) table.remove(d);
-            diZhu.add(card);
-        }
-        for (int i = 0; i < table.size(); i++) {
+        for (int i = 0; i < table.size()-3; i++) {
             Card card=(Card) table.get(i);
             if(i%3==0){
                 a.add(card);
@@ -48,6 +44,10 @@ public class PokeRoom {
                 c.add(card);
             }
         }
+//        a.addAll(table.subList(0,17));
+//        b.addAll(table.subList(17,34));
+//        c.addAll(table.subList(34,51));
+        diZhu.addAll(table.subList(51,table.size()));
     }
     public void sortCard(){
         Collections.sort(a);
@@ -131,5 +131,41 @@ public class PokeRoom {
             case 1->b;
             default -> c;
         };
+    }
+    public void startGame(){
+        washCard();
+        System.out.println("洗牌完成！");
+        distributeCard();
+        System.out.println("发牌完成！");
+        while (true){
+            System.out.println("1.看牌");
+            System.out.println("2.捋牌");
+            System.out.println("3.抢地主");
+            System.out.println("0.退出游戏");
+            System.out.print("请输入操作数：");
+            int type = sc.nextInt();
+            switch (type){
+                case 1->{
+                    showCard(0);
+                    showCard(1);
+                    showCard(2);
+                }
+                case 2->{
+                    sortCard();
+                    System.out.println("捋牌完成！");
+                }
+                case 3->{
+                    System.out.println("开始抢地主");
+                    if(getDiZhu()){
+                        System.out.println("抢地主结束，游戏正式开始！");
+                        System.exit(1);
+                    }else{
+                        System.out.println("抢地主失败，重新洗牌！");
+                        startGame();
+                    }
+                }
+                default -> System.exit(1);
+            }
+        }
     }
 }
