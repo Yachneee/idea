@@ -1,4 +1,4 @@
-package day5_908;
+package day5_908.am;
 
 /**
  * @author Administrator

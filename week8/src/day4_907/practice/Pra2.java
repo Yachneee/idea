@@ -17,9 +17,9 @@ public class Pra2 {
         hs.add(format.parse("2023-7-17"));
         System.out.println("====TreeSet====");
         TreeSet ts=new TreeSet(hs);
-        ts.forEach(o-> System.out.println(o));
-        System.out.println("最早日期："+ts.first());
-        System.out.println("最晚日期："+ts.last());
+        ts.forEach(o-> System.out.println(format.format(o)));
+        System.out.println("最早日期：" + format.format(ts.first()));
+        System.out.println("最晚日期："+format.format(ts.last()));
         System.out.println("====LinkedList====");
         LinkedList ll=new LinkedList<>(hs);
         ll.sort(null);

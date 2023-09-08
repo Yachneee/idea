@@ -1,9 +1,9 @@
-package day5_908;
+package day5_908.am;
 
 import java.util.ArrayList;
 
 /**
- * @author Administrator
+ * @author Yachne
  */
 public class Student {
     private String name;
@@ -25,7 +25,7 @@ public class Student {
                 '}';
     }
 }
-class StudentDemo implements School<Student>{
+class StudentDemo implements School<Student> {
     ArrayList<Student> a=new ArrayList<>();
     @Override
     public void add(Student student) {

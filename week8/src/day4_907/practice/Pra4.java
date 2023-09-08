@@ -1,10 +1,11 @@
 package day4_907.practice;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.TreeSet;
 
 public class Pra4 {
-    static class Student implements Comparable{
+    static class Student{
         private int id;
         private static int count=1;
         private double score;
@@ -23,16 +24,10 @@ public class Pra4 {
                     ", 分数：" + score +
                     '}';
         }
-
-        @Override
-        public int compareTo(Object o) {
-            Student s=(Student)o;
-            return s.score>this.score?1:s.score==this.score?0:-1;
-        }
     }
 
     public static void main(String[] args) {
-        TreeSet l=new TreeSet();
+        TreeSet<Student> l=new TreeSet<>((o1, o2) -> o2.score>o1.score?1:o2.score==o1.score?0:-1);
         for (int i = 0; i < 20; i++) {
             l.add(new Student());
         }
