@@ -1,4 +1,4 @@
-package day5_908.pm.practice;
+package day5_908.practice;
 
 import java.util.HashMap;
 import java.util.Iterator;
