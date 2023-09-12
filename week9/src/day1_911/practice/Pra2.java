@@ -18,7 +18,8 @@ public class Pra2 {
         return Arrays.stream(arr).reduce(0,(i1,i2)->i1+i2);
     }
     public static int sum(Collection<Integer> collection){
-        return collection.stream().reduce(0,(i1,i2)->i1+i2);
+//        return collection.stream().reduce(0,(i1,i2)->i1+i2);
+        return collection.stream().mapToInt(value -> value).sum();
     }
     public static int max(int[] arr){
         return Arrays.stream(arr).reduce(arr[0],(i1,i2)->Math.max(i1,i2));
