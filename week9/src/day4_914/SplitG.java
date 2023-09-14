@@ -10,9 +10,9 @@ import java.io.IOException;
  */
 public class SplitG {
     public static void main(String[] args) {
-        String target="D:\\fileTest\\Hug me.mp4";
-        String folderName="D:\\fileTest\\split1";
-        splitMp4(target,folderName,1024*1024);
+        String target="D:\\fileTest\\gb.mp4";
+        String folderName="D:\\fileTest\\split2";
+        splitMp4(target,folderName, 1024L*1024*1024*2);
     }
     public static void splitMp4(String target,String folderName,long length){
         File targetFile=new File(target);
@@ -30,8 +30,8 @@ public class SplitG {
                 File f=new File(folderName,++count+".tmp");
                 try(FileOutputStream out=new FileOutputStream(f,true)){
                     long size=length;
-                    while(size>0){
-                        int r=in.read(byteG);
+                    while(size>0&&in.available()>0){
+                        int r=in.read(byteG,0,(int)Math.min(size, byteG.length));
                         out.write(byteG,0,r);
                         size-=byteG.length;
                     }
