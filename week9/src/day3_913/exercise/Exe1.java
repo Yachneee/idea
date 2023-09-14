@@ -19,10 +19,17 @@ public class Exe1 {
     }
     public static void write(int[] arr,String name){
         try (FileOutputStream out=new FileOutputStream(name)) {
-            for (int n : arr) {
-                byte[] bytes = (n+" ").getBytes();
-                out.write(bytes);
+            String str="";
+            for (int i : arr) {
+                str+=i+".";
             }
+            str=str.substring(0,str.length()-1);
+            byte[] strBytes = str.getBytes();
+            out.write(strBytes);
+//            for (int n : arr) {
+//                byte[] bytes = (n+" ").getBytes();
+//                out.write(bytes);
+//            }
         } catch (IOException ex) {
             throw new RuntimeException(ex);
         }
@@ -38,7 +45,8 @@ public class Exe1 {
         return str;
     }
     public static int sum(String str){
-        String[] split = str.split(" ");
+//        String[] split = str.split(" ");
+        String[] split = str.split("\\.");
         int sum=0;
         for (String n : split) {
             sum+=Integer.parseInt(n);
