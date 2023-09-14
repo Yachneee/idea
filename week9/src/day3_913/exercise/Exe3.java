@@ -38,11 +38,10 @@ public class Exe3 {
             int i=1;
             File f=new File(folder,i+".mp4");
             while(f.exists()){
-                FileInputStream in = new FileInputStream(f);
-                out.write(in.readAllBytes());
-                in.close();
-                i++;
-                f=new File(folder,i+".mp4");
+                try(FileInputStream in = new FileInputStream(f)){
+                    out.write(in.readAllBytes());
+                }
+                f=new File(folder,++i+".mp4");
             }
         } catch (IOException e) {
             throw new RuntimeException(e);

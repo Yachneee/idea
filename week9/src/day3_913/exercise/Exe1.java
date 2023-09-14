@@ -29,7 +29,7 @@ public class Exe1 {
         }
     }
     public static String read(String name){
-        String str="";
+        String str;
         try (FileInputStream in = new FileInputStream(name)) {
             byte[] bytes = in.readAllBytes();
             str=new String(bytes);
