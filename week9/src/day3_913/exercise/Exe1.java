@@ -23,7 +23,6 @@ public class Exe1 {
                 byte[] bytes = (n+" ").getBytes();
                 out.write(bytes);
             }
-            out.flush();
         } catch (IOException ex) {
             throw new RuntimeException(ex);
         }
