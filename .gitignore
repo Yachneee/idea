@@ -3,6 +3,5 @@
 out/
 *.xml
 *.iml
-*.jar
-lib/
+lib
 
