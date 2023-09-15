@@ -15,6 +15,12 @@ public class Exe1 {
         sortPoem(target,dest);
         sortSentencePoem(target,dest2);
     }
+
+    /**
+     * 将文件中乱序的诗排序后放到另一个文件
+     * @param target 乱序版所在文件
+     * @param dest 目标文件
+     */
     public static void sortPoem(File target,File dest){
         List<String> list=new ArrayList<>();
         String str;
@@ -34,6 +40,12 @@ public class Exe1 {
             throw new RuntimeException(e);
         }
     }
+
+    /**
+     * 将文件中乱序的诗排序后、按句分行后，放到另一个文件
+     * @param target 乱序版所在文件
+     * @param dest 目标文件
+     */
     public static void sortSentencePoem(File target,File dest){
         List<String> list=new ArrayList<>();
         String str;

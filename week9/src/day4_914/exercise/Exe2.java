@@ -14,6 +14,13 @@ public class Exe2 {
         convertCharsetByte(target,destByte,"GBK");
         convertCharsetChar(target,destChar,"GBK");
     }
+
+    /**
+     * 用·字节流·的方法将一种编码格式的文件转换成另一种格式
+     * @param target 要转换格式好的文件
+     * @param dest 目标文件(转换后的文件路径)
+     * @param charsetName 目标格式名
+     */
     public static void convertCharsetByte(File target,File dest,String charsetName){
         try (FileInputStream in = new FileInputStream(target);
              BufferedInputStream bufferIn=new BufferedInputStream(in);
@@ -26,6 +33,12 @@ public class Exe2 {
             throw new RuntimeException(e);
         }
     }
+    /**
+     * 用·字符流·的方法将一种编码格式的文件转换成另一种格式
+     * @param target 要转换格式好的文件
+     * @param dest 目标文件(转换后的文件路径)
+     * @param charsetName 目标格式名
+     */
     public static void convertCharsetChar(File target,File dest,String charsetName){
         try (FileReader reader = new FileReader(target);
         BufferedReader bufferR=new BufferedReader(reader);
