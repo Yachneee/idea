@@ -11,7 +11,7 @@ import java.net.URL;
 public class Exe3 {
     public static void main(String[] args) {
         //Reader
-        File f=new File("week9/src/day5_915/text/student.json");
+        File f=new File("text/student.json");
         try(BufferedReader bufferR=new BufferedReader(new FileReader(f))){
             Student stu = JSON.parseObject(bufferR, Student.class);
             System.out.println(stu);
@@ -20,7 +20,7 @@ public class Exe3 {
         }
         //URL
         try {
-            URL url=new URL("file://localhost/D:/kaifamiao/java/week9/src/day5_915/text/student.json");
+            URL url=new URL("file://localhost/D:/kaifamiao/java/text/student.json");
             Student student = JSON.parseObject(url, Student.class);
             System.out.println(student);
         } catch (MalformedURLException e) {

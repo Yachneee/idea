@@ -11,7 +11,7 @@ import java.io.PrintStream;
  */
 public class Exe2_JSON {
     public static void main(String[] args) {
-        try (PrintStream print = new PrintStream(new File("week9/src/day5_915/text", "game.txt"))) {
+        try (PrintStream print = new PrintStream(new File("text", "game.txt"))) {
             Game wz=new Game("王者荣耀",5.0,1024,0.0);
             String jsonString = JSON.toJSONString(wz);
             print.print(jsonString);

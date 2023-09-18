@@ -7,7 +7,7 @@ import java.io.*;
  */
 public class Exe1_Serial {
     public static void main(String[] args) {
-        File file = new File("week9/src/day5_915/text", "serial.txt");
+        File file = new File("text", "serial.txt");
         try(ObjectOutputStream out=new ObjectOutputStream(new FileOutputStream(file));
             ObjectInputStream in=new ObjectInputStream(new FileInputStream(file))){
             Person son=new Person("son","0002",null);
