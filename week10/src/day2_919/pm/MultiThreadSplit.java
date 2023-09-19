@@ -12,29 +12,18 @@ import java.util.concurrent.CountDownLatch;
  * @author Administrator
  */
 public class MultiThreadSplit {
-    static File target=new File("io/dt.gif");
-    static File dest=new File("io/threadSplit");
-    static int count=0;
-
-    static FileInputStream in;
-
-    static {
-        try {
-            in = new FileInputStream(target);
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
     @SneakyThrows
     public static void main(String[] args) {
+        File target=new File("io/dt.gif");
+        File dest=new File("io/threadSplit");
+        FileInputStream in= new FileInputStream(target);
         if(!dest.exists()){
             dest.mkdirs();
         }
         CountDownLatch latch=new CountDownLatch(50);
         for (int i = 0; i < 50; i++) {
             new Thread(()->{
-                threadSplit(target,dest,1024*2);
+                threadSplit(in,dest,1024*2);
                 latch.countDown();
             }).start();
         }
@@ -42,8 +31,9 @@ public class MultiThreadSplit {
         System.out.println("split end");
 
     }
+    static int count=0;
     @SneakyThrows
-    public static void threadSplit(File target,File dest,long length){
+    public static void threadSplit(FileInputStream in,File dest,long length){
         byte[] bytes=new byte[(int)length];
         int size=in.read(bytes);
         if((size)!=-1){
