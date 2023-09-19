@@ -4,7 +4,6 @@ import lombok.SneakyThrows;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.concurrent.CountDownLatch;
 
@@ -16,18 +15,19 @@ public class MultiThreadSplit {
     public static void main(String[] args) {
         File target=new File("io/dt.gif");
         File dest=new File("io/threadSplit");
-        FileInputStream in= new FileInputStream(target);
-        if(!dest.exists()){
-            dest.mkdirs();
+        try(FileInputStream in= new FileInputStream(target)){
+            if(!dest.exists()){
+                dest.mkdirs();
+            }
+            CountDownLatch latch=new CountDownLatch(50);
+            for (int i = 0; i < 50; i++) {
+                new Thread(()->{
+                    threadSplit(in,dest,1024*2);
+                    latch.countDown();
+                }).start();
+            }
+            latch.await();
         }
-        CountDownLatch latch=new CountDownLatch(50);
-        for (int i = 0; i < 50; i++) {
-            new Thread(()->{
-                threadSplit(in,dest,1024*2);
-                latch.countDown();
-            }).start();
-        }
-        latch.await();
         System.out.println("split end");
 
     }
