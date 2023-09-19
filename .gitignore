@@ -4,4 +4,6 @@ out/
 *.xml
 *.iml
 lib
+io/
+*.gif
 

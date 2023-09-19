@@ -1,7 +1,5 @@
 package day1_918.Exercise;
 
-import java.util.Objects;
-import java.util.concurrent.FutureTask;
 
 /**
  * @author Administrator
