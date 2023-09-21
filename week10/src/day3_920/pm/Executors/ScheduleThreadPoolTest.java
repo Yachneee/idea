@@ -16,8 +16,8 @@ public class ScheduleThreadPoolTest {
     public static void main(String[] args) {
         ScheduledExecutorService scheduled = Executors.newScheduledThreadPool(3);
         //延迟initialDelay unit后执行一次（只一次）
-//        ScheduledFuture<?> futureRun = scheduled.schedule(() -> System.out.println(Thread.currentThread().getName()), 1, TimeUnit.SECONDS);
-//        System.out.println(futureRun.get());
+        ScheduledFuture<?> futureRun = scheduled.schedule(() -> System.out.println(Thread.currentThread().getName()), 1, TimeUnit.SECONDS);
+        System.out.println(futureRun.get());
 //        ScheduledFuture<Integer> futureCall = scheduled.schedule(() -> {
 //            System.out.println(Thread.currentThread().getName());
 //            return 1;

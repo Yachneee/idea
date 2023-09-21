@@ -15,7 +15,8 @@ public class Exe2 {
     private static BlockingQueue<String> desk = new ArrayBlockingQueue<>(DESK_SIZE);
 
     public static void main(String[] args) {
-        ExecutorService executor = Executors.newFixedThreadPool(COOKER_NUM + EATER_NUM);
+//        ExecutorService executor = Executors.newFixedThreadPool(COOKER_NUM + EATER_NUM);
+        ExecutorService executor=new ThreadPoolExecutor(COOKER_NUM + EATER_NUM,COOKER_NUM + EATER_NUM,0,TimeUnit.SECONDS,new ArrayBlockingQueue<>(5));
 
         for (int i = 0; i < COOKER_NUM; i++) {
             executor.execute(new Cooker(i+1));

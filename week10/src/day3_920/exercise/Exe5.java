@@ -22,6 +22,7 @@ public class Exe5 {
         }
         latch.await();
         map.forEach((key,value)-> System.out.println(key+"-->"+value));
+
     }
     static class MyRunnable implements Runnable{
         CountDownLatch latch;
