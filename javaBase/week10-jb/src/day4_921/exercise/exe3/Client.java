@@ -5,7 +5,6 @@ import com.alibaba.fastjson2.JSON;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.net.UnknownHostException;
 import java.time.LocalTime;
 import java.util.Scanner;
 import java.util.concurrent.LinkedBlockingDeque;
@@ -58,29 +57,24 @@ public class Client {
                     System.out.println("发送结束");
                     break;
                 }
-                message.setTime(LocalTime.now().toString());
+                message.setTime(System.currentTimeMillis()+"");
                 File file=new File(str);
                 if(!file.exists()){
                     message.setFormat("text");
                     message.setContent(str);
                 }else{
                     int index = str.lastIndexOf(".");
-                    if(index!=-1){
+                    if(index!=-1&&file.isFile()){
                         message.setFormat(str.substring(index+1));
+                        FileInputStream in=new FileInputStream(file);
+                        message.setContent(new String(in.readAllBytes()));
+                        in.close();
                     }else{
                         message.setFormat("Directory");
                     }
-                    message.setContent(file);
                 }
                 String jsonString = JSON.toJSONString(message);
                 out.write(jsonString.getBytes());
-//                if(file.exists()&&file.isFile()){
-//                    FileInputStream in=new FileInputStream(file);
-//                    byte[] bytes = in.readAllBytes();
-//                    out.write(bytes);
-//                    in.close();
-//                }
-
             }
 
         } catch (IOException e) {

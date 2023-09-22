@@ -18,7 +18,7 @@ public class Message {
     //发送时间
     //接收回复端口
     private String format;
-    private Object content;
+    private String content;
     private String time;
     private int replyPort;
 }

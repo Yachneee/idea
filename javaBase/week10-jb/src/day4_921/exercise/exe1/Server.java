@@ -13,16 +13,17 @@ import java.net.Socket;
 public class Server {
     //实现简单的TCP一发一收
     public static void main(String[] args) {
-        Socket acceptSocket;
         try (ServerSocket serverSocket = new ServerSocket(8888)) {
-            acceptSocket = serverSocket.accept();
+            System.out.println("服务端启动成功，等待连接...");
+            Socket acceptSocket = serverSocket.accept();
+            System.out.println(acceptSocket.getInetAddress().getHostAddress()+"连接成功");
             InputStream in = acceptSocket.getInputStream();
             byte[] bytes = new byte[1024*1024];
             int read;
             StringBuilder str = new StringBuilder();
             while ((read = in.read(bytes)) != -1) {
                 str.append(new String(bytes, 0, read));
-                System.out.println(acceptSocket.getInetAddress().getHostAddress()+"  say："+str);
+                System.out.println(acceptSocket.getPort()+" say："+str);
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
