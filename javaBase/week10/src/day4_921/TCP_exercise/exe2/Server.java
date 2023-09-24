@@ -1,6 +1,4 @@
-package day4_921.exercise.exe2;
-
-import lombok.SneakyThrows;
+package day4_921.TCP_exercise.exe2;
 
 import java.io.*;
 import java.net.ServerSocket;

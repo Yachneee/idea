@@ -1,4 +1,4 @@
-package day4_921.exercise.exe1;
+package day4_921.TCP_exercise.exe1;
 
 import lombok.SneakyThrows;
 
