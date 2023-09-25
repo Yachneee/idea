@@ -97,13 +97,13 @@ public class BookManager{
             int i = statement.executeUpdate(sql);
             if(i>0){
                 printColor("添加"+title+"成功",35);
+                log("新增图书 - 书名："+title);
             }else {
                 printColor("添加"+title+"失败",33);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        log("新增图书 - 书名："+title);
     }
     //可以根据⽤⼾控制台输⼊删除图书信息表 (books) 中对应的数据
     private void removeBook(){
@@ -114,13 +114,13 @@ public class BookManager{
             int i = statement.executeUpdate(sql);
             if(i>0){
                 printColor("删除"+title+"成功",31);
+                log("删除图书记录 - 书名："+title);
             }else {
                 printColor("删除"+title+"失败",33);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        log("删除图书记录 - 书名："+title);
     }
     //可以根据⽤⼾控制台输⼊选择⼀条图书信息并修改其数量（数量要⽐原值⼤）
     private void modifyBookQuantity(){
@@ -142,19 +142,18 @@ public class BookManager{
             System.out.print("数量没有增多，请重新输入：");
             count=sc.nextInt();
         }
-
         try (Statement statement = con.createStatement()) {
             String sql="update books set quantity="+count+" where book_title='"+title+"'";
             int i = statement.executeUpdate(sql);
             if(i>0){
                 printColor("修改"+title+"数量成功",34);
+                log("修改图书信息 - 书名："+title+" 原数量： "+quantity+"  修改后： "+count);
             }else {
                 printColor("修改"+title+"数量失败",33);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        log("修改图书信息 - 书名："+title+" 原数量： "+quantity+"  修改后： "+count);
     }
 
     /**
@@ -194,7 +193,12 @@ public class BookManager{
         LocalDateTime time=LocalDateTime.now();
         String sql="insert into operation_log(description,operation_time) values('"+desc+"','"+time+"')";
         try (Statement statement = con.createStatement()) {
-            statement.executeUpdate(sql);
+            int i = statement.executeUpdate(sql);
+            if(i>0){
+                printColor("插入日志成功",35);
+            }else {
+                printColor("插入日志失败", 33);
+            }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
