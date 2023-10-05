@@ -56,12 +56,13 @@ public class DBUtils {
         setObjects(ps,objects);
         return ps.executeUpdate();
     }
-
     /**
      * 查
      * @param sql 要执行的具体语句
-     * @param objects 变长变量
-     * @return 查询结果
+     * @param handler 接口实现类对象
+     * @param objs 可变长度参数，可当作数组处理
+     * @return list
+     * @param <E> 泛型
      * @throws SQLException 。
      * @throws ClassNotFoundException 。
      */

@@ -3,6 +3,9 @@ package day1_925.handler;
 import java.math.BigDecimal;
 import java.sql.Date;
 
+/**
+ * @author Administrator
+ */
 public class BookHandler implements Handler<Book> {
 
     @Override
