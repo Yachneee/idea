@@ -1,4 +1,4 @@
-package day4_928;
+package com.kfm.select;
 
 import com.alibaba.druid.pool.DruidDataSourceFactory;
 
@@ -9,14 +9,20 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Properties;
 
-public class DruidDemo {
-    public static void main(String[] args) throws Exception {
+/**
+ * @author Administrator
+ */
+public class Select {
+    private static Connection  con;
+
+    private static void getConnect() throws Exception {
         Properties pro=new Properties();
-        pro.load(new FileReader("io/druid.properties"));
+        pro.load(new FileReader("D:\\kaifamiao\\java\\web\\web1\\io\\druid.properties"));
         DataSource source = DruidDataSourceFactory.createDataSource(pro);
-        Connection con = source.getConnection();
-        System.out.println(con);
-        String sql="select * from course";
+        con = source.getConnection();
+    }
+    private static void print(String sql) throws Exception {
+        getConnect();
         PreparedStatement prepared = con.prepareStatement(sql);
         ResultSet resultSet = prepared.executeQuery();
         while(resultSet.next()){
@@ -26,5 +32,15 @@ public class DruidDemo {
             System.out.println();
         }
         con.close();
+        con=null;
+    }
+    public static void selectCourse() throws Exception {
+        print("select * from course");
+    }
+    public static void selectStudent() throws Exception {
+        print("select * from student");
+    }
+    public static void selectTeacher() throws Exception {
+        print("select * from teacher");
     }
 }
