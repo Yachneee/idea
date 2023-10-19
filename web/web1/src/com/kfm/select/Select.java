@@ -17,7 +17,7 @@ public class Select {
 
     private static void getConnect() throws Exception {
         Properties pro=new Properties();
-        pro.load(new FileReader("D:\\kaifamiao\\java\\web\\web1\\io\\druid.properties"));
+        pro.load(new FileReader("D:\\kaifamiao\\java\\io\\druid.properties"));
         DataSource source = DruidDataSourceFactory.createDataSource(pro);
         con = source.getConnection();
     }

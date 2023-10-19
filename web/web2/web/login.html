@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        form {
+            width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<form action="/web2/login" name="登录" method="post">
+<h1>用户登录</h1>
+    <label for="username">用户名：</label>
+    <input type="text" id="username" name="username"><br>
+    <label for="password">密码：</label>
+    <input type="password" id="password" name="password"><br>
+    <div class=".img"><img src="/web2/cap" alt="" srcset="" width="130px" height="48px"></div>
+    <label for="captcha">验证码：</label>
+    <input type="text" id="captcha" name="captcha"><br>
+    <input type="submit" value="登录">
+</form>
+</body>
+</html>
