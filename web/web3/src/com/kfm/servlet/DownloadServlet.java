@@ -1,5 +1,7 @@
 package com.kfm.servlet;
 
+import com.kfm.utils.Constant;
+
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
@@ -9,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 
 /**
  * @author Administrator
@@ -23,9 +27,9 @@ public class DownloadServlet extends HttpServlet {
         // 获取本次请求要下载的文件名
         String file = req.getParameter("file");
         // 设置以附件的形式下载，指定下载的名字是文件原来的名字
-        resp.setHeader("content-disposition", "attachment; filename=" + file);
+        resp.setHeader("content-disposition", "attachment; filename=" + URLEncoder.encode(file, StandardCharsets.UTF_8));
         // 要下载的文件的完整路径
-        String path =  "D:\\upload"+ File.separator + file;
+        String path = Constant.UPLOAD_PATH + File.separator + file;
         FileInputStream in = new FileInputStream(path);
         // 获取响应的输出流
         ServletOutputStream out = resp.getOutputStream();
