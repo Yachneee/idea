@@ -42,7 +42,7 @@ public class UploadFilesServlet  extends HttpServlet {
                 if (!file.getParentFile().exists()) {
                     file.getParentFile().mkdirs();
                 }
-                String address= "https://" +ip+":8080/web3/download?file="+fileName;
+                String address= "http://" +ip+":8080/web3/download?file="+fileName;
                 long size = part.getSize();
                 String name = fileName.substring(0,fileName.lastIndexOf("."));
                 try {

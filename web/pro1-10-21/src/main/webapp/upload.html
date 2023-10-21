@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Files</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d8d8d8;
+        }
+        form {
+            width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #b89db8;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input[type="file"] {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+        input{
+            border-radius: 4px;
+            font-size: 16px;
+            width: 250px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #593359;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            box-shadow: 1px 3px 0 2px rgb(34 5 57 / 30%);
+        }
+        input[type="submit"]:hover{
+            background-color:rgba(89, 51, 89, 0.7) ;
+        }
+    </style>
+</head>
+<body>
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" id="" multiple>
+    <input type="submit" value="上传">
+</form>
+</body>
+</html>
