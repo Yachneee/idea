@@ -13,7 +13,9 @@ public class Exe1_JSON {
         System.out.println(jsonString);
         Person dad = JSON.parseObject(jsonString, Person.class);
         System.out.println(dad);
-        System.out.println(father==dad); //false
-        System.out.println(father.equals(dad)); //true
+        System.out.println(father==dad);
+        //false
+        System.out.println(father.equals(dad));
+        //true
     }
 }

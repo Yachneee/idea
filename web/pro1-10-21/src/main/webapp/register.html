@@ -81,7 +81,7 @@
 <body>
 <div class="container">
     <h2>用户注册</h2>
-    <form action="/register" method="post" name="user-register">
+    <form action="/register" method="post" name="user-register" enctype="multipart/form-data">
         <label for="username">设置用户名:</label>
         <input id="username" name="username" placeholder="Enter Username" type="text">
         <label for="password">设置密码:</label>
@@ -101,6 +101,11 @@
             <input type="text" id="captcha" name="captcha">
             <img src="/captcha" alt="" srcset="" width="125px" height="40px">
         </div>
+<!--        <form action="/uploadImg" method="post" enctype="multipart/form-data">-->
+            <label for="img">头像:</label>
+            <input type="file" name="img" id="img">
+<!--            <input type="submit" value="上传头像">-->
+<!--        </form>-->
         <input type="submit" value="Start Register">
     </form>
 </div>

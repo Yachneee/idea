@@ -4,13 +4,17 @@ package web;
 
 import com.wf.captcha.utils.CaptchaUtil;
 import service.RegisterService;
+import utils.Constant;
 import utils.FormatUtil;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
+import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
 
@@ -19,6 +23,7 @@ import java.util.Objects;
  * @author Administrator
  */
 @WebServlet("/register")
+@MultipartConfig
 public class RegisterServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -36,6 +41,10 @@ public class RegisterServlet extends HttpServlet {
                 String email = req.getParameter("email");
                 boolean register = new RegisterService().register(username, name, password, birth, phone, email);
                 if(register){
+                    Part img = req.getPart("img");
+                    String fileName = img.getSubmittedFileName();
+                    String type=fileName.substring(fileName.lastIndexOf("."));
+                    img.write(Constant.UPLOAD_IMG_PATH + File.separator +username+type);
                     resp.sendRedirect("/login");
                 }else {
                     resp.getWriter().write("<h3 style='color:red;'>注册失败</h3>");

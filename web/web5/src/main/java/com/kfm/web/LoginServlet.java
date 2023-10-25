@@ -1,5 +1,6 @@
-package com.kfm.servlet;
+package com.kfm.web;
 import com.kfm.entity.User;
+import com.kfm.utils.Constant;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,19 +17,19 @@ import java.io.IOException;
 public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/login.html").forward(req,resp);
+        req.getRequestDispatcher("login.html").forward(req,resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        HttpSession session = req.getSession();
-        String username = req.getParameter("username");
-        String password = req.getParameter("password");
-        User user=new User(username,password);
-        session.setAttribute("user",user);
         req.setCharacterEncoding("utf-8");
         resp.setCharacterEncoding("utf-8");
         resp.setContentType("text/html;charset=utf-8");
-        resp.getWriter().write("<h1 style='color: blueviolet'>登录成功</h1>");
+        String username = req.getParameter("username");
+        String password = req.getParameter("password");
+        User user=new User(username,password);
+        HttpSession session = req.getSession();
+        session.setAttribute(Constant.LOGIN_USER_KEY,user);
+        resp.sendRedirect("/index");
     }
 }

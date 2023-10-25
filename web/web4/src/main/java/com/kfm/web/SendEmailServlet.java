@@ -1,4 +1,4 @@
-package com.kfm;
+package com.kfm.web;
 
 import com.kfm.utils.CaptchaUtils;
 import com.kfm.utils.EmailUtils;

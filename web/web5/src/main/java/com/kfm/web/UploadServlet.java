@@ -1,4 +1,4 @@
-package com.kfm.servlet;
+package com.kfm.web;
 
 import com.kfm.utils.Constant;
 

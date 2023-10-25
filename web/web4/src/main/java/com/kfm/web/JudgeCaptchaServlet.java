@@ -1,4 +1,4 @@
-package com.kfm;
+package com.kfm.web;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

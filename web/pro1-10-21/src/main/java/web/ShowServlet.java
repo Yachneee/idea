@@ -28,6 +28,7 @@ public class ShowServlet  extends HttpServlet {
             try {
                 String html = new ShowService().show(user.getUsername());
                 resp.getWriter().write(html);
+                resp.getWriter().write("<img src='/image/"+user.getUsername()+".jpg'>");
             } catch (SQLException e) {
                 resp.getWriter().write("<h3 style='color:red;'>获取失败</h3>");
             }

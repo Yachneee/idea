@@ -1,4 +1,4 @@
-package com.kfm.servlet;
+package com.kfm.web;
 
 import com.kfm.utils.Constant;
 
@@ -14,6 +14,9 @@ import java.io.IOException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
+/**
+ * @author Administrator
+ */
 @WebServlet("/download")
 public class DownloadServlet extends HttpServlet {
     @Override
