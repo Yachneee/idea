@@ -28,12 +28,6 @@ public class LogoutServlet extends HttpServlet {
         }
         session.removeAttribute("user");
         session.invalidate();
-        try {
-            new UserDao().closeCon();
-        } catch (SQLException e) {
-            System.out.println("关闭流失败");
-            e.printStackTrace();
-        }
         resp.getWriter().write("<h1>再见</h1>");
     }
 
