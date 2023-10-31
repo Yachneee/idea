@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChangeStudent</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="container">
+    <h2>修改学生信息</h2>
+    <form action="/change" method="post" name="student-change" th:with="student=${session.get('student')}">
+        <label for="name">姓名:</label>
+        <input id="name" name="name" placeholder="Enter Name" type="text" th:value="${student != null ? student.name : ''}">
+        <label for="birth">生日:</label>
+        <input id="birth" name="birth" placeholder="Enter Birth" type="date" th:value="${student != null ? student.birth : ''}">
+        <label>性别:</label>
+        <div class="gender">
+            <input type="radio" name="gender" value="男" th:checked="${student != null ?student.gender=='男':true}">男
+            <input type="radio" name="gender" value="女" th:checked="${student != null ?student.gender=='女':true}">女
+        </div>
+        <input type="submit" value="Start Change">
+    </form>
+    <a href="/all">返回查询页面</a>
+    <script th:inline="javascript">
+        let msg=[[${msg}]];
+        if(msg){
+            alert(msg);
+        }
+    </script>
+</div>
+</body>
+</html>

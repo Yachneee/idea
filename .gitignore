@@ -2,9 +2,8 @@
 .idea/
 out/
 *.xml
+!pom.xml
 *.iml
-lib
-io/
 *.gif
 .gitignore
-
+target/

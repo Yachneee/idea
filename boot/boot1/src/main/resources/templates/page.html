@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <script th:src="@{/js/jquery.slim.min.js}"></script>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</head>
+<body>
+<a href="/add" class="add-button">添加</a>
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th scope="col">编号</th>
+        <th scope="col">姓名</th>
+        <th scope="col">生日</th>
+        <th scope="col">性别</th>
+        <th scope="col">操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="student:${page.data}">
+        <th scope="row" th:text="${student.id}"></th>
+        <td th:text="${student.name}"></td>
+        <td th:text="${student.birth}"></td>
+        <td th:text="${student.gender}"></td>
+        <td>
+            <a th:href="@{/delete(id=${student.id})}">删除</a>
+            <a th:href="@{/change(id=${student.id})}">修改</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li th:class="${page.hasPrev?'page-item':'page-item disabled'}">
+            <a aria-label="Previous" class="page-link" th:href="@{/listPage(pageNum=${page.prevNum})}">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li th:class="${num==page.pageNum?'page-item active':'page-item'}" th:each="num:${page.pageNumbers}">
+            <a class="page-link" th:href="@{/listPage(pageNum=${num})}" th:text="${num}"></a>
+        </li>
+        <li th:class="${page.hasNext?'page-item':'page-item disabled'}">
+            <a aria-label="Next" class="page-link" th:href="@{/listPage(pageNum=${page.nextNum})}">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+<!--<div class="alert alert-success" role="alert">-->
+<!--    <h4 class="alert-heading">Well done!</h4>-->
+<!--    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>-->
+<!--    <hr>-->
+<!--    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>-->
+<!--</div>-->
+<script th:inline="javascript">
+    let msg = [[${msg}]];
+    console.log(msg); // 输出变量msg的值
+    if (msg) {
+        alert(msg);
+        setTimeout(function () {
+            alert("弹窗已自动关闭");
+            window.close(); // 关闭当前窗口
+        }, 1000); // 1秒后执行关闭操作
+    }
+</script>
+</body>
+</html>
