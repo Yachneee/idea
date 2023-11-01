@@ -1,0 +1,2 @@
+Inserts the specified element at the tail of this queue if it is possible to do so immediately without exceeding the queue's capacity,
+returning true upon success and throwing an IllegalStateException if this queue is full.

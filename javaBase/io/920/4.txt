@@ -1,0 +1,2 @@
+Creates an ArrayBlockingQueue with the given (fixed) capacity, the specified access policy and initially containing
+the elements of the given collection, added in traversal order of the collection's iterator.
