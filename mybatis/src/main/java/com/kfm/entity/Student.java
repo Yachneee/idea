@@ -6,15 +6,14 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.util.Date;
-
 /**
  * @author Administrator
  */
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class Student implements Serializable {
-    private Integer id;
+    private int id;
     private String name;
     private Date birth;
     private String gender;
