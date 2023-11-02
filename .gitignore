@@ -1,8 +1,6 @@
 *.class
 .idea/
 out/
-*.xml
-!pom.xml
 *.iml
 *.gif
 .gitignore
