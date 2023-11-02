@@ -3,6 +3,18 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <!--配置需要的内容 ${name属性的值} 取值 -->
+<!--    <properties>-->
+<!--    <property name="driver" value="com.mysql.cj.jdbc.Driver"/>-->
+<!--    <property name="url" value="jdbc:mysql://localhost:3306/school"/>-->
+<!--    <property name="username" value="root"/>-->
+<!--    <property name="password" value=""/>-->
+    <!--</properties>-->
+    <!--resource 配置文件的位置-->
+    <properties resource="db.properties" />
+    <!--url 绝对路径 -->
+<!--    <properties url="file:/D:/kaifamiao/workspace/idea/java/mybatis/src/main/resources/db.properties" />-->
+    <!--设置-->
     <settings>
         <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
@@ -14,16 +26,25 @@
     <environments default="mysql">
         <environment id="mysql">
             <transactionManager type="JDBC"/>
+<!--            <dataSource type="POOLED">-->
+<!--                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>-->
+<!--                <property name="url" value="jdbc:mysql://localhost:3306/school"/>-->
+<!--                <property name="username" value="root"/>-->
+<!--                <property name="password" value=""/>-->
+<!--            </dataSource>-->
             <dataSource type="POOLED">
-                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://localhost:3306/school"/>
-                <property name="username" value="root"/>
-                <property name="password" value=""/>
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
             </dataSource>
         </environment>
     </environments>
     <mappers>
-        <mapper resource="com/kfm/StudentMapper.xml"/>
-        <mapper resource="com/kfm/TeacherMapper.xml"/>
+        <mapper resource="com/kfm/mapper/StudentMapper.xml"/>
+<!--        <mapper class="com.kfm.mapper.TeacherMapper"/>-->
+<!--        <mapper resource="com/kfm/mapper/TeacherMapper.xml"/>-->
+<!--        D:\kaifamiao\workspace\idea\java\mybatis\src\main\resources\com\kfm\mapper\TeacherMapper.xml-->
+        <mapper url="file:/D:/kaifamiao/workspace/idea/java/mybatis/src/main/resources/com/kfm/mapper/TeacherMapper.xml"/>
     </mappers>
 </configuration>

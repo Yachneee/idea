@@ -14,8 +14,8 @@ import java.util.List;
 /**
  * @author Administrator
  */
-public class TeacherMapperImpl implements TeacherMapper {
-    @Override
+public class TeacherMapperImpl{
+//    @Override
     public List<Teacher> selectAll() {
         try (InputStream in = Resources.getResourceAsStream("mybatis-config.xml")) {
             SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
@@ -29,7 +29,7 @@ public class TeacherMapperImpl implements TeacherMapper {
         }
     }
 
-    @Override
+//    @Override
     public Teacher selectById(int id) {
         return null;
     }

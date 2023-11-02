@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kfm.mapper.TeacherMapper">
+    <select id="selectAll" resultMap="teacher">
+        select * from teacher
+    </select>
+    <select id="selectById" resultMap="teacher">
+        select * from teacher where teacher_id=#{id}
+    </select>
+    <insert id="insert" parameterType="student">
+        <selectKey resultType="int" order="AFTER" keyProperty="id">
+            select last_insert_id();
+        </selectKey>
+        insert into teacher(teacher_name, gender) VALUES (#{name},#{gender,typeHandler=com.kfm.handler.GenderHandler})
+    </insert>
+    <resultMap id="teacher" type="teacher">
+        <result column="gender" property="gender" javaType="String" jdbcType="BIT" typeHandler="com.kfm.handler.GenderHandler"/>
+        <result column="teacher_id" property="id"/>
+        <result column="teacher_name" property="name"/>
+    </resultMap>
+</mapper>

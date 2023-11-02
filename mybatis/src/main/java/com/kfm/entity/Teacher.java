@@ -9,6 +9,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Teacher implements Serializable {
-    private int teacherId;
-    private String teacherName;
+    private int id;
+    private String name;
+    private String gender;
 }
