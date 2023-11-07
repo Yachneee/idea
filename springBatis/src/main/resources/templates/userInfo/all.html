@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <script th:src="@{/js/jquery.slim.min.js}"></script>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</head>
+<body>
+<div>
+    <!--添加用户信息-->
+    <a class="btn btn-primary" th:href="@{/userInfo/add}">添加用户信息</a>
+    <!--条件查询-->
+    <form action="/userInfo/all" class="form-inline">
+        <div class="form-group mx-sm-3 mb-2">
+            <label class="" for="username">用户名:</label>
+            <input class="form-control" id="username" name="username" th:value="${condition.writeUsername()}"
+                   type="text">
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+            <label class="" for="birthday">出生日期：</label>
+            <input class="form-control" id="birthday" name="birth" placeholder="birthday"
+                   th:value="${condition.birthday}"
+                   type="date">
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+            <label class="">性别：</label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" id="inlineRadio1" name="gender" th:checked="${condition.gender == '男'}"
+                       type="radio" value="男">
+                <label class="form-check-label" for="inlineRadio1">男</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" id="inlineRadio2" name="gender" type="radio"
+                       value="女">
+                <label class="form-check-label" for="inlineRadio2"
+                       th:checked="${condition.gender == '女'}">女</label>
+            </div>
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+            <label class="" for="phone">手机号：</label>
+            <input class="form-control" id="phone" name="phone" placeholder="phone" th:value="${condition.phone}"
+                   type="tel">
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+            <label class="" for="email">邮箱：</label>
+            <input class="form-control" id="email" name="email" placeholder="email" th:value="${condition.email}"
+                   type="email">
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+            <label class="" for="qq">qq：</label>
+            <input class="form-control" id="qq" name="qq" placeholder="qq" th:value="${condition.qq}"
+                   type="text">
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+            <label class="" for="state">帐号状态：</label>
+            <input class="form-control" id="state" name="state" placeholder="state" th:value="${condition.state}"
+                   type="number">
+        </div>
+        <button class="btn btn-primary mb-2" type="submit">查询</button>
+    </form>
+    <!--用户信息-->
+    <table>
+        <tr>
+            <th>id</th>
+            <th>用户名</th>
+            <th>真实姓名</th>
+            <th>性别</th>
+            <th>出生日期</th>
+            <th>手机号</th>
+            <th>邮箱</th>
+            <th>QQ</th>
+            <th>头像</th>
+            <th>创建时间</th>
+            <th>更新时间</th>
+            <th>帐号状态</th>
+            <th>删除状态</th>
+            <th>操作</th>
+        </tr>
+        <tr th:each="userInfo:${page.list}">
+            <th scope="row" th:text="${userInfo.id}"></th>
+            <td th:text="${userInfo.username}"></td>
+            <td th:text="${userInfo.name}"></td>
+            <td th:text="${userInfo.gender}"></td>
+            <td th:text="${userInfo.birthday}"></td>
+            <td th:text="${userInfo.phone}"></td>
+            <td th:text="${userInfo.email}"></td>
+            <td th:text="${userInfo.qq}"></td>
+            <td><img alt="..." th:src="@{${userInfo.img}}" style="width: 30px;"></td>
+            <td th:text="${userInfo.createDate}"></td>
+            <td th:text="${userInfo.updateDate}"></td>
+            <td th:text="${userInfo.state}"></td>
+            <td th:text="${userInfo.isDel}"></td>
+            <td>
+                <a th:href="@{/userInfo/delete(id=${userInfo.id})}">删除</a>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+                        th:data-whatever="${userInfo.id}">修改
+                </button>
+            </td>
+        </tr>
+    </table>
+    <!--修改用户信息-->
+    <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">修改信息</h5>
+                    <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="/userInfo/edit" method="post"  enctype="multipart/form-data">
+                        <div class="form-group">
+                            <!--                            <label for="id" class="col-form-label">用户id:</label>-->
+                            <input class="form-control" hidden id="id" name="id" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="username-edit">用户名:
+                                <input class="form-control" id="username-edit" name="username" type="text">
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="password">密码:
+                                <input class="form-control" id="password" name="password" type="password">
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="name">真实姓名:
+                                <input class="form-control" id="name" name="name" type="text">
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label">性别:
+                                <input class="form-control" name="gender" type="radio" value="男">男
+                                <input class="form-control" name="gender" type="radio" value="女">女
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="birthday-edit">出生日期:
+                                <input class="form-control" id="birthday-edit" name="birthday" type="date">
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="phone-edit">手机号:
+                                <input class="form-control" id="phone-edit" name="phone" type="tel">
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="email-edit">邮箱:
+                                <input class="form-control" id="email-edit" name="email" type="email">
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="qq-edit">qq:
+                                <input class="form-control" id="qq-edit" name="qq" type="text">
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="img">头像:
+                                <input class="form-control" id="img" name="file" type="file">
+                            </label>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" data-dismiss="modal" type="button">关闭</button>
+                            <button class="btn btn-primary" type="submit">提交</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--分页-->
+    <nav aria-label="...">
+        <ul class="pagination justify-content-center">
+            <li th:class="${page.isFirstPage? 'page-item disabled' : 'page-item'} ">
+                <a class="page-link"
+                   th:href="@{/userInfo/all(pageNum=${page.navigateFirstPage})}">First</a>
+            </li>
+            <li th:class="${page.hasPreviousPage ? 'page-item' : 'page-item disabled'} ">
+                <a class="page-link"
+                   th:href="@{/userInfo/all(pageNum=${page.prePage})}">Previous</a>
+            </li>
+            <li th:class="${num==page.pageNum ? 'page-item active' : 'page-item'}"
+                th:each="num : ${page.navigatepageNums}">
+                <a class="page-link"
+                   th:href="@{/userInfo/all(pageNum=${num})}"
+                   th:text="${num}"></a></li>
+            <li th:class="${page.hasNextPage ? 'page-item' : 'page-item disabled'}">
+                <a class="page-link"
+                   th:href="@{/userInfo/all(pageNum=${page.nextPage})}">Next</a>
+            </li>
+            <li th:class="${page.isLastPage ? 'page-item disabled' : 'page-item'} ">
+                <a class="page-link"
+                   th:href="@{/userInfo/all(pageNum=${page.navigateLastPage})}">Last</a>
+            </li>
+        </ul>
+        <div style="float: right">共<span th:text="${page.pages}"></span>页&nbsp;&nbsp;共<span
+                th:text="${page.total}"></span>条
+        </div>
+    </nav>
+    <!--获取每一行的id并设置到input框中-->
+    <script>
+        $('#exampleModal').on('show.bs.modal', function (event) {
+            let button = $(event.relatedTarget)
+            let id = button.data('whatever')
+            let modal = $(this)
+            modal.find('#id').val(id)
+        })
+    </script>
+    <div class="toast" data-delay="3000" id="message-info"
+         style="position: absolute; top: 0; right:100px;width: 200px;">
+        <div class="toast-header">
+            <img alt="..." class="rounded mr-2 info-img" th:src="@{/img/avatar.jpg}" width="30px">
+            <strong class="mr-auto">云创云盘</strong>
+            <small>刚刚</small>
+            <button aria-label="Close" class="ml-2 mb-1 close" data-dismiss="toast" type="button">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body">[(${msg})]</div>
+    </div>
+    <script th:inline="javascript">
+        let msg = [[${msg}]];
+        if (msg) {
+            // 让弹窗显示
+            $('#message-info').toast('show');
+        }
+    </script>
+</div>
+
+</body>
+</html>

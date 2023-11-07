@@ -6,14 +6,16 @@
     <resultMap id="userInfo" type="userInfo">
         <result column="gender" property="gender" javaType="String" jdbcType="BIT" typeHandler="com.kfm.springBatis.handler.GenderHandler"/>
     </resultMap>
+    <sql id="UserInfo_Column">`id`,`username`,`password`,`name`,`gender`,`birthday`,`phone`,
+`email`,`qq`,`img`,`create_date`,`update_date`,`state`,`is_del`</sql>
     <select id="selectAll" resultMap="userInfo">
-        select * from user_info
+        select <include refid="UserInfo_Column"/> from user_info
     </select>
     <select id="selectById" resultMap="userInfo" parameterType="string">
-        select * from user_info where id=#{id}
+        select <include refid="UserInfo_Column"/> from user_info where id=#{id}
     </select>
     <select id="selectByIds" resultMap="userInfo">
-        select * from user_info
+        select <include refid="UserInfo_Column"/> from user_info
         <where>
             <foreach collection="array" item="id" open="id in (" separator="," close=")">
                 #{id}
@@ -21,13 +23,13 @@
         </where>
     </select>
     <select id="selectByUserInfo" parameterType="userInfo" resultMap="userInfo">
-        select * from user_info
+        select <include refid="UserInfo_Column"/> from user_info
         <where>
             <if test="id != null">
                 and id=#{id}
             </if>
             <if test="username != null">
-                and username=#{username}
+                and username like #{username}
             </if>
             <if test="password != null">
                 and password=#{password}
@@ -60,7 +62,31 @@
     <delete id="delete" parameterType="userInfo">
         delete from user_info where id=#{id};
     </delete>
-<!--    <update id="update" parameterType="userInfo">-->
-<!--        update user_info set username=#{username}-->
-<!--    </update>-->
+    <update id="update" parameterType="userInfo">
+        update user_info
+        <set>
+            <if test="username != null">
+                username=#{username},
+            </if>
+            <if test="password != null">
+                password=#{password},
+            </if>
+            <if test="name != null">
+                name=#{name},
+            </if>
+            <if test="gender!=null">
+                gender=#{gender,typeHandler=com.kfm.springBatis.handler.GenderHandler},
+            </if>
+            <if test="birthday!=null">
+                birthday=#{birthday},
+            </if>
+            <if test="phone!=null">
+                phone=#{phone},
+            </if>
+            <if test="email!=null">
+                email=#{email},
+            </if>
+        </set>
+        where id=#{id}
+    </update>
 </mapper>

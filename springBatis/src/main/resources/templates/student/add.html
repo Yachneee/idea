@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <script th:src="@{/js/jquery.slim.min.js}"></script>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
 </head>
 <body>
 <div>
-    <form action="/addStudent" method="post">
+    <form action="/student/add" method="post">
         <div class="form-group">
             <label for="name" class="col-form-label">学生姓名:
                 <input type="text" class="form-control" id="name" name="name">

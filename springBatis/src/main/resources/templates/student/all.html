@@ -9,8 +9,10 @@
 </head>
 <body>
 <div class="container">
+    <!--添加学生信息-->
+    <a th:href="@{/student/add}" class="btn btn-primary">添加学生信息</a>
     <!--条件查询-->
-    <form class="form-inline" action="/allStudent">
+    <form class="form-inline" action="/student/all">
         <div class="form-group mb-2">
             <label for="username" class="">姓名:</label>
             <input type="text" class="form-control" id="username" name="name" th:value="${condition.writeName()}">
@@ -50,13 +52,13 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="student :${page.list}">
+        <tr th:each="student:${page.list}">
             <th scope="row" th:text="${student.id}"></th>
             <td th:text="${student.name}"></td>
             <td th:text="${student.birth}"></td>
             <td th:text="${student.gender}"></td>
             <td>
-                <a th:href="@{/deleteStudent(id=${student.id})}">删除</a>
+                <a th:href="@{/student/delete(id=${student.id})}">删除</a>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
                         th:data-whatever="${student.id}">修改
                 </button>
@@ -76,7 +78,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="/editStudent" method="post">
+                    <form action="/student/edit" method="post">
                         <div class="form-group">
                             <!--                            <label for="id" class="col-form-label">学生编号:</label>-->
                             <input type="text" class="form-control" id="id" name="id" hidden>
@@ -112,23 +114,23 @@
         <ul class="pagination justify-content-center">
             <li th:class="${page.isFirstPage? 'page-item disabled' : 'page-item'} ">
                 <a class="page-link"
-                   th:href="@{/allStudent(pageNum=${page.navigateFirstPage})}">First</a>
+                   th:href="@{/student/all(pageNum=${page.navigateFirstPage})}">First</a>
             </li>
             <li th:class="${page.hasPreviousPage ? 'page-item' : 'page-item disabled'} ">
                 <a class="page-link"
-                   th:href="@{/allStudent(pageNum=${page.prePage})}">Previous</a>
+                   th:href="@{/student/all(pageNum=${page.prePage})}">Previous</a>
             </li>
             <li th:each="num : ${page.navigatepageNums}" th:class="${num==page.pageNum ? 'page-item active' : 'page-item'}">
                 <a class="page-link"
-                   th:href="@{/allStudent(pageNum=${num})}"
+                   th:href="@{/student/all(pageNum=${num})}"
                    th:text="${num}"></a></li>
             <li th:class="${page.hasNextPage ? 'page-item' : 'page-item disabled'}">
                 <a class="page-link"
-                   th:href="@{/allStudent(pageNum=${page.nextPage})}">Next</a>
+                   th:href="@{/student/all(pageNum=${page.nextPage})}">Next</a>
             </li>
             <li th:class="${page.isLastPage ? 'page-item disabled' : 'page-item'} ">
                 <a class="page-link"
-                   th:href="@{/allStudent(pageNum=${page.navigateLastPage})}">Last</a>
+                   th:href="@{/student/all(pageNum=${page.navigateLastPage})}">Last</a>
             </li>
         </ul>
         <div style="float: right">共<span th:text="${page.pages}"></span>页&nbsp;&nbsp;共<span th:text="${page.total}"></span>条</div>
@@ -144,7 +146,7 @@
     </script>
     <div class="toast" style="position: absolute; top: 0; right:100px;width: 200px;" id="message-info" data-delay="3000">
         <div class="toast-header">
-            <img th:src="@{img/avatar.jpg}" class="rounded mr-2 info-img" alt="..." width="30px">
+            <img th:src="@{/img/avatar.jpg}" class="rounded mr-2 info-img" alt="..." width="30px">
             <strong class="mr-auto">云创云盘</strong>
             <small>刚刚</small>
             <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">

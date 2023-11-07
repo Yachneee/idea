@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dept</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <script th:src="@{/js/jquery.slim.min.js}"></script>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>部门列表</h3>
+            <table class="table table-hover justify-content-center">
+                <thead>
+                <tr>
+                    <th>部门编号</th>
+                    <th>部门名称</th>
+                    <th>部门地址</th>
+                    <th>
+                        <table>
+<!--                            <tr>-->
+<!--                                <th>部门员工</th>-->
+<!--                            </tr>-->
+                            <tr>
+                                <th>员工编号</th>
+                                <th>员工姓名</th>
+                                <th>员工职位</th>
+                                <th>员工上司</th>
+                                <th>员工入职日期</th>
+                                <th>员工工资</th>
+                                <th>员工奖金</th>
+                            </tr>
+                        </table>
+                    </th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="dept:${list}">
+                    <td th:text="${dept.deptNo}"></td>
+                    <td th:text="${dept.deName}"></td>
+                    <td th:text="${dept.loc}"></td>
+                    <td>
+                        <table th:if="${#lists.size(dept.empList)} > 0">
+                            <tr th:each="emp:${dept.empList}">
+                                <td th:text="${emp.empNo}"></td>
+                                <td th:text="${emp.EName}"></td>
+                                <td th:text="${emp.job}"></td>
+                                <td th:text="${emp.mgr}"></td>
+                                <td th:text="${#dates.format(emp.hirdate, 'yyyy-MM-dd')}"></td>
+                                <td th:text="${emp.sal}"></td>
+                                <td th:text="${emp.comm}"></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <a th:href="@{/dept/edit(deptno=${dept.deptNo})}">编辑</a>
+                        <a th:href="@{/dept/delete(deptno=${dept.deptNo})}">删除</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <a href="/dept/add">添加</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

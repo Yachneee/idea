@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kfm.kfmBatis.mapper.DeptMapper">
+
+    <resultMap id="BaseResultMap" type="dept">
+            <id property="deptNo" column="dept_no" jdbcType="INTEGER"/>
+            <result property="deName" column="de_name" jdbcType="VARCHAR"/>
+            <result property="loc" column="loc" jdbcType="VARCHAR"/>
+        <collection property="empList" ofType="emp">
+            <result property="empNo" column="emp_no" jdbcType="INTEGER"/>
+            <result property="eName" column="e_name" jdbcType="VARCHAR"/>
+            <result property="job" column="job" jdbcType="VARCHAR"/>
+            <result property="mgr" column="mgr" jdbcType="INTEGER"/>
+            <result property="hirdate" column="hirdate" jdbcType="TIMESTAMP"/>
+            <result property="sal" column="sal" jdbcType="DOUBLE"/>
+            <result property="comm" column="comm" jdbcType="DOUBLE"/>
+            <result property="deptNo" column="dept_no" jdbcType="INTEGER"/>
+        </collection>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        dept_no,de_name,loc
+    </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultType="dept">
+        select
+        <include refid="Base_Column_List" />
+        from dept
+        where  dept_no = #{deptNo,jdbcType=INTEGER} 
+    </select>
+    <select id="selectAll" resultType="dept">
+        select
+        <include refid="Base_Column_List" />
+        from dept
+    </select>
+    <select id="selectAllWithEmp" resultMap="BaseResultMap">
+        select dept.*,emp.*
+        from dept,emp
+        where dept.dept_no = emp.dept_no
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete from dept
+        where  dept_no = #{deptNo,jdbcType=INTEGER} 
+    </delete>
+    <insert id="insert" keyColumn="dept_no" keyProperty="deptNo" parameterType="dept" useGeneratedKeys="true">
+        insert into dept
+        ( dept_no,de_name,loc
+        )
+        values (#{deptNo,jdbcType=INTEGER},#{deName,jdbcType=VARCHAR},#{loc,jdbcType=VARCHAR}
+        )
+    </insert>
+    <insert id="insertSelective" keyColumn="dept_no" keyProperty="deptNo" parameterType="dept" useGeneratedKeys="true">
+        insert into dept
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+                <if test="deptNo != null">dept_no,</if>
+                <if test="deName != null">de_name,</if>
+                <if test="loc != null">loc,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+                <if test="deptNo != null">#{deptNo,jdbcType=INTEGER},</if>
+                <if test="deName != null">#{deName,jdbcType=VARCHAR},</if>
+                <if test="loc != null">#{loc,jdbcType=VARCHAR},</if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="dept">
+        update dept
+        <set>
+                <if test="deName != null">
+                    de_name = #{deName,jdbcType=VARCHAR},
+                </if>
+                <if test="loc != null">
+                    loc = #{loc,jdbcType=VARCHAR},
+                </if>
+        </set>
+        where   dept_no = #{deptNo,jdbcType=INTEGER} 
+    </update>
+    <update id="updateByPrimaryKey" parameterType="dept">
+        update dept
+        set 
+            de_name =  #{deName,jdbcType=VARCHAR},
+            loc =  #{loc,jdbcType=VARCHAR}
+        where   dept_no = #{deptNo,jdbcType=INTEGER} 
+    </update>
+</mapper>

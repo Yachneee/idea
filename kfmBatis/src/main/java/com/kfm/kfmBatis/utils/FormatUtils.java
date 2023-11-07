@@ -1,5 +1,4 @@
-package com.kfm.springBatis.utils;
-
+package com.kfm.kfmBatis.utils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

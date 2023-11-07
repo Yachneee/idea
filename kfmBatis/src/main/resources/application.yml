@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/kfm
+    username: root
+    password:
+  mvc:
+    static-path-pattern: /static/avatar/**
+    # 静态资源位置
+  web:
+    resources:
+      static-locations: file:D:/upload/avatar/
+mybatis:
+  configuration:
+    #   ??????
+    map-underscore-to-camel-case: true
+  # ??????
+  type-aliases-package: com.kfm.kfmBatis.entity
+  # ??????(????????)
+  mapper-locations: classpath:mapper/*.xml
+pagehelper:
+  # ????????dialect?
+  helper-dialect: mysql
+  # ??????????
+  reasonable: true
+logging:
+  level:
+  # 来具体输出哪些包的日志级别
+    org.springframework: warn
+    com.kfm.kfmBatis: debug
+  # 请求的路径

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <script th:src="@{/js/jquery.slim.min.js}"></script>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</head>
+<body>
+<div>
+    <form action="/user/add" method="post"  enctype="multipart/form-data">
+        <div class="form-group">
+            <label class="col-form-label" for="username-edit">用户名:
+                <input class="form-control" id="username-edit" name="username" type="text">
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="col-form-label" for="password">密码:
+                <input class="form-control" id="password" name="password" type="password">
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="col-form-label" for="name">真实姓名:
+                <input class="form-control" id="name" name="name" type="text">
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="col-form-label">性别:
+                <input class="form-control" name="gender" type="radio" value="男">男
+                <input class="form-control" name="gender" type="radio" value="女">女
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="col-form-label" for="birthday-edit">出生日期:
+                <input class="form-control" id="birthday-edit" name="birthday" type="date">
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="col-form-label" for="phone-edit">手机号:
+                <input class="form-control" id="phone-edit" name="phone" type="tel">
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="col-form-label" for="email-edit">邮箱:
+                <input class="form-control" id="email-edit" name="email" type="email">
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="col-form-label" for="qq-edit">qq:
+                <input class="form-control" id="qq-edit" name="qq" type="text">
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="col-form-label" for="img">头像:
+                <input class="form-control" id="img" name="file" type="file">
+            </label>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="submit">提交</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

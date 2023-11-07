@@ -1,0 +1,26 @@
+spring:
+    datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/school
+      username: Yachne
+      password: lyq
+#    mvc:
+#      static-path-pattern: /static/avatar/**
+#      # 静态资源位置
+#    web:
+#      resources:
+#        static-locations: file:D:/upload/avatar/
+mybatis:
+  # ??????
+  type-aliases-package: com.kfm.springBatis.entity
+  configuration:
+#   ??????
+    map-underscore-to-camel-case: true
+  # ??????(????????)
+#    mapper-locations: classpath:mapper/*.xml
+pagehelper:
+        # ????????dialect?
+   helper-dialect: mysql
+        # ??????????
+   reasonable: true
+

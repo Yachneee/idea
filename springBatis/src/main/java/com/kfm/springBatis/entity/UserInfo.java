@@ -25,17 +25,31 @@ public class UserInfo implements Serializable {
      */
     private String password;
     private String name;
-
+    public String writeUsername() {
+        if(username!=null){
+            return username.replace("%", "");
+        }
+        return username;
+    }
     public String getBirthday() {
-        return FormatUtils.formatDate(birthday);
+        if(birthday!=null){
+            return FormatUtils.formatDate(birthday);
+        }
+        return null;
     }
 
     public String getCreateDate() {
-        return FormatUtils.formatDateTime(createDate);
+        if(createDate!=null){
+            return FormatUtils.formatDateTime(createDate);
+        }
+        return null;
     }
 
     public String getUpdateDate() {
-        return FormatUtils.formatDateTime(updateDate);
+        if(updateDate!=null){
+            return FormatUtils.formatDateTime(updateDate);
+        }
+        return null;
     }
 
     private String gender;
