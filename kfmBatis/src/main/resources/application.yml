@@ -4,12 +4,12 @@ spring:
     url: jdbc:mysql://localhost:3306/kfm
     username: root
     password:
-  mvc:
-    static-path-pattern: /static/avatar/**
-    # 静态资源位置
-  web:
-    resources:
-      static-locations: file:D:/upload/avatar/
+#  mvc:
+#    static-path-pattern: /static/avatar/**
+#    # 静态资源位置
+#  web:
+#    resources:
+#      static-locations: file:D:/upload/avatar/
 mybatis:
   configuration:
     #   ??????

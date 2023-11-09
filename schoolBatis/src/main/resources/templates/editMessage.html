@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <script th:src="@{/js/jquery.slim.min.js}"></script>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</head>
+<body>
+<div>
+    <form action="/editMessage" enctype="multipart/form-data" method="post">
+        <div class="form-group" hidden="hidden">
+            <label class="col-form-label" for="id">用户编号:
+                <input class="form-control" disabled id="id" name="id" th:value="${session.user.id}" type="text">
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="col-form-label" for="username">用户名:
+                <input class="form-control" id="username" name="username" th:value="${session.user.username}"
+                       type="text">
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="col-form-label" for="email">邮箱:
+                <input class="form-control" id="email" name="email" th:value="${session.user.email}" type="email">
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="col-form-label" for="phone-edit">手机号:
+                <input class="form-control" id="phone-edit" name="phone" th:value="${session.user.phone}" type="tel">
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="col-form-label">性别:
+                <input class="form-control" name="gender" th:checked="${session.user.sex == '男'}" type="radio"
+                       value="男">男
+                <input class="form-control" name="gender" th:checked="${session.user.sex == '女'}" type="radio"
+                       value="女">女
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="col-form-label" for="img">头像:
+                <img alt="..." style="width: 30px;" th:src="@{${session.user.avatar}}"/>
+                <input class="form-control" id="img" name="file" type="file">
+            </label>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="submit">提交</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

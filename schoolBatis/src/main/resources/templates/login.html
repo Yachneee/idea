@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Login</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <script th:src="@{/js/jquery.slim.min.js}"></script>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+        }
+
+        .con {
+            height: 100%;
+            background-image: linear-gradient(to right, #fbc2eb, #a6c1ee);
+        }
+
+        .loginMessage-wrapper {
+            background-color: #fff;
+            width: 358px;
+            height: 588px;
+            border-radius: 15px;
+            padding: 0 50px;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            box-sizing: content-box;
+        }
+
+        .header {
+            font-size: 38px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        .input-item {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+            border: 0;
+            padding: 10px;
+            border-bottom: 1px solid rgb(128, 125, 125);
+            font-size: 15px;
+            outline: none;
+        }
+
+        .input-item::placeholder {
+            text-transform: uppercase;
+        }
+
+        .btn {
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            margin-top: 40px;
+            background-image: linear-gradient(to right, #a6c1ee, #fbc2eb);
+            color: #fff;
+            border: 0;
+        }
+
+        .btn:hover {
+            cursor: pointer;
+            background-image: linear-gradient(to right, #d09de8, #1df3fb);
+        }
+
+        .msg {
+            text-align: center;
+            line-height: 88px;
+        }
+
+        a {
+            text-decoration-line: none;
+            color: #abc1ee;
+        }
+    </style>
+</head>
+<body>
+<div class="con">
+    <div class="loginMessage-wrapper">
+        <div class="header">Login</div>
+        <div class="form-wrapper">
+            <form action="/login" method="post">
+<!--                <label></label>-->
+                <input class="input-item" name="username" placeholder="username" type="text">
+<!--                <label></label>-->
+                <input class="input-item" name="password" placeholder="password" type="password">
+                <input class="btn" type="submit" value="Login"/>
+            </form>
+        </div>
+        <div class="msg">
+            Don't have account?
+            <a href="#">Sign up</a>
+        </div>
+    </div>
+</div>
+<div class="toast" data-delay="3000" id="message-info" style="position: absolute; top: 0; right:100px;width: 200px;">
+    <div class="toast-header" style="width: 100%">
+        <img alt="..." class="rounded mr-2 info-img" th:src="@{/img/avatar.jpg}" width="30px">
+        <strong class="mr-auto">云创云盘</strong>
+        <small>刚刚</small>
+        <button aria-label="Close" class="ml-2 mb-1 close" data-dismiss="toast" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="toast-body">[(${msg})]</div>
+</div>
+<script th:inline="javascript">
+    let msg = [[${msg}]];
+    if (msg) {
+        // 让弹窗显示
+        $('#message-info').toast('show');
+    }
+</script>
+</body>
+</html>

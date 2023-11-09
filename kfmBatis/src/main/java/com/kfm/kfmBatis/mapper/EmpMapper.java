@@ -1,7 +1,6 @@
 package com.kfm.kfmBatis.mapper;
 
 import com.kfm.kfmBatis.entity.Emp;
-import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 

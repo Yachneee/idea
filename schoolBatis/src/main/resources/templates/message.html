@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录信息</title>
+</head>
+<body>
+<div class="container">
+   国家： <span th:text="${loginMessage.country}"></span><br>
+   省份： <span th:text="${loginMessage.province}"></span><br>
+   城市： <span th:text="${loginMessage.city}"></span><br>
+   上一次登陆时间： <span th:text="${loginMessage.lastLoginTime}"></span>
+</div>
+</body>
+</html>

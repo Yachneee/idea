@@ -1,0 +1,46 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/school
+    username: Yachne
+    password: lyq
+#  mvc:
+#    static-path-pattern: /static/avatar/**
+#    # 静态资源位置
+#  web:
+#    resources:
+#      static-locations: file:D:/upload/avatar/
+mybatis:
+  configuration:
+    #   ??????
+    map-underscore-to-camel-case: true
+  # ??????
+  type-aliases-package: com.kfm.schoolBatis.entity
+  # ??????(????????)
+  mapper-locations: classpath:mapper/*.xml
+pagehelper:
+  # ????????dialect?
+  helper-dialect: mysql
+  # ??????????
+  reasonable: true
+logging:
+  level:
+  # 来具体输出哪些包的日志级别
+    org.springframework: warn
+    com.kfm.schoolBatis: debug
+  # 请求的路径
+
+person:
+  - name: 张三
+    age: 20
+  - name: 李四
+    age: 20
+
+ser:
+  port: 9999
+  IP: 127.0.0.1
+school:
+  login_count: 5
+  request_count: 10
+
+

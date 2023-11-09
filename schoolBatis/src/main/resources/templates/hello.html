@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+    <link href="/css/layui.css" rel="stylesheet">
+    <script src="/js/layui.js"></script>
+    <style>
+        .layui-body {
+            display: flex;
+            flex-direction: column;
+            height: 100%; /* 视口的高度，让.layui-body占满全屏 */
+        }
+        .layui-card-body {
+            flex: 1 1 auto; /* 让这个元素占满剩余空间 */
+            position: relative; /* 为iframe的绝对定位做准备 */
+            height: 100%;
+        }
+
+        .layui-card-body iframe {
+            position: absolute; /* 把iframe放在.layui-card-body的左上角 */
+            top: 0; /* 让iframe的顶部和.layui-card-body的顶部对齐 */
+            left: 0; /* 让iframe的左边和.layui-card-body的左边对齐 */
+            width: 100%; /* iframe宽度占满父元素 */
+            height: 100%; /* iframe高度占满父元素 */
+        }
+    </style>
+</head>
+<body>
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <!--        <h1>Hello,<span style="color:#766428;font-weight: bolder" th:text="${session.user.username}"></span></h1>-->
+        <!--        <img alt="头像" class="avatar" th:src="@{${session.user.avatar}}" width="100px">-->
+        <div class="layui-logo layui-hide-xs layui-bg-black">开发喵网页</div>
+        <!-- 头部区域（可配合layui 已有的水平导航） -->
+        <ul class="layui-nav layui-layout-left">
+            <!-- 移动端显示 -->
+            <li class="layui-nav-item layui-show-xs-inline-block layui-hide-sm" lay-header-event="menuLeft">
+                <i class="layui-icon layui-icon-spread-left"></i>
+            </li>
+            <li class="layui-nav-item layui-hide-xs"><a href="javascript:;">nav 1</a></li>
+            <li class="layui-nav-item layui-hide-xs"><a href="javascript:;">nav 2</a></li>
+            <li class="layui-nav-item layui-hide-xs"><a href="javascript:;">nav 3</a></li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">nav groups</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;">menu 11</a></dd>
+                    <dd><a href="javascript:;">menu 22</a></dd>
+                    <dd><a href="javascript:;">menu 33</a></dd>
+                </dl>
+            </li>
+        </ul>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item layui-hide layui-show-sm-inline-block">
+                <a href="javascript:;">
+                    <img class="layui-nav-img" style="width: 30px" th:src="@{${session.user.avatar}}">
+                    <span th:text="${session.user.username}"></span>
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="/editMessage" target="main">个人资料</a></dd>
+                    <dd><a href="/editPassword" target="main">修改密码</a></dd>
+                    <dd><a href="/logout">退出登录</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item" lay-header-event="menuRight" lay-unselect>
+                <a href="javascript:;">
+                    <i class="layui-icon layui-icon-more-vertical"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <li class="layui-nav-item" th:if="${admin}"><a href="/list" target="main">用户列表</a></li>
+<!--                <li class="layui-nav-item" th:if="${admin}"><a href="/add" target="main">添加用户</a></li>-->
+                <li class="layui-nav-item"><a href="/send" target="main">登录信息</a></li>
+                <li class="layui-nav-item"><a href="javascript:">文件列表</a></li>
+                <li class="layui-nav-item"><a href="javascript:">更多功能</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <blockquote class="layui-elem-quote layui-text">
+            Layui 框体布局内容主体区域
+        </blockquote>
+        <!--            <div class="layui-card-header">-->
+        <!--                下面是充数内容，为的是出现滚动条-->
+        <!--            </div>-->
+        <div class="layui-card-body">
+            <iframe frameborder="0" name="main"></iframe>
+        </div>
+<!--        <div style="padding: 15px;">-->
+<!--            -->
+<!--&lt;!&ndash;            <div class="layui-card layui-panel">&ndash;&gt;-->
+<!--&lt;!&ndash;                &ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--            <br><br>-->
+<!--        </div>-->
+        <div class="layui-footer">
+            <!-- 底部固定区域 -->
+            底部固定区域
+        </div>
+    </div>
+    <script>
+        //JS
+        layui.use(['element', 'layer', 'util'], function () {
+            var element = layui.element;
+            var layer = layui.layer;
+            var util = layui.util;
+            var $ = layui.$;
+
+            //头部事件
+            util.event('lay-header-event', {
+                menuLeft: function (othis) { // 左侧菜单事件
+                    layer.msg('展开左侧菜单的操作', {icon: 0});
+                },
+                menuRight: function () {  // 右侧菜单事件
+                    layer.open({
+                        type: 1,
+                        title: '更多',
+                        content: '<div style="padding: 15px;">处理右侧面板的操作</div>',
+                        area: ['260px', '100%'],
+                        offset: 'rt', // 右上角
+                        anim: 'slideLeft', // 从右侧抽屉滑出
+                        shadeClose: true,
+                        scrollbar: false
+                    });
+                }
+            });
+        });
+    </script>
+</div>
+<div class="toast" style="position: absolute; top: 0; right:100px;width: 200px;" id="message-info" data-delay="3000">
+    <div class="toast-header"  style="width: 100%">
+        <img th:src="@{/img/avatar.jpg}" class="rounded mr-2 info-img" alt="..." width="30px">
+        <strong class="mr-auto">云创云盘</strong>
+        <small>刚刚</small>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="toast-body">[(${msg})]</div>
+</div>
+<script th:inline="javascript">
+    let msg = [[${msg}]];
+    if (msg) {
+        // 让弹窗显示
+        $('#message-info').toast('show');
+    }
+</script>
+</body>
+</html>

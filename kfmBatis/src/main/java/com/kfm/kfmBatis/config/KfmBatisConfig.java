@@ -4,8 +4,11 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
+/**
+ * @author Administrator
+ */
 @Component
-public class kfmBatisConfig extends WebMvcConfigurationSupport {
+public class KfmBatisConfig extends WebMvcConfigurationSupport {
     /**
      * 重写addResourceHandlers 静态资源映射处理
      * addResourceHandler() 你要处理的请求

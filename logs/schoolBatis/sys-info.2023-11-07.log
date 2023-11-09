@@ -1,0 +1,385 @@
+20:23:15.701 [main] INFO  c.k.s.m.RoleMapperTest - [logStarting,55] - Starting RoleMapperTest using Java 17.0.2 on Yachne with PID 15192 (started by Administrator in D:\kaifamiao\workspace\idea\java\schoolBatis)
+20:23:15.706 [main] INFO  c.k.s.m.RoleMapperTest - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+20:23:18.236 [main] INFO  c.k.s.m.RoleMapperTest - [logStarted,61] - Started RoleMapperTest in 2.941 seconds (JVM running for 4.17)
+20:23:18.955 [main] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+20:23:19.447 [main] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+20:23:19.705 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+20:23:19.737 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+20:25:11.525 [main] INFO  c.k.s.m.RoleMapperTest - [logStarting,55] - Starting RoleMapperTest using Java 17.0.2 on Yachne with PID 16112 (started by Administrator in D:\kaifamiao\workspace\idea\java\schoolBatis)
+20:25:11.527 [main] INFO  c.k.s.m.RoleMapperTest - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+20:25:13.536 [main] INFO  c.k.s.m.RoleMapperTest - [logStarted,61] - Started RoleMapperTest in 2.379 seconds (JVM running for 3.677)
+20:25:14.062 [main] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+20:25:14.480 [main] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+20:25:14.639 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+20:25:14.685 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+20:29:53.372 [main] INFO  c.k.s.m.RoleMapperTest - [logStarting,55] - Starting RoleMapperTest using Java 17.0.2 on Yachne with PID 2756 (started by Administrator in D:\kaifamiao\workspace\idea\java\schoolBatis)
+20:29:53.375 [main] INFO  c.k.s.m.RoleMapperTest - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+20:29:55.652 [main] INFO  c.k.s.m.RoleMapperTest - [logStarted,61] - Started RoleMapperTest in 2.586 seconds (JVM running for 3.869)
+20:29:56.343 [main] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+20:29:56.882 [main] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+20:29:57.037 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+20:29:57.042 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+20:32:57.755 [main] INFO  c.k.s.m.UserMapperTest - [logStarting,55] - Starting UserMapperTest using Java 17.0.2 on Yachne with PID 20252 (started by Administrator in D:\kaifamiao\workspace\idea\java\schoolBatis)
+20:32:57.758 [main] INFO  c.k.s.m.UserMapperTest - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+20:33:00.025 [main] INFO  c.k.s.m.UserMapperTest - [logStarted,61] - Started UserMapperTest in 2.599 seconds (JVM running for 3.853)
+20:33:00.743 [main] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+20:33:01.264 [main] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+20:33:01.390 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+20:33:01.407 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+22:06:08.239 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarting,55] - Starting SchoolBatisApplication using Java 17.0.2 on Yachne with PID 8316 (D:\kaifamiao\workspace\idea\java\schoolBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+22:06:08.257 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+22:06:10.160 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+22:06:10.164 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+22:06:10.164 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+22:06:10.245 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+22:06:11.507 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+22:06:11.564 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarted,61] - Started SchoolBatisApplication in 4.104 seconds (JVM running for 6.256)
+22:06:33.498 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:10:00.107 [http-nio-8080-exec-5] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+22:10:00.848 [http-nio-8080-exec-5] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+22:16:26.403 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+22:16:26.427 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+22:16:31.266 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarting,55] - Starting SchoolBatisApplication using Java 17.0.2 on Yachne with PID 23832 (D:\kaifamiao\workspace\idea\java\schoolBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+22:16:31.271 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+22:16:32.402 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+22:16:32.403 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+22:16:32.403 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+22:16:32.471 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+22:16:33.178 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+22:16:33.220 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarted,61] - Started SchoolBatisApplication in 2.378 seconds (JVM running for 4.71)
+22:16:52.262 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:16:52.430 [http-nio-8080-exec-1] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+22:16:52.978 [http-nio-8080-exec-1] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+22:21:15.173 [Thread-5] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Pausing ProtocolHandler ["http-nio-8080"]
+22:21:15.177 [Thread-5] INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+22:21:15.177 [Thread-5] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+22:21:15.177 [Thread-5] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Stopping ProtocolHandler ["http-nio-8080"]
+22:21:15.186 [Thread-5] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Destroying ProtocolHandler ["http-nio-8080"]
+22:21:15.189 [Thread-5] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+22:21:15.200 [Thread-5] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+22:21:15.344 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarting,55] - Starting SchoolBatisApplication using Java 17.0.2 on Yachne with PID 23832 (D:\kaifamiao\workspace\idea\java\schoolBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+22:21:15.344 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+22:21:15.697 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+22:21:15.698 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+22:21:15.698 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+22:21:15.721 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+22:21:15.979 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+22:21:15.993 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarted,61] - Started SchoolBatisApplication in 0.705 seconds (JVM running for 287.484)
+22:21:17.426 [Thread-7] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Pausing ProtocolHandler ["http-nio-8080"]
+22:21:17.426 [Thread-7] INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+22:21:17.426 [Thread-7] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Stopping ProtocolHandler ["http-nio-8080"]
+22:21:17.426 [Thread-7] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Destroying ProtocolHandler ["http-nio-8080"]
+22:21:17.536 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarting,55] - Starting SchoolBatisApplication using Java 17.0.2 on Yachne with PID 23832 (D:\kaifamiao\workspace\idea\java\schoolBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+22:21:17.536 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+22:21:17.819 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+22:21:17.819 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+22:21:17.819 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+22:21:17.852 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+22:21:18.189 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+22:21:18.189 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarted,61] - Started SchoolBatisApplication in 0.712 seconds (JVM running for 289.689)
+22:21:32.324 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:21:32.332 [http-nio-8080-exec-1] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-2 - Starting...
+22:21:32.349 [http-nio-8080-exec-1] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-2 - Start completed.
+22:22:37.542 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-2 - Shutdown initiated...
+22:22:37.550 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-2 - Shutdown completed.
+22:25:56.800 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarting,55] - Starting SchoolBatisApplication using Java 17.0.2 on Yachne with PID 23792 (D:\kaifamiao\workspace\idea\java\schoolBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+22:25:56.804 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+22:25:57.883 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+22:25:57.884 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+22:25:57.884 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+22:25:57.965 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+22:25:58.643 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+22:25:58.672 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarted,61] - Started SchoolBatisApplication in 2.367 seconds (JVM running for 3.144)
+22:26:05.418 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:26:16.291 [http-nio-8080-exec-3] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+22:26:16.531 [http-nio-8080-exec-3] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+22:28:07.724 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+22:28:07.732 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+22:28:13.113 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarting,55] - Starting SchoolBatisApplication using Java 17.0.2 on Yachne with PID 14408 (D:\kaifamiao\workspace\idea\java\schoolBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+22:28:13.117 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+22:28:14.491 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+22:28:14.492 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+22:28:14.492 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+22:28:14.568 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+22:28:16.298 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+22:28:16.372 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarted,61] - Started SchoolBatisApplication in 3.833 seconds (JVM running for 4.862)
+22:28:21.462 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:28:46.076 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+22:28:48.088 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+22:31:11.623 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+22:31:11.636 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+22:31:15.573 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarting,55] - Starting SchoolBatisApplication using Java 17.0.2 on Yachne with PID 7424 (D:\kaifamiao\workspace\idea\java\schoolBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+22:31:15.579 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+22:31:17.079 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+22:31:17.082 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+22:31:17.082 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+22:31:17.166 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+22:31:18.940 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+22:31:19.003 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarted,61] - Started SchoolBatisApplication in 4.042 seconds (JVM running for 5.3)
+22:31:22.866 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:31:33.244 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+22:31:35.243 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+22:37:02.216 [main] INFO  c.k.s.m.RoleMapperTest - [logStarting,55] - Starting RoleMapperTest using Java 17.0.2 on Yachne with PID 3416 (started by Administrator in D:\kaifamiao\workspace\idea\java\schoolBatis)
+22:37:02.219 [main] INFO  c.k.s.m.RoleMapperTest - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+22:37:04.949 [main] INFO  c.k.s.m.RoleMapperTest - [logStarted,61] - Started RoleMapperTest in 3.159 seconds (JVM running for 4.909)
+22:37:05.733 [main] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+22:37:05.941 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+22:37:05.958 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+22:37:06.221 [main] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+22:37:06.401 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+22:37:06.433 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+22:38:14.376 [main] INFO  c.k.s.m.UserMapperTest - [logStarting,55] - Starting UserMapperTest using Java 17.0.2 on Yachne with PID 21060 (started by Administrator in D:\kaifamiao\workspace\idea\java\schoolBatis)
+22:38:14.379 [main] INFO  c.k.s.m.UserMapperTest - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+22:38:16.835 [main] INFO  c.k.s.m.UserMapperTest - [logStarted,61] - Started UserMapperTest in 2.793 seconds (JVM running for 4.032)
+22:38:17.358 [main] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+22:38:17.769 [main] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+22:38:17.886 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+22:38:17.914 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+22:40:11.939 [main] INFO  c.k.s.m.UserMapperTest - [logStarting,55] - Starting UserMapperTest using Java 17.0.2 on Yachne with PID 2240 (started by Administrator in D:\kaifamiao\workspace\idea\java\schoolBatis)
+22:40:11.943 [main] INFO  c.k.s.m.UserMapperTest - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+22:40:14.315 [main] INFO  c.k.s.m.UserMapperTest - [logStarted,61] - Started UserMapperTest in 2.745 seconds (JVM running for 4.052)
+22:40:14.820 [main] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+22:40:15.232 [main] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+22:40:15.364 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+22:40:15.374 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+22:48:18.580 [main] INFO  c.k.s.s.i.UserServiceImplTest - [logStarting,55] - Starting UserServiceImplTest using Java 17.0.2 on Yachne with PID 24080 (started by Administrator in D:\kaifamiao\workspace\idea\java\schoolBatis)
+22:48:18.585 [main] INFO  c.k.s.s.i.UserServiceImplTest - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+22:48:20.960 [main] INFO  c.k.s.s.i.UserServiceImplTest - [logStarted,61] - Started UserServiceImplTest in 2.767 seconds (JVM running for 4.174)
+22:48:21.424 [main] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+22:48:21.809 [main] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+22:48:21.938 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+22:48:21.950 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+22:48:45.241 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarting,55] - Starting SchoolBatisApplication using Java 17.0.2 on Yachne with PID 20728 (D:\kaifamiao\workspace\idea\java\schoolBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+22:48:45.245 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+22:48:46.320 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+22:48:46.321 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+22:48:46.321 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+22:48:46.389 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+22:48:47.765 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+22:48:47.836 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarted,61] - Started SchoolBatisApplication in 3.137 seconds (JVM running for 4.479)
+22:48:55.410 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:49:03.132 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+22:49:05.127 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+22:50:54.549 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+22:50:54.565 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+22:50:56.806 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarting,55] - Starting SchoolBatisApplication using Java 17.0.2 on Yachne with PID 21976 (D:\kaifamiao\workspace\idea\java\schoolBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+22:50:56.810 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+22:50:58.230 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+22:50:58.233 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+22:50:58.233 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+22:50:58.332 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+22:50:59.073 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+22:50:59.106 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarted,61] - Started SchoolBatisApplication in 2.771 seconds (JVM running for 3.624)
+22:51:01.205 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:51:04.093 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+22:51:04.408 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+22:51:38.768 [Thread-5] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Pausing ProtocolHandler ["http-nio-8080"]
+22:51:38.769 [Thread-5] INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+22:51:38.770 [Thread-5] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+22:51:38.773 [Thread-5] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Stopping ProtocolHandler ["http-nio-8080"]
+22:51:38.775 [Thread-5] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Destroying ProtocolHandler ["http-nio-8080"]
+22:51:38.778 [Thread-5] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+22:51:38.785 [Thread-5] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+22:51:38.848 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarting,55] - Starting SchoolBatisApplication using Java 17.0.2 on Yachne with PID 21976 (D:\kaifamiao\workspace\idea\java\schoolBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+22:51:38.849 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+22:51:39.069 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+22:51:39.069 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+22:51:39.069 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+22:51:39.087 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+22:51:39.328 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+22:51:39.343 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarted,61] - Started SchoolBatisApplication in 0.526 seconds (JVM running for 43.86)
+22:52:02.289 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarting,55] - Starting SchoolBatisApplication using Java 17.0.2 on Yachne with PID 8556 (D:\kaifamiao\workspace\idea\java\schoolBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+22:52:02.294 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+22:52:03.861 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+22:52:03.862 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+22:52:03.864 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+22:52:03.949 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+22:52:05.780 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+22:52:05.897 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarted,61] - Started SchoolBatisApplication in 4.745 seconds (JVM running for 6.76)
+22:52:08.202 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:52:14.696 [http-nio-8080-exec-3] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+22:52:17.058 [http-nio-8080-exec-3] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+22:53:27.375 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+22:53:27.385 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+22:53:30.313 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarting,55] - Starting SchoolBatisApplication using Java 17.0.2 on Yachne with PID 12060 (D:\kaifamiao\workspace\idea\java\schoolBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+22:53:30.318 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+22:53:31.616 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+22:53:31.617 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+22:53:31.617 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+22:53:31.687 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+22:53:32.422 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+22:53:32.463 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarted,61] - Started SchoolBatisApplication in 2.628 seconds (JVM running for 3.425)
+22:53:38.756 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:53:41.073 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+22:53:41.381 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+22:53:54.261 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+22:53:54.269 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+22:53:56.845 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarting,55] - Starting SchoolBatisApplication using Java 17.0.2 on Yachne with PID 21644 (D:\kaifamiao\workspace\idea\java\schoolBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+22:53:56.849 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+22:53:58.298 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+22:53:58.300 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+22:53:58.300 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+22:53:58.403 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+22:53:59.920 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+22:53:59.985 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarted,61] - Started SchoolBatisApplication in 3.691 seconds (JVM running for 4.758)
+22:54:08.737 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:54:14.573 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+22:54:16.544 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+22:59:01.575 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+22:59:01.585 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+22:59:06.142 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarting,55] - Starting SchoolBatisApplication using Java 17.0.2 on Yachne with PID 19324 (D:\kaifamiao\workspace\idea\java\schoolBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+22:59:06.145 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+22:59:07.128 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+22:59:07.129 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+22:59:07.129 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+22:59:07.189 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+22:59:07.832 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+22:59:07.861 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarted,61] - Started SchoolBatisApplication in 2.109 seconds (JVM running for 2.827)
+22:59:12.704 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:59:14.617 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+22:59:14.854 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+22:59:31.346 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+22:59:31.356 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+22:59:35.039 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarting,55] - Starting SchoolBatisApplication using Java 17.0.2 on Yachne with PID 24568 (D:\kaifamiao\workspace\idea\java\schoolBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+22:59:35.043 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+22:59:36.222 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+22:59:36.224 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+22:59:36.224 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+22:59:36.296 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+22:59:37.767 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+22:59:37.827 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarted,61] - Started SchoolBatisApplication in 3.26 seconds (JVM running for 4.882)
+22:59:49.402 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:59:57.404 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+22:59:59.265 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+23:00:44.039 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+23:00:44.050 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+23:00:48.675 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarting,55] - Starting SchoolBatisApplication using Java 17.0.2 on Yachne with PID 5748 (D:\kaifamiao\workspace\idea\java\schoolBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+23:00:48.679 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+23:00:49.743 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+23:00:49.773 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+23:00:49.773 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+23:00:49.838 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+23:00:50.577 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+23:00:50.612 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarted,61] - Started SchoolBatisApplication in 2.365 seconds (JVM running for 3.088)
+23:00:53.875 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:00:55.658 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+23:00:55.892 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+23:01:00.503 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+23:01:00.513 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+23:01:04.016 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarting,55] - Starting SchoolBatisApplication using Java 17.0.2 on Yachne with PID 24856 (D:\kaifamiao\workspace\idea\java\schoolBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+23:01:04.019 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+23:01:05.140 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+23:01:05.141 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+23:01:05.141 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+23:01:05.211 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+23:01:06.781 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+23:01:06.849 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarted,61] - Started SchoolBatisApplication in 3.276 seconds (JVM running for 4.723)
+23:01:07.661 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:01:14.111 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+23:01:14.856 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+23:02:02.800 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+23:02:02.812 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+23:02:06.158 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarting,55] - Starting SchoolBatisApplication using Java 17.0.2 on Yachne with PID 11280 (D:\kaifamiao\workspace\idea\java\schoolBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+23:02:06.163 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+23:02:07.434 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+23:02:07.436 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+23:02:07.436 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+23:02:07.526 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+23:02:09.283 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+23:02:09.340 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarted,61] - Started SchoolBatisApplication in 3.761 seconds (JVM running for 4.841)
+23:02:15.404 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:02:21.267 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+23:02:23.161 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+23:09:04.396 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+23:09:04.405 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+23:09:10.642 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarting,55] - Starting SchoolBatisApplication using Java 17.0.2 on Yachne with PID 23000 (D:\kaifamiao\workspace\idea\java\schoolBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+23:09:10.646 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+23:09:12.096 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+23:09:12.097 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+23:09:12.098 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+23:09:12.170 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+23:09:12.915 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+23:09:12.958 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarted,61] - Started SchoolBatisApplication in 3.227 seconds (JVM running for 4.077)
+23:09:23.250 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:09:24.571 [http-nio-8080-exec-1] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+23:09:24.802 [http-nio-8080-exec-1] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+23:09:38.342 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+23:09:38.353 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+23:12:22.671 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarting,55] - Starting SchoolBatisApplication using Java 17.0.2 on Yachne with PID 15292 (D:\kaifamiao\workspace\idea\java\schoolBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+23:12:22.675 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+23:12:23.765 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+23:12:23.766 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+23:12:23.766 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+23:12:23.830 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+23:12:24.506 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+23:12:24.535 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarted,61] - Started SchoolBatisApplication in 2.316 seconds (JVM running for 3.16)
+23:12:33.736 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:12:35.892 [http-nio-8080-exec-3] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+23:12:36.149 [http-nio-8080-exec-3] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+23:14:48.566 [Thread-5] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Pausing ProtocolHandler ["http-nio-8080"]
+23:14:48.567 [Thread-5] INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+23:14:48.568 [Thread-5] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+23:14:48.573 [Thread-5] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Stopping ProtocolHandler ["http-nio-8080"]
+23:14:48.574 [Thread-5] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Destroying ProtocolHandler ["http-nio-8080"]
+23:14:48.577 [Thread-5] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+23:14:48.588 [Thread-5] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+23:14:48.713 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarting,55] - Starting SchoolBatisApplication using Java 17.0.2 on Yachne with PID 15292 (D:\kaifamiao\workspace\idea\java\schoolBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+23:14:48.714 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+23:14:48.918 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+23:14:48.918 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+23:14:48.918 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+23:14:48.936 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+23:14:49.108 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+23:14:49.116 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarted,61] - Started SchoolBatisApplication in 0.434 seconds (JVM running for 147.741)
+23:14:53.636 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarting,55] - Starting SchoolBatisApplication using Java 17.0.2 on Yachne with PID 25468 (D:\kaifamiao\workspace\idea\java\schoolBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+23:14:53.639 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+23:14:54.720 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+23:14:54.723 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+23:14:54.724 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+23:14:54.813 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+23:14:55.593 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+23:14:55.627 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarted,61] - Started SchoolBatisApplication in 2.415 seconds (JVM running for 3.154)
+23:15:00.875 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:15:57.532 [http-nio-8080-exec-4] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+23:15:57.988 [http-nio-8080-exec-4] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+23:16:27.880 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+23:16:27.894 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+23:16:58.942 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarting,55] - Starting SchoolBatisApplication using Java 17.0.2 on Yachne with PID 7976 (D:\kaifamiao\workspace\idea\java\schoolBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+23:16:58.945 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+23:16:59.897 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+23:16:59.899 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+23:16:59.899 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+23:16:59.966 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+23:17:00.538 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+23:17:00.575 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarted,61] - Started SchoolBatisApplication in 2.005 seconds (JVM running for 2.694)
+23:17:09.932 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:17:17.738 [http-nio-8080-exec-3] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+23:17:18.196 [http-nio-8080-exec-3] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+23:18:10.579 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+23:18:10.588 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+23:18:16.642 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarting,55] - Starting SchoolBatisApplication using Java 17.0.2 on Yachne with PID 6708 (D:\kaifamiao\workspace\idea\java\schoolBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+23:18:16.646 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+23:18:17.718 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+23:18:17.719 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+23:18:17.720 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+23:18:17.786 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+23:18:18.417 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+23:18:18.453 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarted,61] - Started SchoolBatisApplication in 2.245 seconds (JVM running for 3.001)
+23:18:23.532 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:18:27.231 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+23:18:27.632 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+23:19:05.293 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+23:19:05.301 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+23:20:15.506 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarting,55] - Starting SchoolBatisApplication using Java 17.0.2 on Yachne with PID 18488 (D:\kaifamiao\workspace\idea\java\schoolBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+23:20:15.511 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+23:20:16.534 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+23:20:16.535 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+23:20:16.536 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+23:20:16.608 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+23:20:17.320 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+23:20:17.352 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarted,61] - Started SchoolBatisApplication in 2.241 seconds (JVM running for 2.944)
+23:20:21.407 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:20:34.729 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+23:20:35.162 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+23:21:45.376 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+23:21:45.384 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.

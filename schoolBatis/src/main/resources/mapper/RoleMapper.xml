@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kfm.schoolBatis.mapper.RoleMapper">
+
+    <resultMap id="BaseResultMap" type="Role">
+        <id property="rid" column="rid" jdbcType="INTEGER"/>
+        <result property="roleName" column="role_name" jdbcType="VARCHAR"/>
+        <result property="roleDesc" column="role_desc" jdbcType="VARCHAR"/>
+        <collection property="users" ofType="user">
+            <result property="id" column="id" jdbcType="INTEGER"/>
+            <result property="username" column="username" jdbcType="VARCHAR"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
+            <result property="email" column="email" jdbcType="VARCHAR"/>
+            <result property="phone" column="phone" jdbcType="VARCHAR"/>
+            <result property="sex" column="sex" jdbcType="CHAR"/>
+            <result property="avatar" column="avatar" jdbcType="VARCHAR"/>
+        </collection>
+    </resultMap>
+    <resultMap id="BaseResultMap1" type="Role">
+        <id property="rid" column="rid" jdbcType="INTEGER"/>
+        <result property="roleName" column="role_name" jdbcType="VARCHAR"/>
+        <result property="roleDesc" column="role_desc" jdbcType="VARCHAR"/>
+        <collection property="users" ofType="user" column="rid"
+                    select="com.kfm.schoolBatis.mapper.UserMapper.selectByRid"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        rid,role_name,role_desc
+    </sql>
+    <select id="selectByPrimaryKey" parameterType="int" resultType="role">
+        select
+        <include refid="Base_Column_List"/>
+        from role
+        where rid = #{rid,jdbcType=INTEGER}
+    </select>
+    <select id="selectAll" resultMap="BaseResultMap">
+        select r.*, u.*
+        from role r
+                 join role_user ru on r.rid = ru.role_id
+                 join user u on ru.user_id = u.id
+    </select>
+    <select id="selectAll1" resultMap="BaseResultMap1">
+        select
+        <include refid="Base_Column_List"/>
+        from role
+    </select>
+    <select id="selectByUid" parameterType="int" resultType="role">
+        select r.* from role r join role_user ru on r.rid = ru.role_id and ru.user_id=#{uid}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete
+        from role
+        where rid = #{rid,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" keyColumn="rid" keyProperty="rid" parameterType="Role" useGeneratedKeys="true">
+        insert into role
+        (rid, role_name, role_desc)
+        values (#{rid,jdbcType=INTEGER}, #{roleName,jdbcType=VARCHAR}, #{roleDesc,jdbcType=VARCHAR})
+    </insert>
+    <insert id="insertSelective" keyColumn="rid" keyProperty="rid" parameterType="Role" useGeneratedKeys="true">
+        insert into role
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="rid != null">rid,</if>
+            <if test="roleName != null">role_name,</if>
+            <if test="roleDesc != null">role_desc,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="rid != null">#{rid,jdbcType=INTEGER},</if>
+            <if test="roleName != null">#{roleName,jdbcType=VARCHAR},</if>
+            <if test="roleDesc != null">#{roleDesc,jdbcType=VARCHAR},</if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="Role">
+        update role
+        <set>
+            <if test="roleName != null">
+                role_name = #{roleName,jdbcType=VARCHAR},
+            </if>
+            <if test="roleDesc != null">
+                role_desc = #{roleDesc,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where rid = #{rid,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="Role">
+        update role
+        set role_name = #{roleName,jdbcType=VARCHAR},
+            role_desc = #{roleDesc,jdbcType=VARCHAR}
+        where rid = #{rid,jdbcType=INTEGER}
+    </update>
+</mapper>
