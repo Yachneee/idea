@@ -1,0 +1,171 @@
+14:22:22.888 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStarting,55] - Starting KfmBatisApplication using Java 17.0.2 on Yachne with PID 13448 (D:\kaifamiao\workspace\idea\java\kfmBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+14:22:22.900 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+14:22:26.042 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+14:22:26.044 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+14:22:26.045 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+14:22:26.154 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+14:22:28.336 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+14:22:28.464 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStarted,61] - Started KfmBatisApplication in 6.663 seconds (JVM running for 9.673)
+14:22:58.285 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:28:23.269 [Thread-5] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Pausing ProtocolHandler ["http-nio-8080"]
+14:28:23.270 [Thread-5] INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+14:28:23.272 [Thread-5] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+14:28:23.280 [Thread-5] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Stopping ProtocolHandler ["http-nio-8080"]
+14:28:23.283 [Thread-5] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Destroying ProtocolHandler ["http-nio-8080"]
+14:28:23.452 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStarting,55] - Starting KfmBatisApplication using Java 17.0.2 on Yachne with PID 13448 (D:\kaifamiao\workspace\idea\java\kfmBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+14:28:23.452 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+14:28:23.994 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+14:28:23.995 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+14:28:23.995 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+14:28:24.020 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+14:28:24.345 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+14:28:24.363 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStarted,61] - Started KfmBatisApplication in 0.985 seconds (JVM running for 365.572)
+14:28:26.004 [Thread-7] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Pausing ProtocolHandler ["http-nio-8080"]
+14:28:26.004 [Thread-7] INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+14:28:26.008 [Thread-7] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Stopping ProtocolHandler ["http-nio-8080"]
+14:28:26.013 [Thread-7] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Destroying ProtocolHandler ["http-nio-8080"]
+14:28:26.162 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStarting,55] - Starting KfmBatisApplication using Java 17.0.2 on Yachne with PID 13448 (D:\kaifamiao\workspace\idea\java\kfmBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+14:28:26.163 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+14:28:26.629 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+14:28:26.629 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+14:28:26.629 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+14:28:26.663 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+14:28:26.989 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+14:28:27.006 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStarted,61] - Started KfmBatisApplication in 0.912 seconds (JVM running for 368.215)
+14:28:36.805 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:28:36.882 [http-nio-8080-exec-1] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+14:28:37.409 [http-nio-8080-exec-1] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+15:18:20.206 [Thread-11] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Pausing ProtocolHandler ["http-nio-8080"]
+15:18:20.209 [Thread-11] INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+15:18:20.210 [Thread-11] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+15:18:20.222 [Thread-11] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Stopping ProtocolHandler ["http-nio-8080"]
+15:18:20.224 [Thread-11] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Destroying ProtocolHandler ["http-nio-8080"]
+15:18:20.228 [Thread-11] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+15:18:20.241 [Thread-11] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+15:18:20.620 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStarting,55] - Starting KfmBatisApplication using Java 17.0.2 on Yachne with PID 13448 (D:\kaifamiao\workspace\idea\java\kfmBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+15:18:20.620 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+15:18:21.615 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+15:18:21.616 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+15:18:21.616 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+15:18:21.650 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+15:18:21.929 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+15:18:21.945 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStarted,61] - Started KfmBatisApplication in 1.425 seconds (JVM running for 3363.154)
+15:18:23.374 [Thread-15] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Pausing ProtocolHandler ["http-nio-8080"]
+15:18:23.374 [Thread-15] INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+15:18:23.376 [Thread-15] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Stopping ProtocolHandler ["http-nio-8080"]
+15:18:23.378 [Thread-15] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Destroying ProtocolHandler ["http-nio-8080"]
+15:18:23.516 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStarting,55] - Starting KfmBatisApplication using Java 17.0.2 on Yachne with PID 13448 (D:\kaifamiao\workspace\idea\java\kfmBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+15:18:23.518 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+15:18:23.924 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+15:18:23.924 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+15:18:23.924 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+15:18:23.957 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+15:18:24.243 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+15:18:24.255 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStarted,61] - Started KfmBatisApplication in 0.791 seconds (JVM running for 3365.463)
+15:18:24.306 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:18:24.309 [http-nio-8080-exec-1] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-2 - Starting...
+15:18:24.342 [http-nio-8080-exec-1] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-2 - Start completed.
+15:24:15.302 [Thread-19] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Pausing ProtocolHandler ["http-nio-8080"]
+15:24:15.302 [Thread-19] INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+15:24:15.302 [Thread-19] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+15:24:15.304 [Thread-19] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Stopping ProtocolHandler ["http-nio-8080"]
+15:24:15.305 [Thread-19] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Destroying ProtocolHandler ["http-nio-8080"]
+15:24:15.306 [Thread-19] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-2 - Shutdown initiated...
+15:24:15.311 [Thread-19] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-2 - Shutdown completed.
+15:24:15.389 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStarting,55] - Starting KfmBatisApplication using Java 17.0.2 on Yachne with PID 13448 (D:\kaifamiao\workspace\idea\java\kfmBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+15:24:15.390 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+15:24:15.643 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+15:24:15.644 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+15:24:15.644 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+15:24:15.660 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+15:24:15.820 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+15:24:15.826 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStarted,61] - Started KfmBatisApplication in 0.475 seconds (JVM running for 3717.035)
+15:25:15.685 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:25:15.689 [http-nio-8080-exec-1] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-3 - Starting...
+15:25:15.709 [http-nio-8080-exec-1] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-3 - Start completed.
+15:28:22.608 [Thread-23] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Pausing ProtocolHandler ["http-nio-8080"]
+15:28:22.608 [Thread-23] INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+15:28:22.608 [Thread-23] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+15:28:22.611 [Thread-23] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Stopping ProtocolHandler ["http-nio-8080"]
+15:28:22.616 [Thread-23] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Destroying ProtocolHandler ["http-nio-8080"]
+15:28:22.618 [Thread-23] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-3 - Shutdown initiated...
+15:28:22.623 [Thread-23] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-3 - Shutdown completed.
+15:28:22.727 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStarting,55] - Starting KfmBatisApplication using Java 17.0.2 on Yachne with PID 13448 (D:\kaifamiao\workspace\idea\java\kfmBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+15:28:22.727 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+15:28:23.152 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+15:28:23.153 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+15:28:23.153 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+15:28:23.184 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+15:28:23.520 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+15:28:23.535 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStarted,61] - Started KfmBatisApplication in 0.85 seconds (JVM running for 3964.744)
+15:29:35.106 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:29:35.108 [http-nio-8080-exec-1] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-4 - Starting...
+15:29:35.130 [http-nio-8080-exec-1] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-4 - Start completed.
+15:29:35.628 [Thread-27] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Pausing ProtocolHandler ["http-nio-8080"]
+15:29:35.628 [Thread-27] INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+15:29:35.629 [Thread-27] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+15:29:35.633 [Thread-27] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Stopping ProtocolHandler ["http-nio-8080"]
+15:29:35.634 [Thread-27] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Destroying ProtocolHandler ["http-nio-8080"]
+15:29:35.636 [Thread-27] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-4 - Shutdown initiated...
+15:29:35.641 [Thread-27] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-4 - Shutdown completed.
+15:29:35.750 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStarting,55] - Starting KfmBatisApplication using Java 17.0.2 on Yachne with PID 13448 (D:\kaifamiao\workspace\idea\java\kfmBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+15:29:35.750 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+15:29:36.129 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+15:29:36.130 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+15:29:36.130 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+15:29:36.158 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+15:29:36.400 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+15:29:36.416 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStarted,61] - Started KfmBatisApplication in 0.711 seconds (JVM running for 4037.625)
+15:29:36.651 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:29:36.655 [http-nio-8080-exec-1] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-5 - Starting...
+15:29:36.679 [http-nio-8080-exec-1] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-5 - Start completed.
+15:30:07.122 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-5 - Shutdown initiated...
+15:30:07.127 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-5 - Shutdown completed.
+20:43:36.947 [main] INFO  c.k.k.m.UserMapperTest - [logStarting,55] - Starting UserMapperTest using Java 17.0.2 on Yachne with PID 9276 (started by Administrator in D:\kaifamiao\workspace\idea\java\kfmBatis)
+20:43:36.982 [main] INFO  c.k.k.m.UserMapperTest - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+20:43:43.108 [main] INFO  c.k.k.m.UserMapperTest - [logStarted,61] - Started UserMapperTest in 7.128 seconds (JVM running for 11.05)
+20:43:44.867 [main] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+20:43:46.402 [main] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+20:43:46.668 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+20:43:46.683 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+20:46:13.913 [main] INFO  c.k.k.m.AbilityMapperTest - [logStarting,55] - Starting AbilityMapperTest using Java 17.0.2 on Yachne with PID 21432 (started by Administrator in D:\kaifamiao\workspace\idea\java\kfmBatis)
+20:46:13.919 [main] INFO  c.k.k.m.AbilityMapperTest - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+20:46:20.305 [main] INFO  c.k.k.m.AbilityMapperTest - [logStarted,61] - Started AbilityMapperTest in 6.977 seconds (JVM running for 9.359)
+20:46:21.436 [main] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+20:46:22.317 [main] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+20:46:22.661 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+20:46:22.680 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+20:49:18.499 [main] INFO  c.k.k.m.UserMapperTest - [logStarting,55] - Starting UserMapperTest using Java 17.0.2 on Yachne with PID 20048 (started by Administrator in D:\kaifamiao\workspace\idea\java\kfmBatis)
+20:49:18.504 [main] INFO  c.k.k.m.UserMapperTest - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+20:49:22.373 [main] INFO  c.k.k.m.UserMapperTest - [logStarted,61] - Started UserMapperTest in 4.311 seconds (JVM running for 5.595)
+20:49:23.257 [main] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+20:49:24.115 [main] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+20:49:24.265 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+20:49:24.288 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+20:50:23.423 [main] INFO  c.k.k.m.UserMapperTest - [logStarting,55] - Starting UserMapperTest using Java 17.0.2 on Yachne with PID 17172 (started by Administrator in D:\kaifamiao\workspace\idea\java\kfmBatis)
+20:50:23.431 [main] INFO  c.k.k.m.UserMapperTest - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+20:50:27.256 [main] INFO  c.k.k.m.UserMapperTest - [logStarted,61] - Started UserMapperTest in 4.397 seconds (JVM running for 6.284)
+20:50:28.193 [main] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+20:50:29.001 [main] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+20:50:29.217 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+20:50:29.243 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+20:54:14.263 [main] INFO  c.k.k.m.UserMapperTest - [logStarting,55] - Starting UserMapperTest using Java 17.0.2 on Yachne with PID 4796 (started by Administrator in D:\kaifamiao\workspace\idea\java\kfmBatis)
+20:54:14.266 [main] INFO  c.k.k.m.UserMapperTest - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+20:54:18.090 [main] INFO  c.k.k.m.UserMapperTest - [logStarted,61] - Started UserMapperTest in 4.235 seconds (JVM running for 5.531)
+20:54:19.055 [main] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+20:54:19.817 [main] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+20:54:20.065 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+20:54:20.101 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+21:35:23.932 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStarting,55] - Starting KfmBatisApplication using Java 17.0.2 on Yachne with PID 22632 (D:\kaifamiao\workspace\idea\java\kfmBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+21:35:23.967 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+21:35:26.793 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+21:35:26.795 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+21:35:26.795 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+21:35:26.885 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+21:35:28.264 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+21:35:28.349 [restartedMain] INFO  c.k.k.KfmBatisApplication - [logStarted,61] - Started KfmBatisApplication in 5.267 seconds (JVM running for 7.517)
+21:38:25.808 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:38:26.294 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+21:38:27.300 [http-nio-8080-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+21:50:10.915 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+21:50:10.942 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
