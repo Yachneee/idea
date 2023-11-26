@@ -7,7 +7,6 @@ import com.github.pagehelper.PageInfo;
 import com.kfm.schoolBatis.entity.LoginMessage;
 import com.kfm.schoolBatis.entity.Role;
 import com.kfm.schoolBatis.entity.User;
-import com.kfm.schoolBatis.interceptor.LoginCountInterceptor;
 import com.kfm.schoolBatis.service.UserService;
 import com.kfm.schoolBatis.utils.Constant;
 import com.kfm.schoolBatis.utils.IpUtil;
@@ -69,11 +68,7 @@ public class UserController {
         } else {
             attributes.addFlashAttribute(Constant.MSG, "登陆成功");
         }
-        Map<String, Integer> ipMap = LoginCountInterceptor.ipMap1;
         String ip = IpUtil.getIpAddress(request);
-        if (ipMap != null) {
-            ipMap.remove(ip);
-        }
         Timestamp time = one.getLastLoginTime();
         if (time != null) {
             IP_LAST_MAP.put(ip, time);

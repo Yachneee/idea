@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue3</title>
+</head>
+<body>
+<div id="app">
+    <div>姓名: {{name}}</div>
+    <div>班级: {{classRoom}}</div>
+    <button v-on:click="study">打招呼</button>
+    <button onclick="update()">改名</button><br>
+    <button @click="show()">显示</button>
+<!--    <table v-if="deptList.length>0">-->
+    <table>
+        <tr>
+            <th>编号</th>
+            <th>名称</th>
+            <th>区域编号</th>
+        </tr>
+        <tr v-for="dept in deptList">
+            <td>{{dept.id}}</td>
+            <td>{{dept.name}}</td>
+            <td>{{dept.regionId}}</td>
+        </tr>
+    </table>
+</div>
+<script src="../static/js/vue@3.2.36.js"></script>
+<script src="../static/js/axios.js"></script>
+<script>
+    const app = {
+        //data()是一个函数，返回一个对象
+        data() {
+            return {
+                //model数据
+                name: "开发喵",
+                classRoom: "开发喵07",
+                deptList:[]
+            }
+        },
+        //methods是一个对象，里面定义了一些方法
+        methods: {
+            study() {
+                alert(this.name + "正在" + this.classRoom + "好好学习!");
+            },
+            show(){
+                axios.get("http://localhost:8080/list").then(function (response) {
+                    let result=response.data;
+                    vm.deptList=result.data;
+                }).catch(function (error) {
+                    alert(error);
+                })
+            }
+        }
+    };
+    //创建一个ViewModel
+    const vm = Vue3236.createApp(app).mount('#app');
+
+    // 定义打招呼方法
+    function hi() {
+        vm.study();
+    }
+
+    //定义修改班级
+    function update() {
+        vm.classRoom = "云创动力";
+    }
+    function show() {
+        vm.show();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+23:12:49.255 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - [report,40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.kfm.ajax.mapper.SDeptMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.kfm.ajax.mapper.SDeptMapper' in your configuration.
+

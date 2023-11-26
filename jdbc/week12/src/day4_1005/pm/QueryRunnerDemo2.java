@@ -15,7 +15,7 @@ public class QueryRunnerDemo2 {
         QueryRunner runner = new QueryRunner();
         boolean b = DbUtils.loadDriver("com.mysql.cj.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/kfm","root","");
-        List<Student> studentList = runner.query(con, "select * from students", new BeanListHandler<>(Student.class));
+        List<Student> studentList = runner.query(con, "select * from student", new BeanListHandler<>(Student.class));
         studentList.forEach(System.out::println);
         DbUtils.close(con);
     }

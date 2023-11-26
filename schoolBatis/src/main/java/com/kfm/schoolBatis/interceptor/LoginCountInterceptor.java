@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,7 +23,6 @@ public class LoginCountInterceptor implements HandlerInterceptor {
     private Integer max;
     @Autowired
     private AccessIpInterceptor accessIpInterceptor;
-    public static Map<String, Integer> ipMap1;
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
@@ -31,7 +31,6 @@ public class LoginCountInterceptor implements HandlerInterceptor {
             return true;
         }
         Map<String, Integer> ipMap = ipInfo.getIpMap();
-        ipMap1 = ipMap;
         String ip = IpUtil.getIpAddress(request);
         Integer count = ipMap.get(ip);
         if (count == null) {
@@ -39,7 +38,7 @@ public class LoginCountInterceptor implements HandlerInterceptor {
             return true;
         } else {
             count++;
-            if (count >= max) {
+            if (count > max) {
                 //拉入黑名单
                 accessIpInterceptor.blackIPList.add(ip);
                 response.sendRedirect(request.getContextPath() + "/error");
@@ -48,6 +47,13 @@ public class LoginCountInterceptor implements HandlerInterceptor {
                 ipMap.put(ip, count);
                 return true;
             }
+        }
+    }
+    @Override
+    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
+        Object user = request.getSession().getAttribute("user");
+        if(user!=null){
+            ipInfo.getIpMap().remove(IpUtil.getIpAddress(request));
         }
     }
 }

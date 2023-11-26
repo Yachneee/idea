@@ -18,7 +18,7 @@ import java.util.Properties;
 public class QueryRunnerDemo {
     public static void main(String[] args) throws Exception {
         QueryRunner queryRunner = new QueryRunner(getDataSource());
-        String sql="select * from students";
+        String sql="select * from student";
         System.out.println("\033[35mnew BeanHandler<>(Student.class)\033[0m");
         Student student = queryRunner.query(sql, new BeanHandler<>(Student.class));
         System.out.println(student);
@@ -44,7 +44,7 @@ public class QueryRunnerDemo {
         Map<Integer, Map<String, Object>> mapMap = queryRunner.query(sql, new KeyedHandler<>(1));
         mapMap.forEach((id,map)-> System.out.println(id+"-->"+map));
         System.out.println("\033[35mnew ScalarHandler<>()---count(*)\033[0m");
-        String only="select count(*) from students";
+        String only="select count(*) from student";
         Long count = queryRunner.query(only, new ScalarHandler<>());
         System.out.println(count);
     }

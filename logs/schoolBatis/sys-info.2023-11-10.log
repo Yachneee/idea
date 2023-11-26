@@ -1,0 +1,29 @@
+08:59:22.659 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarting,55] - Starting SchoolBatisApplication using Java 17.0.2 on Yachne with PID 7632 (D:\kaifamiao\workspace\idea\java\schoolBatis\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+08:59:22.668 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+08:59:24.887 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+08:59:24.890 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+08:59:24.890 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+08:59:24.981 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+08:59:26.220 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+08:59:26.280 [restartedMain] INFO  c.k.s.SchoolBatisApplication - [logStarted,61] - Started SchoolBatisApplication in 4.417 seconds (JVM running for 9.313)
+08:59:37.705 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+08:59:40.209 [http-nio-8080-exec-3] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+08:59:41.401 [http-nio-8080-exec-3] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+09:14:19.850 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+09:14:19.856 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+11:57:29.041 [main] INFO  c.k.s.m.RoleMapperTest - [logStarting,55] - Starting RoleMapperTest using Java 17.0.2 on Yachne with PID 24024 (started by Administrator in D:\kaifamiao\workspace\idea\java\schoolBatis)
+11:57:29.076 [main] INFO  c.k.s.m.RoleMapperTest - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+11:57:29.127 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+11:57:33.657 [main] INFO  c.k.s.m.RoleMapperTest - [logStarted,61] - Started RoleMapperTest in 5.162 seconds (JVM running for 7.781)
+11:57:34.923 [main] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+11:57:35.492 [main] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+11:57:35.679 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+11:57:35.686 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+11:58:06.109 [main] INFO  c.k.s.m.RoleMapperTest - [logStarting,55] - Starting RoleMapperTest using Java 17.0.2 on Yachne with PID 13720 (started by Administrator in D:\kaifamiao\workspace\idea\java\schoolBatis)
+11:58:06.113 [main] INFO  c.k.s.m.RoleMapperTest - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+11:58:06.119 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+11:58:08.754 [main] INFO  c.k.s.m.RoleMapperTest - [logStarted,61] - Started RoleMapperTest in 2.949 seconds (JVM running for 4.302)
+11:58:09.396 [main] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+11:58:09.821 [main] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+11:58:09.989 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+11:58:10.007 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.

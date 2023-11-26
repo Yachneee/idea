@@ -1,0 +1,51 @@
+00:24:10.261 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+00:24:10.270 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+13:59:33.019 [restartedMain] INFO  c.k.a.AjaxApplication - [logStarting,55] - Starting AjaxApplication using Java 17.0.2 on Yachne with PID 7656 (D:\kaifamiao\workspace\idea\java\ajax\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+13:59:33.023 [restartedMain] INFO  c.k.a.AjaxApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+13:59:33.029 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+13:59:34.751 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+13:59:34.753 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+13:59:34.753 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+13:59:34.973 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+13:59:36.063 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+13:59:36.150 [restartedMain] INFO  c.k.a.AjaxApplication - [logStarted,61] - Started AjaxApplication in 3.719 seconds (JVM running for 7.0)
+13:59:56.681 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:59:56.840 [http-nio-8080-exec-1] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+13:59:57.294 [http-nio-8080-exec-1] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+15:07:03.522 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+15:07:03.527 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+16:25:33.437 [restartedMain] INFO  c.k.a.AjaxApplication - [logStarting,55] - Starting AjaxApplication using Java 17.0.2 on Yachne with PID 18124 (D:\kaifamiao\workspace\idea\java\ajax\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+16:25:33.441 [restartedMain] INFO  c.k.a.AjaxApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+16:25:33.447 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+16:25:34.994 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+16:25:34.996 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+16:25:34.996 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+16:25:35.079 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+16:25:36.318 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+16:25:36.386 [restartedMain] INFO  c.k.a.AjaxApplication - [logStarted,61] - Started AjaxApplication in 3.539 seconds (JVM running for 8.007)
+16:31:27.258 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:31:27.497 [http-nio-8080-exec-1] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+16:31:27.958 [http-nio-8080-exec-1] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+17:52:02.038 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+17:52:02.051 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.
+23:32:45.695 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+23:32:45.699 [restartedMain] INFO  c.k.a.AjaxApplication - [logStarting,55] - Starting AjaxApplication using Java 17.0.2 on Yachne with PID 14048 (D:\kaifamiao\workspace\idea\java\ajax\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+23:32:45.729 [restartedMain] INFO  c.k.a.AjaxApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+23:32:47.272 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+23:32:47.273 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+23:32:47.275 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+23:32:47.359 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+23:32:48.464 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+23:32:48.473 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Pausing ProtocolHandler ["http-nio-8080"]
+23:32:48.473 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+23:32:48.477 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Stopping ProtocolHandler ["http-nio-8080"]
+23:32:48.478 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Destroying ProtocolHandler ["http-nio-8080"]
+23:32:57.172 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+23:32:57.177 [restartedMain] INFO  c.k.a.AjaxApplication - [logStarting,55] - Starting AjaxApplication using Java 17.0.2 on Yachne with PID 12644 (D:\kaifamiao\workspace\idea\java\ajax\target\classes started by Administrator in D:\kaifamiao\workspace\idea\java)
+23:32:57.179 [restartedMain] INFO  c.k.a.AjaxApplication - [logStartupProfileInfo,632] - No active profile set, falling back to 1 default profile: "default"
+23:32:58.399 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+23:32:58.402 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+23:32:58.402 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+23:32:58.468 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+23:32:59.063 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+23:32:59.089 [restartedMain] INFO  c.k.a.AjaxApplication - [logStarted,61] - Started AjaxApplication in 2.338 seconds (JVM running for 3.028)

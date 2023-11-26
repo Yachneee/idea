@@ -1,6 +1,7 @@
 package com.kfm.kfmBatis.mapper;
 
 import com.kfm.kfmBatis.entity.Emp;
+import org.apache.ibatis.annotations.CacheNamespace;
 
 import java.util.List;
 
@@ -10,6 +11,7 @@ import java.util.List;
 * @createDate 2023-11-06 16:28:46
 * @Entity com/kfm/kfmBatis.entity.Emp
 */
+@CacheNamespace(blocking=true)
 public interface EmpMapper {
 
     int deleteByPrimaryKey(Long id);

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue1</title>
+</head>
+<body>
+<div id="counter">
+    Counter: {{ counter }}
+</div>
+<!--vue3-->
+<!--<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>-->
+<script src="../static/js/vue@3.2.36.js"></script>
+<script>
+    //define
+    //定义
+    const counter={
+        data(){
+            return{
+                //data
+                counter:1
+            }
+        },
+        //methods
+    }
+    //createApp
+    //创建一个Vue应用
+    let app=Vue3236.createApp(counter);
+    //将应用挂载到DOM元素上
+    app.mount('#counter');
+</script>
+</body>
+</html>

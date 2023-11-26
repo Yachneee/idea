@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生管理</title>
+    <meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+    <!-- import element-plus.css -->
+    <link href="../css/element-plus@2.4.2.css" rel="stylesheet">
+    <style>
+        .flex-grow {
+            flex-grow: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+    </style>
+    <style scoped>
+        .el-button--text {
+            margin-right: 15px;
+        }
+
+        .el-select {
+            width: 300px;
+        }
+
+        .el-input {
+            width: 300px;
+        }
+
+        .dialog-footer button:first-child {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="common-layout">
+        <el-container>
+            <!--顶部菜单-->
+            <el-header>
+                <!--                @select="handleSelect"-->
+                <el-menu
+                        :ellipsis="false"
+                        active-text-color="#ffd04b"
+                        background-color="#545c64"
+                        class="el-menu-demo"
+                        default-active="3"
+                        mode="horizontal"
+                        text-color="#fff">
+                    <el-menu-item index="0">
+                        <img alt="Element logo" src="../img/logo.jpg" style="width: 50px"/>
+                    </el-menu-item>
+                    <div class="flex-grow">
+                        <el-menu-item index="1">处理中心</el-menu-item>
+                        <el-sub-menu index="2">
+                            <template #title>我的工作台</template>
+                            <el-menu-item index="2-1">item one</el-menu-item>
+                            <el-menu-item index="2-2">item two</el-menu-item>
+                            <el-menu-item index="2-3">item three</el-menu-item>
+                            <el-sub-menu index="2-4">
+                                <template #title>item four</template>
+                                <el-menu-item index="2-4-1">item one</el-menu-item>
+                                <el-menu-item index="2-4-2">item two</el-menu-item>
+                                <el-menu-item index="2-4-3">item three</el-menu-item>
+                            </el-sub-menu>
+                        </el-sub-menu>
+                        <el-menu-item index="3">首页</el-menu-item>
+                    </div>
+                </el-menu>
+            </el-header>
+            <el-container>
+                <!--侧边栏-->
+                <el-aside width="200px">
+                    <el-row class="tac">
+                        <el-col :span="24">
+                            <!--default-active 默认打开的是哪个菜单栏 找到的是el-sub-menu/ el-menu-item 的index属性-->
+                            <!--                            @close="handleClose"-->
+                            <!--                            @open="handleOpen"-->
+                            <el-menu
+                                    class="el-menu-vertical-demo"
+                                    default-active="1-1">
+                                <el-sub-menu index="1">
+                                    <template #title>
+                                        <el-icon>
+                                            <Grid color="#919398"/>
+                                        </el-icon>
+                                        <span>学工部</span>
+                                    </template>
+                                    <el-menu-item index="1-1">
+                                        <el-icon>
+                                            <Help color="#919398"/>
+                                        </el-icon>
+                                        在校学生管理
+                                    </el-menu-item>
+                                    <el-menu-item index="1-2">
+                                        <el-icon>
+                                            <Help color="#919398"/>
+                                        </el-icon>
+                                        学生升级/留级
+                                    </el-menu-item>
+                                    <el-menu-item index="1-3">
+                                        <el-icon>
+                                            <Help color="#919398"/>
+                                        </el-icon>
+                                        学生就业情况
+                                    </el-menu-item>
+                                </el-sub-menu>
+                                <el-menu-item index="2">
+                                    <el-icon>
+                                        <Grid color="#919398"/>
+                                    </el-icon>
+                                    <span>咨询部</span>
+                                </el-menu-item>
+                                <el-menu-item index="3">
+                                    <el-icon>
+                                        <Grid color="#919398"/>
+                                    </el-icon>
+                                    <span>教研部</span>
+                                </el-menu-item>
+                            </el-menu>
+                        </el-col>
+                    </el-row>
+                </el-aside>
+                <!--主体内容-->
+                <el-main>
+                    <!--面包屑导航-->
+                    <el-row>
+                        <el-col :span="4" style="color: red; font-weight: bolder;">学生列表</el-col>
+                        <el-col :offset="16" :span="4">
+                            <el-button @click="handleAdd" type="primary">添加学生</el-button>
+                        </el-col>
+                    </el-row>
+                    <!--表格-->
+                    <el-table :data="students" style="width: 100%">
+                        <el-table-column fixed label="编号" prop="id" width="150"></el-table-column>
+                        <el-table-column label="姓名" prop="name" width="120"></el-table-column>
+                        <el-table-column label="手机号" prop="tel" width="150"></el-table-column>
+                        <el-table-column label="地址" prop="loc" width="600"></el-table-column>
+                        <el-table-column fixed="right" label="操作" width="200">
+                            <template #default="scope">
+                                <!--编辑-->
+                                <el-button @click.prevent="handleEdit(scope.$index,scope.row)" type="warning">编辑
+                                </el-button>
+                                <!--删除-->
+                                <el-popconfirm
+                                        @cancel="cancelEvent"
+                                        @confirm="handleDelete(scope.$index,scope.row)"
+                                        cancel-button-text="取消"
+                                        confirm-button-text="确认"
+                                        icon-color="#626AEF"
+                                        title="确定删除这条记录吗?"
+                                        width="300">
+                                    <template #reference>
+                                        <el-button type="danger">删除</el-button>
+                                    </template>
+                                </el-popconfirm>
+                            </template>
+                        </el-table-column>
+                    </el-table>
+                </el-main>
+            </el-container>
+        </el-container>
+    </div>
+    <!--编辑学生-->
+    <el-dialog title="编辑学生信息" v-model="editVisible">
+        <el-form :model="student">
+            <el-form-item label="姓名" prop="name" label-width="80">
+                <el-input v-model="student.name" autocomplete="off"></el-input>
+            </el-form-item>
+            <el-form-item label="手机号" prop="tel" label-width="80">
+                <el-input v-model="student.tel"></el-input>
+            </el-form-item>
+            <el-form-item label="地址" prop="loc" label-width="80">
+                <el-input v-model="student.loc"></el-input>
+            </el-form-item>
+        </el-form>
+        <template #footer>
+                <span class="dialog-footer">
+                    <el-button @click="cancelEvent">取消</el-button>
+                    <el-button @click="submitEdit" type="primary">确认</el-button>
+                </span>
+        </template>
+    </el-dialog>
+    <!--添加学生-->
+    <el-dialog title="添加学生" v-model="addVisible">
+        <el-form :model="student">
+            <el-form-item label="姓名" prop="name" label-width="80">
+                <el-input v-model="student.name"></el-input>
+            </el-form-item>
+            <el-form-item label="手机号" prop="tel" label-width="80">
+                <el-input v-model="student.tel"></el-input>
+            </el-form-item>
+            <el-form-item label="地址" prop="loc" label-width="80">
+                <el-input v-model="student.loc"></el-input>
+            </el-form-item>
+        </el-form>
+        <template #footer>
+                <span class="dialog-footer">
+                    <el-button @click="cancelEvent">取消</el-button>
+                    <el-button @click="submitAdd" type="primary">确认</el-button>
+                </span>
+        </template>
+    </el-dialog>
+</div>
+<!--2.引入vue.js-->
+<script src="../js/vue@3.3.8.js"></script>
+<!--3. 引入element-plus.js-->
+<script src="../js/element-plus@2.4.2.js"></script>
+<script src="../js/icons-vue@2.1.0.js"></script>
+<script src="../js/axios.js"></script>
+<script>
+    // 4. 创建Vue实例
+    const app = Vue.createApp({
+        data() {
+            return {
+                students: [],
+                editVisible: false,
+                addVisible: false,
+                student: {
+                    id: undefined,
+                    name: '',
+                    tel: '',
+                    loc: ''
+                }
+            }
+        },
+        methods: {
+            getStudents() {
+                axios.get('http://localhost:8080/student/all').then(response => {
+                    console.log(response.data);
+                    if (response.data.code === 1) {
+                        this.students = response.data.data;
+                    } else {
+                        this.students = [
+                            {
+                                id: 1,
+                                name: "张三",
+                                tel: "33333333333",
+                                loc: "北京市昌平区"
+                            }
+                        ]
+                    }
+                }).catch(error => {
+                    console.log(error);
+                });
+            },
+            handleEdit(index, row) {
+                this.student = row;
+                this.editVisible = true;
+            },
+            submitEdit() {
+                console.log(this.student)
+                axios.post("http://localhost:8080/student/edit", this.student).then(res => {
+                    console.log(res.data);
+                    if (res.data.code === 1) {
+                        this.getStudents();
+                        this.$message.success(res.data.msg)
+                    } else {
+                        this.$message.error(res.data.msg)
+                    }
+                    this.editVisible = false;
+                }).catch(error => {
+                    console.log(error);
+                });
+            },
+            handleDelete(index, student) {
+                let id = student.id;
+                axios.get("http://localhost:8080/student/delete", id).then(response => {
+                    console.log(response.data);
+                    if (response.data.code === 1) {
+                        this.students.splice(index, 1);
+                        this.$message.success(response.data.msg)
+                    } else {
+                        this.$message.error(response.data.msg)
+                    }
+                }).catch(error => {
+                    console.log(error);
+                });
+            },
+            handleAdd() {
+                this.addVisible = true;
+                this.student = {}
+            },
+            submitAdd() {
+                console.log(this.student)
+                axios.post("http://localhost:8080/student/add", this.student).then(res => {
+                    console.log(res.data);
+                    if (res.data.code === 1) {
+                        this.getStudents();
+                        this.$message.success(res.data.msg)
+                    } else {
+                        this.$message.error(res.data.msg)
+                    }
+                    this.addVisible = false;
+                }).catch(error => {
+                    console.log(error);
+                });
+            },
+            cancelEvent() {
+                this.$message.info("取消操作")
+                this.editVisible = false;
+                this.addVisible = false;
+            },
+        },
+        created() {
+            // console.log(this.$el); // 页面上的dom元素
+            // console.log(this.$data); // {name,age.arr}
+            this.getStudents();
+        },
+    });
+    // 5. 使用组件库
+    app.use(ElementPlus);
+    // 注册图标
+    for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+        app.component(key, component)
+    }
+    const handleOpen = (key, keyPath) => {
+        console.log(key, keyPath)
+    }
+    const handleClose = (key, keyPath) => {
+        console.log(key, keyPath)
+    }
+    // 6. 挂载到页面
+    app.mount("#app");
+</script>
+</body>
+</html>

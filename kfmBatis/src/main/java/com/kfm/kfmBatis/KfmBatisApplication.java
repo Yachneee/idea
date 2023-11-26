@@ -5,10 +5,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @author Administrator
+ * @author Yachne
+ * MapperScan：扫描指定包下的所有mapper接口，这样就不用在每个mapper接口上添加@Mapper注解了,
+ * 当启动的时候主动去加载某个包所有类，并且创建对象，放到spring容器中
  */
 @SpringBootApplication
-// 当启动的时候主动去加载某个包所有类，并且创建对象
 @MapperScan("com.kfm.kfmBatis.mapper")
 public class KfmBatisApplication {
 

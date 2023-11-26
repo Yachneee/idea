@@ -26,4 +26,11 @@ class RoleMapperTest {
         List<Role> roles = roleMapper.selectByUid(1);
         roles.forEach(r-> System.out.println(r));
     }
+
+    @Test
+    void selectByPrimaryKey() {
+        Role role = roleMapper.selectByPrimaryKey(1);
+        System.out.println(role);
+    }
+
 }

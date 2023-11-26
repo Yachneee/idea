@@ -14,7 +14,6 @@ public class ValidUtils {
         String pattern = "^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$";
         return email.matches(pattern);
     }
-
     /**
      * 校验密码强度 密码(以字母开头，长度在6~18之间，只能包含字母、数字和下划线)
      *
@@ -25,7 +24,6 @@ public class ValidUtils {
         String pattern = "^[a-zA-Z]\\w{5,17}$";
         return password.matches(pattern);
     }
-
     /**
      * 校验账号是否是否合法 账号是否合法(字母开头，允许5-16个字节，允许字母数字下划线)
      *

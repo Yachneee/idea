@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生管理</title>
+    <meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+    <!-- import element-plus.css -->
+    <link href="../css/element-plus@2.4.2.css" rel="stylesheet">
+    <style>
+        .flex-grow {
+            flex-grow: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+    </style>
+    <style scoped>
+        .el-button--text {
+            margin-right: 15px;
+        }
+
+        .el-select {
+            width: 300px;
+        }
+
+        .el-input {
+            width: 300px;
+        }
+
+        .dialog-footer button:first-child {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="common-layout">
+        <el-container>
+            <!--顶部菜单-->
+            <el-header>
+                <el-menu
+                        :ellipsis="false"
+                        active-text-color="#ffd04b"
+                        background-color="#545c64"
+                        class="el-menu-demo"
+                        default-active="3"
+                        mode="horizontal"
+                        text-color="#fff">
+                    <el-menu-item index="0">
+                        <img alt="Element logo" src="../img/logo.jpg" style="width: 50px"/>
+                    </el-menu-item>
+                    <div class="flex-grow">
+                        <el-menu-item index="1">处理中心</el-menu-item>
+                        <el-sub-menu index="2">
+                            <template #title>我的工作台</template>
+                            <el-menu-item index="2-1">item one</el-menu-item>
+                            <el-menu-item index="2-2">item two</el-menu-item>
+                            <el-menu-item index="2-3">item three</el-menu-item>
+                            <el-sub-menu index="2-4">
+                                <template #title>item four</template>
+                                <el-menu-item index="2-4-1">item one</el-menu-item>
+                                <el-menu-item index="2-4-2">item two</el-menu-item>
+                                <el-menu-item index="2-4-3">item three</el-menu-item>
+                            </el-sub-menu>
+                        </el-sub-menu>
+                        <el-menu-item index="3">首页</el-menu-item>
+                    </div>
+                </el-menu>
+            </el-header>
+            <el-container>
+                <!--侧边栏-->
+                <el-aside width="200px">
+                    <el-row class="tac">
+                        <el-col :span="24">
+                            <el-menu
+                                    class="el-menu-vertical-demo"
+                                    default-active="">
+                                <el-menu-item v-for="ability in user.abilities">
+                                    <el-icon>
+                                        <Grid color="#919398"/>
+                                    </el-icon>
+                                    {{ability.abilityName}}
+                                </el-menu-item>
+                            </el-menu>
+                        </el-col>
+                    </el-row>
+                </el-aside>
+                <!--主体内容-->
+                <el-main>
+                    <h1 style="font-weight: bolder">Hello,<span style="color:darkred;">{{user.username}}</span></h1>
+                </el-main>
+            </el-container>
+        </el-container>
+    </div>
+</div>
+<!--2.引入vue.js-->
+<script src="../js/vue@3.3.8.js"></script>
+<!--3. 引入element-plus.js-->
+<script src="../js/element-plus@2.4.2.js"></script>
+<script src="../js/icons-vue@2.1.0.js"></script>
+<script src="../js/axios.js"></script>
+<script>
+    // 4. 创建Vue实例
+    const app = Vue.createApp({
+        data() {
+            return {
+                user: {
+                    id: undefined,
+                    username: '',
+                    password: '',
+                    roleId: '',
+                    abilities: [
+                        {
+                            id: 1,
+                            abilityName: '学生管理',
+                            abilityDesc: '学生管理',
+                        }
+                    ]
+                }
+            }
+        },
+        methods: {
+            getUser(){
+                let user = sessionStorage.getItem('user');
+                this.user=JSON.parse(user);
+            }
+        },
+        created() {
+            // console.log(this.$el); // 页面上的dom元素
+            // console.log(this.$data); // {name,age.arr}
+            this.getUser();
+        },
+    });
+    // 5. 使用组件库
+    app.use(ElementPlus);
+    // 注册图标
+    for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+        app.component(key, component)
+    }
+    // 6. 挂载到页面
+    app.mount("#app");
+</script>
+</body>
+</html>

@@ -47,7 +47,7 @@ public class SchoolBatisConfig extends WebMvcConfigurationSupport {
                  excludePathPatterns("/login", "/captcha", "/js/**", "/css/**", "/font/**", "/error");
         registry.addInterceptor(loginCountInterceptor).addPathPatterns("/login")
                 .excludePathPatterns("/captcha", "/js/**", "/css/**", "/font/**", "/error");
-        registry.addInterceptor(requestMuchInterceptor).addPathPatterns("/**").excludePathPatterns("/error");
+        registry.addInterceptor(requestMuchInterceptor).addPathPatterns("/**").excludePathPatterns("/error","/captcha", "/js/**", "/css/**", "/font/**","/favicon.ico");
         registry.addInterceptor(accessIpInterceptor).addPathPatterns("/**").excludePathPatterns("/error");
 
     }

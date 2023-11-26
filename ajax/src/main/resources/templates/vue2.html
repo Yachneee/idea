@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue2</title>
+</head>
+<body>
+<div id="app">
+</div>
+<!--vue3-->
+<script src="../static/js/vue@3.2.36.js"></script>
+<script>
+    const app=Vue3236.createApp({
+        data(){
+            return {count:4}
+        }
+    })
+    const vm=app.mount('#app')
+    document.write(vm.$data.count)
+    document.write('<br>')
+    document.write(vm.count)
+    document.write('<br>')
+    vm.count=5
+    document.write(vm.$data.count)
+    document.write('<br>')
+    vm.$data.count=6
+    document.write(vm.count)
+</script>
+</body>
+</html>

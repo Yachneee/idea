@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kfm.kfmBatis.mapper.AbilityMapper">
+
+    <resultMap id="BaseResultMap" type="Ability">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="abilityName" column="ability_name" jdbcType="VARCHAR"/>
+            <result property="abilityDesc" column="ability_desc" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,ability_name,ability_desc
+    </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from ability
+        where  id = #{id,jdbcType=INTEGER} 
+    </select>
+    <select id="selectByRoleId" resultType="com.kfm.kfmBatis.entity.Ability">
+        select a.*
+        from ability a
+        join role_ability ra on a.id = ra.ability_id and ra.role_id = #{roleId}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete from ability
+        where  id = #{id,jdbcType=INTEGER} 
+    </delete>
+    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="Ability" useGeneratedKeys="true">
+        insert into ability
+        ( id,ability_name,ability_desc
+        )
+        values (#{id,jdbcType=INTEGER},#{abilityName,jdbcType=VARCHAR},#{abilityDesc,jdbcType=VARCHAR}
+        )
+    </insert>
+    <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="Ability" useGeneratedKeys="true">
+        insert into ability
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+                <if test="id != null">id,</if>
+                <if test="abilityName != null">ability_name,</if>
+                <if test="abilityDesc != null">ability_desc,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+                <if test="id != null">#{id,jdbcType=INTEGER},</if>
+                <if test="abilityName != null">#{abilityName,jdbcType=VARCHAR},</if>
+                <if test="abilityDesc != null">#{abilityDesc,jdbcType=VARCHAR},</if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="Ability">
+        update ability
+        <set>
+                <if test="abilityName != null">
+                    ability_name = #{abilityName,jdbcType=VARCHAR},
+                </if>
+                <if test="abilityDesc != null">
+                    ability_desc = #{abilityDesc,jdbcType=VARCHAR},
+                </if>
+        </set>
+        where   id = #{id,jdbcType=INTEGER} 
+    </update>
+    <update id="updateByPrimaryKey" parameterType="Ability">
+        update ability
+        set 
+            ability_name =  #{abilityName,jdbcType=VARCHAR},
+            ability_desc =  #{abilityDesc,jdbcType=VARCHAR}
+        where   id = #{id,jdbcType=INTEGER} 
+    </update>
+</mapper>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link href="../css/element-plus@2.4.2.css" rel="stylesheet"></link>
+</head>
+<body>
+<div id="app">
+    <el-form :model="user" label-width="120px">
+        <el-form-item label="用户名" >
+            <el-input v-model="user.username" />
+        </el-form-item>
+        <el-form-item label="密码">
+            <el-input v-model="user.password" />
+        </el-form-item>
+        <el-form-item>
+            <el-button type="primary" @click="onSubmit">登录</el-button>
+        </el-form-item>
+    </el-form>
+</div>
+<script src="../js/vue@3.3.8.js"></script>
+<script src="../js/element-plus@2.4.2.js"></script>
+<script src="../js/icons-vue@2.1.0.js"></script>
+<script src="../js/axios.js"></script>
+<script>
+    let app = Vue.createApp({
+        data() {
+            return {
+                user: {
+                    username: '',
+                    password: ''
+                },
+            }
+        },
+        methods: {
+            onSubmit() {
+                axios.post('http://localhost:8080/user/login', this.user).then(res => {
+                    if(res.data.code === 1) {
+                        sessionStorage.setItem('user', JSON.stringify(res.data.data));
+                        this.$message.success(res.data.msg)
+                        setTimeout(() => {
+                            window.location.href = './index.html'
+                        }, 3000)
+                    } else {
+                        this.$message.error(res.data.msg)
+                    }
+                })
+            }
+        }
+    });
+    app.use(ElementPlus);
+    // 注册图标
+    for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+        app.component(key, component)
+    }
+    app.mount('#app');
+</script>
+</body>
+</html>
